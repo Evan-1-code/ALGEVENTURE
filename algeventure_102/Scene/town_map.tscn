@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3r5f632yvumg"]
+
+[ext_resource type="PackedScene" uid="uid://1kitqn7mlglj" path="res://Scene/tile_map_layer.tscn" id="1_ter5d"]
+
+[node name="TOWN_MAP" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_ter5d")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(425, 283)
+zoom = Vector2(2, 2)
