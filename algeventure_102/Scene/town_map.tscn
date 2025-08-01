@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3r5f632yvumg"]
+[gd_scene load_steps=3 format=3 uid="uid://c3r5f632yvumg"]
 
 [ext_resource type="PackedScene" uid="uid://1kitqn7mlglj" path="res://Scene/tile_map_layer.tscn" id="1_ter5d"]
+[ext_resource type="PackedScene" path="res://Scripts/PlayerMovement.gd/player.tscn" id="2_b3l2c"]
 
 [node name="TOWN_MAP" type="Node2D"]
 
@@ -9,3 +10,7 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(425, 283)
 zoom = Vector2(2, 2)
+
+[node name="player2" parent="." instance=ExtResource("2_b3l2c")]
+position = Vector2(363, 299)
+script = null
