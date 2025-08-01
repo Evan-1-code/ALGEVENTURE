@@ -13,4 +13,5 @@ zoom = Vector2(2, 2)
 
 [node name="player2" parent="." instance=ExtResource("2_b3l2c")]
 position = Vector2(363, 299)
+scale = Vector2(0.1, 0.1)
 script = null
