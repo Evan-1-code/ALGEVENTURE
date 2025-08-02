@@ -1,7 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://cffknknskx3vy"]
+[gd_scene load_steps=28 format=3 uid="uid://b6v3arhsnrqru"]
 
-[ext_resource type="Texture2D" uid="uid://cs4nbljchqfai" path="res://Spritesheet (1).png" id="1_24tn0"]
-[ext_resource type="Script" uid="uid://cd2sb43uedk5o" path="res://character & movements/player.gd" id="1_shefv"]
+[ext_resource type="Texture2D" uid="uid://cs4nbljchqfai" path="res://Animation/Player/Spritesheet (1).png" id="1_24tn0"]
+[ext_resource type="Script" uid="uid://cd2sb43uedk5o" path="res://Scripts/PlayerMovement.gd/player.gd" id="1_shefv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_shefv"]
 radius = 144.014
@@ -237,13 +237,14 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 script = ExtResource("1_shefv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -5)
+position = Vector2(210, 119)
 texture = ExtResource("1_24tn0")
 hframes = 9
 vframes = 4
 frame = 27
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(224, 192)
 shape = SubResource("CircleShape2D_shefv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D"]

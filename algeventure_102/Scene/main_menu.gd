@@ -1,29 +1,21 @@
 extends Control
 
-func _ready():
-	$VBoxContainer/PlayButton.pressed.connect(_on_play_pressed)
-	$VBoxContainer/OptionsButton.pressed.connect(_on_options_pressed)
-	$VBoxContainer/QuitButton.pressed.connect(_on_quit_pressed)
-
 func _on_play_pressed():
-	print("Play clicked!")
-	# get_tree().change_scene_to_file("res://scenes/Game.tscn")
+	print("Play button pressed")
+	$ColorRect21/AnimationPlayer.play("fade_in")
+	 # just play animation — nothing else yet
 
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "fade_in":
+		print("Fade finished — switching scene")
+		get_tree().change_scene_to_file("res://Scene/town_map.tscn")
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	print("Fade finished — switching scene")
+	if anim_name == "fade_in":
+		get_tree().change_scene_to_file("res://Scene/town_map.tscn")
 func _on_options_pressed():
 	print("Options clicked!")
-	# TODO: Show options popup or navigate to Options scene
 
 func _on_quit_pressed():
 	get_tree().quit()
-
-
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_2_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_3_pressed() -> void:
-	pass # Replace with function body.

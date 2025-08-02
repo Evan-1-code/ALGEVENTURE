@@ -4,7 +4,7 @@ extends Node2D
 
 const IMAGE_WIDTH := 793
 const SCREEN_WIDTH := 1152
-var speed := 300
+var speed := 30
 
 func _ready():
 	sprite.position = Vector2(0, 0)
