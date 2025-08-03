@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
-<<<<<<< Updated upstream
 @export var move_speed : float = 100
-=======
 class_name Player
 
 const SPEED = 300
 const ACCEL = 2
 >>>>>>> Stashed changes
+
 
 func _physics_process(_delta):
 	
