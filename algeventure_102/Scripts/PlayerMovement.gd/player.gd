@@ -5,7 +5,6 @@ class_name Player
 
 const SPEED = 300
 const ACCEL = 2
->>>>>>> Stashed changes
 
 
 func _physics_process(_delta):
