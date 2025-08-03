@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm6f4drr0yu3y"]
+
+[ext_resource type="PackedScene" uid="uid://b6v3arhsnrqru" path="res://Scripts/PlayerMovement.gd/player.tscn" id="1_2qkb0"]
+
+[node name="playerni evs" instance=ExtResource("1_2qkb0")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(362.5, 334.5)
+scale = Vector2(0.328194, 0.288779)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(361, 338)
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+position = Vector2(257, 146)
+position_smoothing_enabled = true
