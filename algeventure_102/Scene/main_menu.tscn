@@ -121,7 +121,6 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_hptlk")
 }
-speed_scale = 0.105
 
 [connection signal="pressed" from="Background2d/VBoxContainer/PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Background2d/VBoxContainer/OptionsButton" to="." method="_on_options_pressed"]
