@@ -6,6 +6,7 @@ An educational pixel RPG game to improve algebra proficiency for Grade 11 STEM s
 
 ## 📂 Folder Structure
 
+<pre><code>
 res://
 │
 ├── Assets/                 # Raw art, sounds, music, etc.
@@ -47,7 +48,7 @@ res://
 ├── Tests/                 # Temporary or test files
 │
 └── main.gd                # Optional: main logic
-
+</code></pre>
 
 ## 🌿 Branch Workflow
 
