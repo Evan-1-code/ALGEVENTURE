@@ -6,15 +6,48 @@ An educational pixel RPG game to improve algebra proficiency for Grade 11 STEM s
 
 ## 📂 Folder Structure
 
-/addons/ # Godot plugins (if any)
-/assets/ # Images, sounds, animations
-/characters/ # NPCs and player scenes/scripts
-/scenes/ # Main scenes (main menu, town, battle, etc.)
-/scripts/ # Global and utility scripts
-/ui/ # UI elements and scenes
-/tests/ # Test scenes or scripts
-README.md
-.gitignore
+res://
+│
+├── Assets/                 # Raw art, sounds, music, etc.
+│   ├── Sound/
+│   ├── Fonts/
+│   ├── Sprites/
+│   ├── Tilesets/
+│
+├── Characters/            # Player & NPCs
+│   ├── Player/
+│   └── NPCs/
+│
+├── Scenes/                # Main game areas
+│   ├── MainMenu/
+│   │   └── MainMenu.tscn
+│   ├── Map/
+│   │   ├── Town_Map.tscn
+│   │   └── Shop.tscn
+│   ├── Battle/
+│   │   └── BattleScene.tscn
+│   └── Dialogue/
+│   |  └── DialogueBox.tscn
+│   |__  
+├── Scripts/               # All game logic scripts
+│   |
+│   ├── Systems/
+│   ├── Characters/
+│   └── Utilities/
+│
+├── UI/                    # Reusable UI components
+│   └── HUD/
+│
+├── Globals/               # Autoloads (GameState, SaveManager, etc.)
+│   └── GameState.gd
+│
+├── Contents/             # Dialogue files (JSON or script-based)
+│   └── npc_intro.dialogue
+│   |__ Problems
+├── Tests/                 # Temporary or test files
+│
+└── main.gd                # Optional: main logic
+
 
 ## 🌿 Branch Workflow
 
