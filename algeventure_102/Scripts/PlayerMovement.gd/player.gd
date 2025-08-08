@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @export var move_speed : float = 100
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 class_name Player
