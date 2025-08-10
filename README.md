@@ -91,3 +91,44 @@ Create from `dev`:
 - Always pull before starting work
 - Keep commits small and meaningful
 - Use PRs for **everything**
+
+| Folder / File               | Owner(s)      | Notes                                           |
+| --------------------------- | ------------- | ----------------------------------------------- |
+| `Scenes/MainMenu/`          | Main Menu Dev | Handles menu UI, buttons, background            |
+| `Scenes/Player/Player.tscn` | Movement Dev  | Owns Player scene & base script                 |
+| `Scripts/Player/Player.gd`  | Movement Dev  | Core movement logic – only owner edits          |
+| `Scenes/NPCs/`              | NPC Dev(s)    | NPC visuals & interaction triggers              |
+| `Scripts/NPCs/`             | NPC Dev(s)    | Dialogue triggers, interaction logic            |
+| `Scenes/Battle/`            | Battle Dev(s) | Battle scene, UI, and logic                     |
+| `Scripts/Battle/`           | Battle Dev(s) | Battle manager, HP/XP logic                     |
+| `Assets/Sprites/`           | Artist(s)     | Sprite sheets, textures                         |
+| `Assets/Sound/`             | Audio Dev(s)  | Music, sound effects                            |
+| `Globals/`                  | Lead Dev      | Autoloads (GameState, SaveManager, etc.)        |
+| `Contents/`                 | Writer(s)     | Dialogue files, story scripts                   |
+| `Tests/`                    | Any           | Temporary testing files, can be deleted anytime |
+
+2. Editing Rules
+Export Variables: Programmers should use @export so artists can assign assets without editing code.
+
+Scene Instancing: If adding new components, make them in separate .tscn files and instance into main scenes.
+
+One Feature per Branch: Always branch off dev (or another feature branch if it depends on it).
+
+Commit Messages: Be clear — e.g., Add NPC interaction script not stuff done.
+
+Pull Before Push: Always pull before push to merge locally first.
+
+3. Example Workflow
+Player Animation Example:
+Movement Dev: Creates Player.tscn + Player.gd with placeholder sprite and export variable @export var anim_player.
+Animator: Opens Player.tscn, adds AnimationPlayer node, assigns anim_player variable, imports animations.
+Dialogue Dev: Creates PlayerDialogue.tscn and instances it in Player.tscn without touching movement code.
+
+4. Communication
+Use Discord channel #dev-changes to announce when you:
+Create new files
+Rename/move files
+Edit someone else’s file (with permission)
+Ping the file owner if you’re unsure.
+
+
