@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://blivmucek65m4" path="res://Scene/Interactionsystem/npc.gd" id="1_u63c5"]
 [ext_resource type="Texture2D" uid="uid://d6ebqbfpssmk" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Entities/Npc's/Knight/Idle/Idle-Sheet.png" id="1_ypteh"]
 [ext_resource type="Texture2D" uid="uid://dume1aynp6kds" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Entities/Npc's/Knight/Run/Run-Sheet.png" id="2_u63c5"]
-[ext_resource type="PackedScene" uid="uid://h66qty7odb6n" path="res://Content/dialogues.json/dialogue.tscn" id="4_ip7r7"]
+[ext_resource type="PackedScene" uid="uid://h66qty7odb6n" path="res://Content/dialogues_scenes/dialogue.tscn" id="4_ip7r7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ip7r7"]
 atlas = ExtResource("1_ypteh")
@@ -255,12 +255,7 @@ shape = SubResource("RectangleShape2D_wjglj")
 autostart = true
 
 [node name="Dialogue" parent="." instance=ExtResource("4_ip7r7")]
-offset_left = -160.0
-offset_top = -308.0
-offset_right = -66.0
-offset_bottom = -256.0
 
 [connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
 [connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]

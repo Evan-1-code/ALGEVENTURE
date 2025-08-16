@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bwd4fi1q3po0u"]
+[gd_scene load_steps=7 format=4 uid="uid://c1cwxauiyposm"]
 
 [ext_resource type="Texture2D" uid="uid://oul76q8c1r1m" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_4qc02"]
 [ext_resource type="PackedScene" uid="uid://dbmy2mm3i2p00" path="res://Animation/Player/player(test).tscn" id="2_4wuf8"]
 [ext_resource type="PackedScene" uid="uid://cxh5dgc3owxp2" path="res://Scene/Interactionsystem/npc.tscn" id="3_s02eq"]
+[ext_resource type="PackedScene" uid="uid://h66qty7odb6n" path="res://Content/dialogues_scenes/dialogue.tscn" id="4_t8dge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wuf8"]
 texture = ExtResource("1_4qc02")
@@ -280,4 +281,14 @@ tile_set = SubResource("TileSet_s02eq")
 [node name="player(test)" parent="Node2D" instance=ExtResource("2_4wuf8")]
 
 [node name="npc" parent="." instance=ExtResource("3_s02eq")]
+position = Vector2(554, 290)
 scale = Vector2(1.31655, 1.56744)
+
+[node name="Dialogue2" parent="npc" instance=ExtResource("4_t8dge")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(571, 330)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0

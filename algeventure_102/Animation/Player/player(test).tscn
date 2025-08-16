@@ -18,6 +18,3 @@ texture = ExtResource("2_xlycn")
 position = Vector2(1, 0)
 scale = Vector2(0.875, 0.820313)
 shape = SubResource("RectangleShape2D_mq8vs")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true

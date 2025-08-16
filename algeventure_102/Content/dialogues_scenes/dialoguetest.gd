@@ -21,7 +21,7 @@ func start():
 	next_script()
 	
 func load_dialogue():
-	var file = FileAccess.open("res://Content/dialogues.json/worker_dialogue1(test).json", FileAccess.READ)
+	var file = FileAccess.open("res://Content/dialogues_scenes/worker_dialogue1(test).json", FileAccess.READ)
 	var content = JSON.parse_string(file.get_as_text())
 	return content
 	
