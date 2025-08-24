@@ -22,6 +22,10 @@ NavigationManager="*res://Globals/navigation_manager.gd"
 
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+Doors=""
+
 [input]
 
 right={

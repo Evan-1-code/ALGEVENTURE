@@ -288,23 +288,25 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAHAAkAAAAAAAEAAAAHAAkAAAAAAAIAAAAHAAk
 tile_set = SubResource("TileSet_l4vgr")
 
 [node name="player(test)" parent="." instance=ExtResource("2_cv0i3")]
-position = Vector2(634, 194)
+visible = false
+position = Vector2(420, 380)
 
 [node name="Node" type="Node" parent="."]
 
-[node name="Door_N" type="Area2D" parent="Node"]
-position = Vector2(578, -30)
+[node name="Door_S" type="Area2D" parent="Node" groups=["Doors"]]
+position = Vector2(658, 50)
 script = ExtResource("4_dxoqu")
 destination_level_tag = "town_map_1"
-destination_Door_tag = "S"
+destination_door_tag = "Door_N"
+door_tag = "Door_S"
 spawn_direction = "north "
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Door_N"]
-position = Vector2(54, 77)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Door_S"]
+position = Vector2(2, 5)
 shape = SubResource("RectangleShape2D_excey")
 
-[node name="Spawn" type="Marker2D" parent="Node/Door_N"]
-position = Vector2(53, 76)
+[node name="Spawn" type="Marker2D" parent="Node/Door_S"]
+position = Vector2(-5, -2)
 scale = Vector2(1, 2)
 
-[connection signal="body_entered" from="Node/Door_N" to="Node/Door_N" method="_on_body_entered"]
+[connection signal="body_entered" from="Node/Door_S" to="Node/Door_S" method="_on_body_entered"]

@@ -1,5 +1,7 @@
 extends Node
 
+var is_first_load := true # Add this flag
+
 const scene_town_map_1 = preload("res://Scene/Worldmap.tscn/town_map_1.tscn")
 const scene_learning_forge = preload("res://Scene/Worldmap.tscn/learning_forge.tscn")
 
