@@ -1,0 +1,34 @@
+{
+  "level": "1",
+  "topic": "arithmetic",
+  "problems": [
+    {
+      "id": 1,
+      "problem": "A car travels 60 km in 2 hours. What is its speed?",
+      "given": ["Distance = 60 km", "Time = 2 hours"],
+      "formula_options": ["Speed = Distance / Time", "Speed = Time × Distance", "Speed = Distance × Time"],
+      "correct_formula": "Speed = Distance / Time",
+      "solution_steps": [
+        "Identify given: Distance = 60 km, Time = 2 hours",
+        "Select formula: Speed = Distance / Time",
+        "Compute: 60 ÷ 2 = 30 km/h",
+        "Answer: Speed = 30 km/h"
+      ],
+      "hints": ["Remember formula for speed: distance ÷ time", "Divide distance by time to get speed"]
+    },
+    {
+      "id": 2,
+      "problem": "If a person saves $50 each week, how much will they have saved after 4 weeks?",
+      "given": ["Weekly saving = $50", "Number of weeks = 4"],
+      "formula_options": ["Total = Weekly saving × Number of weeks", "Total = Weekly saving + Number of weeks", "Total = Weekly saving ÷ Number of weeks"],
+      "correct_formula": "Total = Weekly saving × Number of weeks",
+      "solution_steps": [
+        "Identify given: Weekly saving = $50, Number of weeks = 4",
+        "Select formula: Total = Weekly saving × Number of weeks",
+        "Compute: 50 × 4 = 200",
+        "Answer: Total savings = $200"
+      ],
+      "hints": ["Multiply weekly saving by the number of weeks", "Total savings = $50 × 4"]
+    }
+  ]
+}

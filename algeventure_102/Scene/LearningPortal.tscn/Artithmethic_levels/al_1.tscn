@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://drye3g6mrtxq5"]
+
+[ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
+
+[node name="AL_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lssfj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 1, 1)
+
+[node name="DisplayLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.069
+anchor_right = 0.495
+anchor_bottom = 0.069
+offset_left = -205.24
+offset_top = 111.288
+offset_right = 207.76
+offset_bottom = 251.288
+grow_horizontal = 2
+text = "problemtext"
+
+[node name="FormulaOptions" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 360.0
+offset_right = 846.0
+offset_bottom = 435.0
+
+[node name="SolutionSteps" type="Label" parent="."]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 469.0
+offset_right = 412.0
+offset_bottom = 492.0
+text = "Solution Steps"
+
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 353.0
+offset_right = 196.0
+offset_bottom = 430.0
+text = "Hint"
+
+[node name="HintLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 449.0
+offset_right = 277.0
+offset_bottom = 504.0
+text = "hint label"
+
+[node name="Given" type="Label" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 348.0
+offset_right = 363.0
+offset_bottom = 371.0
+text = "Given"
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 253.0
+offset_right = 254.0
+offset_bottom = 276.0
+
+[node name="ActionButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 654.0
+offset_top = 465.0
+offset_right = 749.0
+offset_bottom = 504.0
