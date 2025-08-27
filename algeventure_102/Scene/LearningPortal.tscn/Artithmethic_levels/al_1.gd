@@ -2,123 +2,253 @@ extends Node
 
 @export var JSON_PATH: String = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_1_problem.json"
 
-var problems: Array = []
-var current_problem_idx: int = 0
-var current_step: int = 0
-var state: String = "show_problem" # States: show_problem, show_given, ask_formula, formula_correct, solve_steps, solved
+enum Step { SHOW_PROBLEM, GIVEN, FORMULA, SOLVE, FEEDBACK }
+var levels = []
+var current_level_index := 0
+var current_problem_index := 0
+var current_step: Step = Step.SHOW_PROBLEM
 
-@onready var DisplayLabel = $DisplayLabel
+@onready var ProblemLabel = $ProblemLabel
+@onready var NextButton = $NextButton
+@onready var GivenInputContainer = $GivenInputContainer
 @onready var FormulaOptions = $FormulaOptions
-@onready var ActionButton = $ActionButton
-@onready var FeedbackLabel = $FeedbackLabel
-@onready var HintButton = $HintButton
-@onready var HintLabel = $HintLabel
+@onready var FormulaFeedbackLabel = $FormulaFeedbackLabel
+@onready var SolveInput = $SolveInput
+@onready var SolveFeedbackLabel = $SolveFeedbackLabel
 
 func _ready():
-	load_problems()
-	show_problem()
-	ActionButton.pressed.connect(_on_ActionButton_pressed)
-	HintButton.pressed.connect(_on_HintButton_pressed)
+	_load_levels_from_json(JSON_PATH)
+	_show_current_problem()
+	if not NextButton.pressed.is_connected(_on_NextButton_pressed):
+		NextButton.pressed.connect(_on_NextButton_pressed)
 
-func load_problems():
-	var file = FileAccess.open(JSON_PATH, FileAccess.READ)
+func _load_levels_from_json(path):
+	var file = FileAccess.open(path, FileAccess.READ)
 	if file:
-		var data = file.get_as_text()
-		var json = JSON.parse_string(data)
-		if typeof(json) == TYPE_DICTIONARY and "problems" in json:
-			problems = json["problems"]
+		var json = JSON.parse_string(file.get_as_text())
+		if typeof(json) == TYPE_ARRAY:
+			levels = json
 		else:
-			push_error("JSON root does not contain 'problems' array!")
+			push_error("JSON root is not an array!")
 	else:
-		push_error("Could not open problems JSON file!")
+		push_error("Could not open JSON file.")
 
-func show_problem():
-	state = "show_problem"
-	current_step = 0
+func _get_current_problem():
+	if levels.size() == 0:
+		push_error("Levels array is empty!")
+		return null
+	if current_level_index < 0 or current_level_index >= levels.size():
+		push_error("current_level_index %d out of bounds" % current_level_index)
+		return null
+	var level = levels[current_level_index]
+	if typeof(level) != TYPE_DICTIONARY or not level.has("problems"):
+		push_error("Level has no 'problems' key: %s" % str(level))
+		return null
+	var problems = level["problems"]
+	if current_problem_index < 0 or current_problem_index >= problems.size():
+		push_error("current_problem_index %d out of bounds" % current_problem_index)
+		return null
+	return problems[current_problem_index]
+
+func _show_current_problem():
+	current_step = Step.SHOW_PROBLEM
+	var problem = _get_current_problem()
+	if problem == null:
+		ProblemLabel.text = "No more problems."
+		NextButton.hide()
+		GivenInputContainer.hide()
+		FormulaOptions.hide()
+		FormulaFeedbackLabel.hide()
+		SolveInput.hide()
+		SolveFeedbackLabel.hide()
+		return
+	if not problem.has("text"):
+		ProblemLabel.text = "[b]Problem text missing.[/b]"
+		return
+	ProblemLabel.text = "[b]Problem:[/b]\n" + str(problem["text"])
+	NextButton.text = "Next"
+	NextButton.show()
+	GivenInputContainer.hide()
 	FormulaOptions.hide()
-	FeedbackLabel.text = ""
-	HintLabel.text = ""
-	var p = problems[current_problem_idx]
-	DisplayLabel.text = p["problem"]
-	ActionButton.text = "Next"
-	ActionButton.show()
+	FormulaFeedbackLabel.hide()
+	SolveInput.hide()
+	SolveFeedbackLabel.hide()
 
-func show_given():
-	state = "show_given"
-	var p = problems[current_problem_idx]
-	DisplayLabel.text = "[b]Given:[/b]\n" + "\n".join(p["given"])
-	ActionButton.text = "What formula should we use?"
-
-func ask_formula():
-	state = "ask_formula"
-	FormulaOptions.show()
-	# Clear previous buttons
-	for child in FormulaOptions.get_children():
+func _show_given_inputs():
+	current_step = Step.GIVEN
+	NextButton.text = "Submit"
+	NextButton.show()
+	FormulaOptions.hide()
+	FormulaFeedbackLabel.hide()
+	SolveInput.hide()
+	SolveFeedbackLabel.hide()
+	GivenInputContainer.show()
+	# Clear previous
+	for child in GivenInputContainer.get_children():
 		child.queue_free()
-	var p = problems[current_problem_idx]
-	for i in p["formula_options"].size():
-		var b = Button.new()
-		b.text = p["formula_options"][i]
-		b.pressed.connect(_on_formula_pressed.bind(i))
-		FormulaOptions.add_child(b)
-	DisplayLabel.text = "Which formula should be used?"
-	ActionButton.hide()
+	# Add new input fields
+	var problem = _get_current_problem()
+	if problem == null:
+		push_error("No problem found in _show_given_inputs.")
+		return
+	if not problem.has("given"):
+		push_error("Problem has no 'given' key in _show_given_inputs.")
+		return
+	for given_key in problem["given"].keys():
+		var hbox = HBoxContainer.new()
+		var label = Label.new()
+		label.text = "%s = " % given_key
+		var input = LineEdit.new()
+		input.name = given_key
+		hbox.add_child(label)
+		hbox.add_child(input)
+		GivenInputContainer.add_child(hbox)
 
-func solve_steps():
-	state = "solve_steps"
+func _try_submit_given() -> bool:
+	var problem = _get_current_problem()
+	if problem == null:
+		push_error("No problem found in _try_submit_given.")
+		return false
+	if not problem.has("given"):
+		push_error("Problem has no 'given' key in _try_submit_given.")
+		return false
+	for given_key in problem["given"].keys():
+		var input_line = null
+		for hbox in GivenInputContainer.get_children():
+			if hbox is HBoxContainer:
+				var label = hbox.get_child(0)
+				var input = hbox.get_child(1)
+				if label.text.begins_with("%s = " % given_key):
+					input_line = input
+					break
+		if input_line == null:
+			push_error("Input line is null for key: %s in _try_submit_given." % given_key)
+			return false
+		var user_val = input_line.text.strip_edges()
+		var solution_val = str(problem["given"][given_key])
+		# Compare as floats, allow margin for float answers
+		if abs(float(user_val) - float(solution_val)) > 0.01:
+			return false
+	return true
+
+func _show_formula_choices():
+	current_step = Step.FORMULA
+	NextButton.hide()
+	FormulaOptions.show()
+	FormulaFeedbackLabel.hide()
+	# Clear previous options
+	for c in FormulaOptions.get_children():
+		c.queue_free()
+	var problem = _get_current_problem()
+	if problem == null:
+		push_error("No problem found in _show_formula_choices.")
+		return
+	if not problem.has("formula"):
+		push_error("Problem has no 'formula' key in _show_formula_choices.")
+		return
+	var options = [problem["formula"]]
+	while options.size() < 3:
+		var distractor = "Speed = Time / Distance"
+		if distractor not in options:
+			options.append(distractor)
+		else:
+			options.append("Distance = Speed x Time")
+	options.shuffle()
+	for formula in options:
+		var btn = Button.new()
+		btn.text = formula
+		btn.pressed.connect(_on_formula_selected.bind(formula))
+		FormulaOptions.add_child(btn)
+
+func _on_formula_selected(selected_formula):
+	var problem = _get_current_problem()
+	if problem == null:
+		push_error("No problem found in _on_formula_selected.")
+		return
+	if not problem.has("formula"):
+		push_error("Problem has no 'formula' key in _on_formula_selected.")
+		return
+	if selected_formula == problem["formula"]:
+		FormulaFeedbackLabel.hide()
+		FormulaOptions.hide()
+		_show_solve_phase()
+	else:
+		FormulaFeedbackLabel.text = "[color=red]Not quite! Try again.[/color]"
+		FormulaFeedbackLabel.show()
+
+func _show_solve_phase():
+	current_step = Step.SOLVE
+	NextButton.text = "Submit"
+	NextButton.show()
 	FormulaOptions.hide()
-	var p = problems[current_problem_idx]
-	current_step = 0
-	DisplayLabel.text = p["solution_steps"][current_step]
-	ActionButton.text = "Next Step"
-	ActionButton.show()
+	SolveInput.show()
+	SolveFeedbackLabel.hide()
+	SolveInput.text = ""
 
-func complete_problem():
-	state = "solved"
-	DisplayLabel.text = "✅ Correct! Problem Solved."
-	if current_problem_idx < problems.size() - 1:
-		ActionButton.text = "Next Problem"
-	else:
-		ActionButton.text = "Back to Level Select"
-	ActionButton.show()
+func _try_submit_solve() -> bool:
+	var problem = _get_current_problem()
+	if problem == null:
+		push_error("No problem found in _try_submit_solve.")
+		return false
+	if not problem.has("answer"):
+		push_error("Problem has no 'answer' key in _try_submit_solve.")
+		return false
+	var user_ans = SolveInput.text.strip_edges()
+	var correct_ans = str(problem["answer"])
+	return user_ans == correct_ans
 
-func _on_ActionButton_pressed():
-	match state:
-		"show_problem":
-			show_given()
-		"show_given":
-			ask_formula()
-		"formula_correct":
-			solve_steps()
-		"solve_steps":
-			var p = problems[current_problem_idx]
-			current_step += 1
-			if current_step < p["solution_steps"].size():
-				DisplayLabel.text = p["solution_steps"][current_step]
+func _show_feedback():
+	current_step = Step.FEEDBACK
+	var level = null
+	if current_level_index < levels.size():
+		level = levels[current_level_index]
+	if level == null or not level.has("problems"):
+		NextButton.hide()
+		ProblemLabel.text = "[b]All levels complete![/b]"
+		return
+	var last_problem = false
+	if typeof(level["problems"]) == TYPE_ARRAY:
+		last_problem = current_problem_index >= level["problems"].size() - 1
+	NextButton.text = "Next Problem" if not last_problem else "Next Level"
+	NextButton.show()
+
+func _on_NextButton_pressed():
+	if current_step == Step.SHOW_PROBLEM:
+		_show_given_inputs()
+	elif current_step == Step.GIVEN:
+		if _try_submit_given():
+			GivenInputContainer.hide()
+			_show_formula_choices()
+		else:
+			var problem = _get_current_problem()
+			if problem != null and problem.has("text"):
+				ProblemLabel.text = "[color=red]Try again![/color]\n" + str(problem["text"])
 			else:
-				complete_problem()
-		"solved":
-			if current_problem_idx < problems.size() - 1:
-				current_problem_idx += 1
-				show_problem()
+				ProblemLabel.text = "[color=red]Try again![/color]"
+	elif current_step == Step.SOLVE:
+		if _try_submit_solve():
+			SolveFeedbackLabel.text = "[color=green]Correct![/color]"
+			SolveFeedbackLabel.show()
+			_show_feedback()
+		else:
+			SolveFeedbackLabel.text = "[color=red]Try again![/color]"
+			SolveFeedbackLabel.show()
+	elif current_step == Step.FEEDBACK:
+		var level = null
+		if current_level_index < levels.size():
+			level = levels[current_level_index]
+		if level == null or not level.has("problems"):
+			ProblemLabel.text = "[b]All levels complete![/b]"
+			NextButton.hide()
+			return
+		if typeof(level["problems"]) == TYPE_ARRAY and current_problem_index < level["problems"].size() - 1:
+			current_problem_index += 1
+			_show_current_problem()
+		else:
+			current_level_index += 1
+			current_problem_index = 0
+			if current_level_index < levels.size():
+				_show_current_problem()
 			else:
-				# Return to level select logic here
-				get_tree().change_scene_to_file("res://LevelSelect.tscn") # Example
-
-func _on_formula_pressed(idx):
-	var p = problems[current_problem_idx]
-	var selected = p["formula_options"][idx]
-	if selected == p["correct_formula"]:
-		FeedbackLabel.text = ""
-		ActionButton.text = "Now Solve"
-		ActionButton.show()
-		state = "formula_correct"
-	else:
-		FeedbackLabel.text = "[color=red]Not quite, try again.[/color]"
-
-func _on_HintButton_pressed():
-	var p = problems[current_problem_idx]
-	if "hints" in p and p["hints"].size() > 0:
-		HintLabel.text = "[b]Hint:[/b] " + "\n".join(p["hints"])
-	else:
-		HintLabel.text = "No hints available."
+				ProblemLabel.text = "[b]All levels complete![/b]"
+				NextButton.hide()

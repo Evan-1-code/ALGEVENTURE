@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
-[node name="DisplayLabel" type="RichTextLabel" parent="."]
+[node name="ProblemLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.495
@@ -49,22 +49,6 @@ offset_right = 412.0
 offset_bottom = 492.0
 text = "Solution Steps"
 
-[node name="HintButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 111.0
-offset_top = 353.0
-offset_right = 196.0
-offset_bottom = 430.0
-text = "Hint"
-
-[node name="HintLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 102.0
-offset_top = 449.0
-offset_right = 277.0
-offset_bottom = 504.0
-text = "hint label"
-
 [node name="Given" type="Label" parent="."]
 layout_mode = 0
 offset_left = 318.0
@@ -73,16 +57,40 @@ offset_right = 363.0
 offset_bottom = 371.0
 text = "Given"
 
-[node name="FeedbackLabel" type="Label" parent="."]
+[node name="FormulaFeedbackLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 253.0
-offset_right = 254.0
-offset_bottom = 276.0
+offset_left = 424.0
+offset_top = 485.0
+offset_right = 464.0
+offset_bottom = 508.0
 
-[node name="ActionButton" type="Button" parent="."]
+[node name="NextButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 654.0
 offset_top = 465.0
 offset_right = 749.0
 offset_bottom = 504.0
+
+[node name="SolveFeedbackLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.035
+offset_left = 375.0
+offset_top = 414.0
+offset_right = 395.416
+offset_bottom = 414.32
+
+[node name="GivenInputContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 406.0
+offset_right = 503.0
+offset_bottom = 446.0
+
+[node name="SolveInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 508.0
+offset_right = 402.563
+offset_bottom = 539.0
