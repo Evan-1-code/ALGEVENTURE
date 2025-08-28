@@ -15,6 +15,10 @@ var current_step: Step = Step.SHOW_PROBLEM
 @onready var FormulaFeedbackLabel = $FormulaFeedbackLabel
 @onready var SolveInput = $SolveInput
 @onready var SolveFeedbackLabel = $SolveFeedbackLabel
+@onready var CalculatorButton = $CalculatorButton
+
+var calculator_instance = null
+var calculator_scene = preload("res://Scene/Calculatorscene/calculator.tscn")
 
 func _ready():
 	_load_levels_from_json(JSON_PATH)
@@ -73,6 +77,7 @@ func _show_current_problem():
 	FormulaFeedbackLabel.hide()
 	SolveInput.hide()
 	SolveFeedbackLabel.hide()
+	CalculatorButton.hide()
 
 func _show_given_inputs():
 	current_step = Step.GIVEN
@@ -82,6 +87,7 @@ func _show_given_inputs():
 	FormulaFeedbackLabel.hide()
 	SolveInput.hide()
 	SolveFeedbackLabel.hide()
+	CalculatorButton.hide()
 	GivenInputContainer.show()
 	# Clear previous
 	for child in GivenInputContainer.get_children():
@@ -134,6 +140,7 @@ func _try_submit_given() -> bool:
 func _show_formula_choices():
 	current_step = Step.FORMULA
 	NextButton.hide()
+	CalculatorButton.hide()
 	FormulaOptions.show()
 	FormulaFeedbackLabel.hide()
 	# Clear previous options
@@ -175,6 +182,20 @@ func _on_formula_selected(selected_formula):
 	else:
 		FormulaFeedbackLabel.text = "[color=red]Not quite! Try again.[/color]"
 		FormulaFeedbackLabel.show()
+		CalculatorButton.hide()
+
+func _on_CalculatorButton_pressed():
+	if calculator_instance == null:
+		calculator_instance = calculator_scene.instantiate()
+		get_tree().current_scene.add_child(calculator_instance)
+
+	# If it's a Popup/Window type → use popup_centered()
+	if calculator_instance.has_method("popup_centered"):
+		calculator_instance.popup_centered()
+	else:
+		# Otherwise just show it normally
+		calculator_instance.show()
+
 
 func _show_solve_phase():
 	current_step = Step.SOLVE
@@ -184,6 +205,7 @@ func _show_solve_phase():
 	SolveInput.show()
 	SolveFeedbackLabel.hide()
 	SolveInput.text = ""
+	CalculatorButton.show()
 
 func _try_submit_solve() -> bool:
 	var problem = _get_current_problem()
@@ -194,8 +216,17 @@ func _try_submit_solve() -> bool:
 		push_error("Problem has no 'answer' key in _try_submit_solve.")
 		return false
 	var user_ans = SolveInput.text.strip_edges()
-	var correct_ans = str(problem["answer"])
-	return user_ans == correct_ans
+	var correct_ans = float(problem["answer"]) # Make sure it's a float
+	var user_val = 0.0
+	if user_ans.is_valid_float():
+		user_val = float(user_ans)
+	elif user_ans.is_valid_int():
+		user_val = float(int(user_ans))
+	else:
+		# Not a valid number
+		return false
+	# Accept a small error for floats
+	return abs(user_val - correct_ans) < 0.01
 
 func _show_feedback():
 	current_step = Step.FEEDBACK
@@ -211,6 +242,7 @@ func _show_feedback():
 		last_problem = current_problem_index >= level["problems"].size() - 1
 	NextButton.text = "Next Problem" if not last_problem else "Next Level"
 	NextButton.show()
+	CalculatorButton.hide()
 
 func _on_NextButton_pressed():
 	if current_step == Step.SHOW_PROBLEM:
