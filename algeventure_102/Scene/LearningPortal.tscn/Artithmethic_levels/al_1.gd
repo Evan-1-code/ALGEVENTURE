@@ -143,9 +143,11 @@ func _show_formula_choices():
 	CalculatorButton.hide()
 	FormulaOptions.show()
 	FormulaFeedbackLabel.hide()
+
 	# Clear previous options
 	for c in FormulaOptions.get_children():
 		c.queue_free()
+
 	var problem = _get_current_problem()
 	if problem == null:
 		push_error("No problem found in _show_formula_choices.")
@@ -153,19 +155,24 @@ func _show_formula_choices():
 	if not problem.has("formula"):
 		push_error("Problem has no 'formula' key in _show_formula_choices.")
 		return
-	var options = [problem["formula"]]
-	while options.size() < 3:
-		var distractor = "Speed = Time / Distance"
-		if distractor not in options:
-			options.append(distractor)
-		else:
-			options.append("Distance = Speed x Time")
+
+	# ✅ Get correct + distractors from JSON
+	var options = []
+	options.append(problem["formula"])
+	if problem.has("distractors"):
+		for d in problem["distractors"]:
+			options.append(d)
+
+	# Shuffle all
 	options.shuffle()
+
+	# Create buttons
 	for formula in options:
 		var btn = Button.new()
 		btn.text = formula
 		btn.pressed.connect(_on_formula_selected.bind(formula))
 		FormulaOptions.add_child(btn)
+
 
 func _on_formula_selected(selected_formula):
 	var problem = _get_current_problem()
@@ -184,17 +191,7 @@ func _on_formula_selected(selected_formula):
 		FormulaFeedbackLabel.show()
 		CalculatorButton.hide()
 
-func _on_CalculatorButton_pressed():
-	if calculator_instance == null:
-		calculator_instance = calculator_scene.instantiate()
-		get_tree().current_scene.add_child(calculator_instance)
 
-	# If it's a Popup/Window type → use popup_centered()
-	if calculator_instance.has_method("popup_centered"):
-		calculator_instance.popup_centered()
-	else:
-		# Otherwise just show it normally
-		calculator_instance.show()
 
 
 func _show_solve_phase():
@@ -243,6 +240,8 @@ func _show_feedback():
 	NextButton.text = "Next Problem" if not last_problem else "Next Level"
 	NextButton.show()
 	CalculatorButton.hide()
+	_hide_calculator()
+	return
 
 func _on_NextButton_pressed():
 	if current_step == Step.SHOW_PROBLEM:
@@ -284,3 +283,22 @@ func _on_NextButton_pressed():
 			else:
 				ProblemLabel.text = "[b]All levels complete![/b]"
 				NextButton.hide()
+
+
+func _on_calculator_button_pressed() -> void:
+	if not is_instance_valid(calculator_instance):
+		calculator_instance = calculator_scene.instantiate()
+		get_tree().current_scene.add_child(calculator_instance)
+		calculator_instance.custom_minimum_size = Vector2(250, 400)
+		calculator_instance.position = Vector2(20, 20)
+
+	# toggle
+	if calculator_instance.visible:
+		calculator_instance.hide()
+	else:
+		calculator_instance.show()
+
+
+func _hide_calculator():
+	if is_instance_valid(calculator_instance):
+		calculator_instance.hide()

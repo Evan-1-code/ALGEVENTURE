@@ -15,9 +15,11 @@
 
 [sub_resource type="SystemFont" id="SystemFont_k0oxa"]
 font_names = PackedStringArray("Avenir")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_f3tcp"]
 font_names = PackedStringArray("Avenir")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8wbf"]
 
@@ -29,8 +31,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 444.0
+offset_top = 177.0
+offset_right = 410.0
+offset_bottom = 735.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.281514, 0.273508)
 script = ExtResource("1_ml8cq")
 
 [node name="Screen" type="Panel" parent="."]

@@ -49,7 +49,7 @@ offset_left = 301.0
 offset_top = 469.0
 offset_right = 412.0
 offset_bottom = 492.0
-text = "Solution Steps"
+text = "Answer"
 
 [node name="Given" type="Label" parent="."]
 layout_mode = 0
@@ -98,10 +98,13 @@ offset_right = 402.563
 offset_bottom = 539.0
 
 [node name="CalculatorButton" type="Button" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 offset_left = 122.0
 offset_top = 110.0
 offset_right = 213.0
 offset_bottom = 141.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
+
+[connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]

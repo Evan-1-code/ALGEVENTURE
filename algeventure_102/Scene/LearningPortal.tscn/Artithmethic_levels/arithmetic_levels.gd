@@ -4,3 +4,7 @@ extends Control
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.tscn")
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_2.tscn")
