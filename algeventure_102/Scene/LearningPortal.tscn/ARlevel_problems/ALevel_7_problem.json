@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "A cyclist rides 10 km on day 1 and increases the distance by 3 km each day. What is the total distance after 4 days?",
+		"given": { "a": 10, "d": 3, "n": 4 },
+		"formula": "S_n = n/2 × [2a + (n - 1)d]",
+		"distractors": ["S_n = n × [a + (n - 1)d]", "S_n = a + d × n"],
+		"answer": 58
+	  },
+	  {
+		"text": "A theater has 20 seats in the first row, 24 seats in the second row, 28 seats in the third row, and so on. How many seats are there in the first 10 rows?",
+		"given": { "a": 20, "d": 4, "n": 10 },
+		"formula": "S_n = n/2 [2a + (n - 1)d]",
+		"distractors": ["S_n = n/2 [a + d]", "S_n = n/2 [2a + (n + 1)d]"],
+		"answer": 380
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A student saves ₱50 on the first week, ₱100 on the second week, ₱150 on the third week, and continues this pattern. How much will the student save on the 12th week?",
+		"given": { "a": 50, "d": 50, "n": 12 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a × n + d", "a_n = a + n × d"],
+		"answer": 600
+	  },
+	  {
+		"text": "A runner jogs 2 km on the first day, 4 km on the second day, 6 km on the third day, and continues this pattern. How many kilometers will the runner complete after 15 days?",
+		"given": { "a": 2, "d": 2, "n": 15 },
+		"formula": "S_n = n/2 [2a + (n - 1)d]",
+		"distractors": ["S_n = n × (a + d)", "S_n = n/2 [a + (n - 1)d]"],
+		"answer": 240
+      }
+	]
+  },
+]

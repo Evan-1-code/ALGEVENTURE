@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6x7k85i13sa2"]
-
-[ext_resource type="PackedScene" uid="uid://c6x7k85i13sa2" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_2.tscn" id="1_fk401"]
-
-[node name="al_2" instance=ExtResource("1_fk401")]

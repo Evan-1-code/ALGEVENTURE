@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Ben sells candies in a pattern: 3 on day 1, 6 on day 2, 9 on day 3. How many will he sell on day 15?",
+		"given": { "a": 3, "d": 3, "n": 15 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = d + (n - 1)a",  "a_n = a × d × n"],
+		"answer": 45
+	  },
+	  {
+		"text": "A wall is built by placing 10 bricks on the first row, 13 on the second, and so on. How many bricks are in 7 rows?",
+		"given": { "First term (a)": 10, "Common difference (d)": 3, "Number of terms (n)": 7 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a × n + d",  "S_n = n × d + a",  "S_n = a × d × n"],
+		"answer": 133
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A student scores 5 points in game 1, 8 in game 2, 11 in game 3. What is the total score after 6 games?",
+		"given": { "a": 5, "d": 3, "n": 6 },
+		"formula": "S_n = n/2 × [2a + (n - 1)d]",
+		"distractors": ["S_n = n × [2a + d]", "S_n = n/2 × (a + d)"],
+		"answer": 75
+	  },
+	  {
+		"text": "A gardener plants 2 trees the first day, 5 on the second, 8 on the third, continuing the pattern. How many trees after 6 days?",
+		"given": { "First term (a)": 2, "Common difference (d)": 3, "Number of terms (n)": 6 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a + n × d",  "S_n = n × (a + d)",  "S_n = a × n + d"],
+		"answer": 57
+      }
+	]
+  },
+]

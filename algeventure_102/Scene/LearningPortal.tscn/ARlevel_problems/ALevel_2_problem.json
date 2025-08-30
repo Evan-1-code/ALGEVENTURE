@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "A staircase has steps increasing in height by 5 cm. The first step is 10 cm high. How high is the 12th step?",
+		"given": { "a": 10, "d": 5, "n": 12 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a × d × n", "a_n = a + nd" ],
+		"answer": 65
+	  },
+	  {
+		"text": "A student reads 5 pages on Day 1 and increases by 2 pages each day. How many pages does she read in 12 days?",
+		"given": { "First term (a)": 5, "Common difference (d)": 2, "Number of terms (n)": 12 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": [ "S_n = n × d + a",  "S_n = a × d × n",  "S_n = (a + d)/2 × n"],
+		"answer": 192
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A theater has seats such that the first row has 20 seats and each next row increases by 4 seats. How many seats are in the 7th row?",
+		"given": { "a": 20, "d": 4, "n": 7 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a - (n - 1)d", "a_n = a × d × n"],
+		"answer": 44
+	  },
+	  {
+		"text": "John’s salary is ₱20,000 and increases by ₱1,000 annually. What is his total salary for 5 years?",
+		"given": { "First term (a)": 20000, "Common difference (d)": 1000, "Number of terms (n)": 5 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a + d × n", "S_n = n × (a + d)", "S_n = (a + d)/2 × n"],
+		"answer": 110000
+      }
+	]
+  },
+]

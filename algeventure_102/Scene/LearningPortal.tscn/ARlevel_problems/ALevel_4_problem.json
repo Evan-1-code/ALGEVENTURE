@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "A plant grows 2 cm on day 1, 4 cm on day 2, 6 cm on day 3, etc. How tall is it after 10 days?",
+		"given": { "a": 2, "d": 2, "n": 10 },
+		"formula": "S_n = n/2 × [2a + (n - 1)d]",
+		"distractors": ["S_n = n × (a + d)",  "S_n = n/2 × (a - d)"],
+		"answer": 110
+	  },
+	  {
+		"text": "Ella receives ₱100 allowance in week 1, ₱120 in week 2, and so on. What's her total allowance in 4 weeks?",
+		"given": { "First term (a)": 100, "Common difference (d)": 20, "Number of terms (n)": 4 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = n × a + d",  "S_n = a + d × n",  "S_n = (a + d)/2 × n"],
+		"answer": 440
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A man earns $3000 in the first month and receives a $250 raise each month. What is his salary in month 9?",
+		"given": { "a": 3000, "d": 250, "n": 9 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a + nd",  "a_n = d + (n - 1)a"],
+		"answer": 5000
+	  },
+	  {
+		"text": "Tim collects 3 stamps the first week and increases by 4 weekly. How many does he collect in 5 weeks?",
+		"given": { "First term (a)": 3, "Common difference (d)": 4, "Number of terms (n)": 5 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a + d × n",  "S_n = a × d × n", "S_n = (a + d)/2 × n"],
+		"answer": 55
+      }
+	]
+  },
+]

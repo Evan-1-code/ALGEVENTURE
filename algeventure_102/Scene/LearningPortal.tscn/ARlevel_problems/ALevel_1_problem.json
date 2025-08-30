@@ -3,18 +3,18 @@
 	"level": 1,
 	"problems": [
 	  {
-		"text": "A car traveled 120 km in 2 hours. What is the speed?",
-		"given": { "Distance": 120, "Time": 2 },
-		"formula": "Speed = Distance / Time",
-		"distractors": ["Speed = Time / Distance", "Speed = Distance * Time"],
-		"answer": 60
+		"text": "A library stacks books where the first row has 5 books, the second has 8, the third has 11, and so on. How many books are there in the 10th row?",
+		"given": { "a": 5, "d": 3, "n": 10 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a × (n - 1) + d", "a_n = a + (n + 1)d"],
+		"answer": 32
 	  },
 	  {
-		"text": "A train traveled 300 km in 5 hours. What is the speed?",
-		"given": { "Distance": 300, "Time": 5 },
-		"formula": "Speed = Distance / Time",
-		"distractors": ["Speed = Time / Distance", "Speed = Distance * Time"],
-		"answer": 60
+		"text": "Anna climbs 3 steps on the first day, 6 on the second, 9 on the third, and so on. How many steps does she climb in 10 days?",
+		"given": { "First term (a)": 3, "Common difference (d)": 3, "Number of terms (n)": 10 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors":  ["S_n = n × a", "S_n = a + (n - 1)d", "S_n = a × d × n"],
+		"answer": 165
 	  }
 	]
   },
@@ -22,18 +22,18 @@
 	"level": 2,
 	"problems": [
 	  {
-		"text": "A cyclist covered 90 km in 3 hours. What is the speed?",
-		"given": { "Distance": 90, "Time": 3 },
-		"formula": "Speed = Distance / Time",
-		"distractors": ["Speed = Time / Distance", "Speed = Distance * Time"],
-		"answer": 30
+		"text": "Julia saves $100 in the first month and increases her savings by $20 each month. How much does she save in the 6th month?",
+		"given": { "a": 100, "d": 20, "n": 6 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a × (n + 1) + d",  "a_n = a + nd"],
+		"answer": 200
 	  },
 	  {
-		"text": "A bus traveled 200 km in 4 hours. What is the speed?",
-		"given": { "Distance": 200, "Time": 4 },
-		"formula": "Speed = Distance / Time",
-		"distractors": ["Speed = Time / Distance", "Speed = Distance * Time"],
-		"answer": 50
+		"text": "Miguel saves ₱10 on the first week and increases his savings by ₱5 every week. How much will he save in 8 weeks?",
+		"given": { "First term (a)": 10, "Common difference (d)": 5, "Number of terms (n)": 8 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = n × (a + d)", "S_n = a × n + d", "S_n = a + d × n"],
+		"answer": 220
 	  }
 	]
   }
