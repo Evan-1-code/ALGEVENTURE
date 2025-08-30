@@ -2,7 +2,7 @@ extends Node
 
 @export var JSON_PATH: String = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_1_problem.json"
 
-enum Step { SHOW_PROBLEM, GIVEN, FORMULA, SOLVE, FEEDBACK }
+enum Step { SHOW_PROBLEM, GIVEN, FORMULA, SOLVE, FEEDBACK, END }
 var levels = []
 var current_level_index := 0
 var current_problem_index := 0
@@ -185,7 +185,9 @@ func _on_formula_selected(selected_formula):
 	if selected_formula == problem["formula"]:
 		FormulaFeedbackLabel.hide()
 		FormulaOptions.hide()
+		ProblemLabel.text += "\n\n[b]Correct Formula:[/b] " + selected_formula
 		_show_solve_phase()
+		
 	else:
 		FormulaFeedbackLabel.text = "[color=red]Not quite! Try again.[/color]"
 		FormulaFeedbackLabel.show()
@@ -237,11 +239,19 @@ func _show_feedback():
 	var last_problem = false
 	if typeof(level["problems"]) == TYPE_ARRAY:
 		last_problem = current_problem_index >= level["problems"].size() - 1
-	NextButton.text = "Next Problem" if not last_problem else "Next Level"
-	NextButton.show()
-	CalculatorButton.hide()
-	_hide_calculator()
-	return
+
+	if last_problem:
+		ProblemLabel.text += "\n\n[b]Level Complete![/b]"
+		if current_level_index < levels.size() - 1:
+			_next_as_next_level()
+		else:
+			_next_as_back_to_topics()
+
+	else:
+		NextButton.text = "Next Problem"
+		NextButton.show()
+		CalculatorButton.hide()
+		_hide_calculator()
 
 func _on_NextButton_pressed():
 	if current_step == Step.SHOW_PROBLEM:
@@ -269,7 +279,7 @@ func _on_NextButton_pressed():
 		if current_level_index < levels.size():
 			level = levels[current_level_index]
 		if level == null or not level.has("problems"):
-			ProblemLabel.text = "[b]All levels complete![/b]"
+			ProblemLabel.text = "[b]All stages complete![/b]"
 			NextButton.hide()
 			return
 		if typeof(level["problems"]) == TYPE_ARRAY and current_problem_index < level["problems"].size() - 1:
@@ -281,8 +291,16 @@ func _on_NextButton_pressed():
 			if current_level_index < levels.size():
 				_show_current_problem()
 			else:
-				ProblemLabel.text = "[b]All levels complete![/b]"
+				ProblemLabel.text = "[b]All stages complete![/b]"
 				NextButton.hide()
+
+	elif current_step == Step.END:
+		if NextButton.text == "Back to Topics":
+			get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.tscn")
+		elif NextButton.text == "Next Level":
+			current_level_index += 1
+			current_problem_index = 0
+			_show_current_problem()
 
 
 func _on_calculator_button_pressed() -> void:
@@ -302,3 +320,51 @@ func _on_calculator_button_pressed() -> void:
 func _hide_calculator():
 	if is_instance_valid(calculator_instance):
 		calculator_instance.hide()
+
+func _show_end_buttons():
+	# Create two buttons dynamically
+	var back_btn = Button.new()
+	back_btn.text = "Back to Topics"
+	back_btn.pressed.connect(_on_back_to_topics_pressed)
+	add_child(back_btn)
+	
+
+	var proceed_btn = Button.new()
+	if current_level_index < levels.size() - 1:
+		proceed_btn.text = "Next Level"
+		proceed_btn.pressed.connect(_on_next_level_pressed)
+	else:
+		proceed_btn.text = "Restart"
+		proceed_btn.pressed.connect(_on_back_to_topics_pressed)  # Restart goes to topics
+	add_child(proceed_btn) 
+	
+	ProgressManager.progress["al_1"] = true
+	ProgressManager.save_progress()
+	
+	
+	
+func _on_back_to_topics_pressed():
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/learning_portal.tscn")
+
+
+func _on_next_level_pressed():
+	current_level_index += 1
+	current_problem_index = 0
+	if current_level_index < levels.size():
+		_show_current_problem()
+	else:
+		ProblemLabel.text = "[b]All stages complete![/b]"
+
+func _next_as_back_to_topics():
+	current_step = Step.END
+	NextButton.text = "Back to Topics"
+	NextButton.show()
+	CalculatorButton.hide()
+	_hide_calculator()
+
+func _next_as_next_level():
+	current_step = Step.END
+	NextButton.text = "Next Level"
+	NextButton.show()
+	CalculatorButton.hide()
+	_hide_calculator()

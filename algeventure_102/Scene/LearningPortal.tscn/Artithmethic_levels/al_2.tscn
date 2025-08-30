@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://drye3g6mrtxq5"]
+[gd_scene load_steps=3 format=3 uid="uid://cmxpb05l6lnxq"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
-[node name="AL_1" type="Control"]
+[node name="AL_2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_2_problem.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -20,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0, 1, 1)
+color = Color(0.619087, 0.000282142, 0.619083, 1)
 
 [node name="ProblemLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -30,9 +31,9 @@ anchor_top = 0.069
 anchor_right = 0.495
 anchor_bottom = 0.069
 offset_left = -205.24
-offset_top = 111.288
-offset_right = 208.76
-offset_bottom = 302.288
+offset_top = 72.288
+offset_right = 213.76
+offset_bottom = 299.288
 grow_horizontal = 2
 text = "problemtext"
 

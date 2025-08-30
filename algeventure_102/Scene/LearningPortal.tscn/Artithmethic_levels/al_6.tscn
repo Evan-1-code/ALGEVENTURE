@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://drye3g6mrtxq5"]
+[gd_scene load_steps=3 format=3 uid="uid://i7wwdrjief2f"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 
@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_6_problem.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -31,8 +32,8 @@ anchor_right = 0.495
 anchor_bottom = 0.069
 offset_left = -205.24
 offset_top = 111.288
-offset_right = 208.76
-offset_bottom = 302.288
+offset_right = 207.76
+offset_bottom = 251.288
 grow_horizontal = 2
 text = "problemtext"
 

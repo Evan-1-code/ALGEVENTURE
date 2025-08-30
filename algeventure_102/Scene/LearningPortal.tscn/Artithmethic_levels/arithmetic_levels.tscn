@@ -96,3 +96,8 @@ text = "LEVEL 14"
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button7" to="." method="_on_button_7_pressed"]

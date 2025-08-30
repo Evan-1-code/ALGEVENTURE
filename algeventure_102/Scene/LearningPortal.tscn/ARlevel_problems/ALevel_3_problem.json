@@ -15,7 +15,7 @@
 		"formula": "S_n = n/2 × (2a + (n - 1)d)",
 		"distractors": ["S_n = a × n + d",  "S_n = n × d + a",  "S_n = a × d × n"],
 		"answer": 133
-      }
+	  }
 	]
   },
   {
@@ -34,7 +34,7 @@
 		"formula": "S_n = n/2 × (2a + (n - 1)d)",
 		"distractors": ["S_n = a + n × d",  "S_n = n × (a + d)",  "S_n = a × n + d"],
 		"answer": 57
-      }
+	  }
 	]
   },
 ]

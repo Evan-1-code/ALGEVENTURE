@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://e5qfhkfqm1ud"]
+[gd_scene load_steps=2 format=3 uid="uid://blujy48h1exnx"]
 
-[ext_resource type="Script" uid="uid://niww10lokbgt" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
+[ext_resource type="Script" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
 
 [node name="LearningPortal" type="Control"]
 layout_mode = 3
