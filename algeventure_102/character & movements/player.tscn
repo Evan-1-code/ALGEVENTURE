@@ -8,7 +8,7 @@ script/source = "extends CharacterBody2D
 @export var move_speed: float = 100.0
 var last_direction = \"down\"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 
 	if Input.is_action_pressed(\"move_right\"):
@@ -69,18 +69,6 @@ region = Rect2(0, 606, 454, 606)
 atlas = ExtResource("1_24tn0")
 region = Rect2(3632, 606, 454, 606)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dysq6"]
-atlas = ExtResource("1_24tn0")
-region = Rect2(1362, 1212, 454, 606)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sjign"]
-atlas = ExtResource("1_24tn0")
-region = Rect2(908, 1212, 454, 606)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_royl4"]
-atlas = ExtResource("1_24tn0")
-region = Rect2(2270, 1212, 454, 606)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_yyxy5"]
 atlas = ExtResource("1_24tn0")
 region = Rect2(454, 0, 454, 606)
@@ -104,6 +92,18 @@ region = Rect2(2724, 0, 454, 606)
 [sub_resource type="AtlasTexture" id="AtlasTexture_yns2a"]
 atlas = ExtResource("1_24tn0")
 region = Rect2(3178, 0, 454, 606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dysq6"]
+atlas = ExtResource("1_24tn0")
+region = Rect2(1362, 1212, 454, 606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjign"]
+atlas = ExtResource("1_24tn0")
+region = Rect2(908, 1212, 454, 606)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_royl4"]
+atlas = ExtResource("1_24tn0")
+region = Rect2(2270, 1212, 454, 606)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qss2d"]
 atlas = ExtResource("1_24tn0")
@@ -189,20 +189,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dysq6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sjign")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_royl4")
-}],
-"loop": true,
-"name": &"moeve_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_yyxy5")
 }, {
 "duration": 1.0,
@@ -221,7 +207,21 @@ animations = [{
 "texture": SubResource("AtlasTexture_yns2a")
 }],
 "loop": true,
-"name": &"move_down",
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dysq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjign")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_royl4")
+}],
+"loop": true,
+"name": &"walk_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -235,7 +235,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ya2lm")
 }],
 "loop": true,
-"name": &"move_right",
+"name": &"walk_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -258,7 +258,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dh8xr")
 }],
 "loop": true,
-"name": &"move_up",
+"name": &"walk_up",
 "speed": 5.0
 }]
 
@@ -271,7 +271,7 @@ script = SubResource("GDScript_24tn0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iu26j")
-animation = &"idle_down"
+animation = &"walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_nf5w6")
