@@ -4,7 +4,7 @@
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
-[node name="AL_1" type="Control"]
+[node name="AL_7" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -15,6 +15,20 @@ var progress = {
 	"al_12": false,
 	"al_13": false,
 	"al_14": false,
+	"gl_1": false,
+	"gl_2": false,
+	"gl_3": false,
+	"gl_4": false,
+	"gl_5": false,
+	"gl_6": false,
+	"gl_7": false,
+	"gl_8": false,
+	"gl_9": false,
+	"gl_10": false,
+	"gl_11": false,
+	"gl_12": false,
+	"gl_13": false,
+	"gl_14": false,
 }
 
 const SAVE_PATH = "user://progress.save"

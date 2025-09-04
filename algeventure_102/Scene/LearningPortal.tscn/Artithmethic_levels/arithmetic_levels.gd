@@ -41,3 +41,31 @@ func _on_button_6_pressed() -> void:
 
 func _on_button_7_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_7.tscn")
+
+
+func _on_button_8_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_8.tscn")
+
+
+func _on_button_9_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_9.tscn")
+
+
+func _on_button_10_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_10.tscn")
+
+
+func _on_button_11_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_11.tscn")
+
+
+func _on_button_12_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_12.tscn")
+
+
+func _on_button_13_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_13.tscn")
+
+
+func _on_button_14_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_14.tscn")

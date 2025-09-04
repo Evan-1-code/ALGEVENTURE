@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://drye3g6mrtxq5"]
+[gd_scene load_steps=4 format=3 uid="uid://nqj3e1kxdw0u"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 [ext_resource type="Texture2D" uid="uid://dnfdr6fx6cuco" path="res://Assets/Sprites/Learning_Mode_Preview.jpg" id="2_pda0v"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
-[node name="AL_1" type="Control"]
+[node name="GL_8" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_8_problem.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

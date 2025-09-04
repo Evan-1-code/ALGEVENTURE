@@ -1,0 +1,59 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "Find the sum of the first 15 terms of a geometric sequence where a1 = 4 and r = 3/2.",
+        "given": { "a1": 4, "r": 1.5, "n": 15 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+        "answer": 32766
+      },
+      {
+        "text": "Find the sum of the first 10 terms where a1 = 5 and r = -1/2.",
+        "given": { "a1": 5, "r": -0.5, "n": 10 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 + r^n) / (1 + r)"],
+        "answer": 3.9922
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "Find the sum of an infinite geometric series where a1 = 12 and r = 1/4.",
+        "given": { "a1": 12, "r": 0.25 },
+        "formula": "S∞ = a1 / (1 - r)",
+        "distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+        "answer": 16
+      },
+      {
+        "text": "Find the sum of an infinite geometric series where a1 = 9 and r = -2/3.",
+        "given": { "a1": 9, "r": -2/3 },
+        "formula": "S∞ = a1 / (1 - r)",
+        "distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+        "answer": 27
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "Find the sum of the first 20 terms of a geometric sequence where a1 = 1/2 and r = 3/4.",
+        "given": { "a1": 0.5, "r": 0.75, "n": 20 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+        "answer": 1.9966
+      },
+      {
+        "text": "Find the sum of an infinite geometric series where a1 = 5 and r = -0.8.",
+        "given": { "a1": 5, "r": -0.8 },
+        "formula": "S∞ = a1 / (1 - r)",
+        "distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+        "answer": 2.7778
+      }
+    ]
+  }
+]

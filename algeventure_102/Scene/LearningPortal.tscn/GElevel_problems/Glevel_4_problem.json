@@ -1,0 +1,40 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "Find the 3rd term of the sequence: 15, 30, 60, ...",
+        "given": { "a1": 15, "r": 2, "n": 3 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = r^n", "an = a1 × r × n"],
+        "answer": 60
+      },
+      {
+        "text": "Find the 4th term of the sequence: 5, 15, 45, ...",
+        "given": { "a1": 5, "r": 3, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r^n", "an = r^(n-1)"],
+        "answer": 135
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "Find the 5th term of the sequence: 20, 40, 80, ...",
+        "given": { "a1": 20, "r": 2, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r × n", "an = a1 ÷ r^(n-1)"],
+        "answer": 320
+      },
+      {
+        "text": "Find the 4th term of the sequence: 2, 6, 18, ...",
+        "given": { "a1": 2, "r": 3, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 54
+      }
+    ]
+  }
+]

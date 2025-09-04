@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlgcwb2dfncnu"]
+[gd_scene load_steps=2 format=3 uid="uid://dlgcwb2dfncnu"]
 
 [ext_resource type="Script" uid="uid://c1cuce1jgxpdd" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.gd" id="1_bk81l"]
-[ext_resource type="PackedScene" uid="uid://cp152pr7bj3qc" path="res://Scene/back_button.tscn" id="2_sjl3w"]
 
 [node name="ArithmeticLevels" type="Control"]
 layout_mode = 3
@@ -95,18 +94,6 @@ text = "LEVEL 13"
 layout_mode = 2
 text = "LEVEL 14"
 
-[node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="BackButton" parent="Control" instance=ExtResource("2_sjl3w")]
-layout_mode = 0
-offset_left = 1079.0
-offset_top = 14.0
-offset_right = 1129.0
-offset_bottom = 45.0
-
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
@@ -114,10 +101,3 @@ offset_bottom = 45.0
 [connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button7" to="." method="_on_button_7_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button10" to="." method="_on_button_10_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button14" to="." method="_on_button_14_pressed"]

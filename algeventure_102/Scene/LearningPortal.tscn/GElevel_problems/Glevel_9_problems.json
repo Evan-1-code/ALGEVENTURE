@@ -1,0 +1,59 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "The 6th term of a geometric sequence is 192 and r = 2. Find the first term a1.",
+        "given": { "an": 192, "r": 2, "n": 6 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["a1 = an × r^(n-1)", "a1 = an / (n × r)"],
+        "answer": 6
+      },
+      {
+        "text": "Find the sum of the first 5 terms of a geometric sequence where a1 = 4 and r = -3.",
+        "given": { "a1": 4, "r": -3, "n": 5 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = n × (a1 + an)/2"],
+        "answer":  -292
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "A geometric sequence has a1 = 9 and a5 = 3. Find the common ratio r.",
+        "given": { "a1": 9, "a5": 3, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["r = a5 / (a1 × n)", "r = (a5 - a1)/(n-1)"],
+        "answer": 0.5
+      },
+      {
+        "text": "The sum of the first 6 terms of a geometric sequence is 189. If r = -2, find the first term a1.",
+        "given": { "Sn": 189, "r": -2, "n": 6 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["a1 = Sn / n", "a1 = Sn × (r + 1)/(r^n - 1)"],
+        "answer": 3
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "Find the 7th term of a geometric sequence where a1 = -2 and r = -3.",
+        "given": { "a1": -2, "r": -3, "n": 7 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r × (n-1)", "an = a1 × r × n"],
+        "answer": -1458
+      },
+      {
+        "text": "The sum of the first 8 terms of a geometric sequence is 2186. If r = 3, find the first term a1.",
+        "given": { "Sn": 2186, "r": 3, "n": 8 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["a1 = Sn / n", "a1 = Sn × (r - 1)/(r^n + 1)"],
+        "answer": 2
+      }
+    ]
+  }
+]

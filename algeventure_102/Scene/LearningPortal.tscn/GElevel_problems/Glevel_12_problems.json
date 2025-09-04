@@ -1,0 +1,59 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "A population of rabbits quadruples every 3 months. If there are 2 rabbits initially, how many after 12 months?",
+        "given": { "a1": 2, "r": 4, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
+        "answer": 128
+      },
+      {
+        "text": "An investor deposits $1500 at 6% interest compounded annually. What will it be worth after 10 years?",
+        "given": { "a1": 1500, "r": 1.06, "n": 10 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + n × r"],
+        "answer": 2678.29
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "A ball bounces to 7/10 of its previous height each time. Dropped from 5 meters, how high is the 9th bounce?",
+        "given": { "a1": 5, "r": 0.7, "n": 9 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 0.60
+      },
+      {
+        "text": "A tree grows 8% taller each year. If current height is 4 meters, what is height after 15 years?",
+        "given": { "a1": 4, "r": 1.08, "n": 15 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + n × r"],
+        "answer": 14.37
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "A mold doubles every 2 days. If it starts at 1.5 grams, what is its weight on the 10th day?",
+        "given": { "a1": 1.5, "r": 2, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + (n-1) × r"],
+        "answer": 24
+      },
+      {
+        "text": "A savings account deposits $800 annually, earning 7% compounded yearly. What is the value of the 15th deposit after 15 years?",
+        "given": { "a1": 800, "r": 1.07, "n": 15 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + (n-1) × r"],
+        "answer": 2395.84
+      }
+    ]
+  }
+]

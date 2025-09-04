@@ -1,0 +1,40 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "The 6th term of a geometric sequence is 192 and the common ratio r = 2. Find the first term a1.",
+        "given": { "an": 192, "r": 2, "n": 6 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["a1 = an × r^(n-1)", "a1 = an / (n × r)"],
+        "answer": 6
+      },
+      {
+        "text": "The sum of the first 5 terms of a geometric sequence is 121. If r = 3, find the first term a1.",
+        "given": { "Sn": 121, "r": 3, "n": 5 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["a1 = Sn / n", "a1 = Sn × (r - 1) / (r^n + 1)"],
+        "answer": 2
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "A geometric sequence has a1 = 8 and a5 = 128. Find the common ratio r.",
+        "given": { "a1": 8, "a5": 128, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["r = a5 / (a1 × n)", "r = (a5 - a1)/(n-1)"],
+        "answer": 2
+      },
+      {
+        "text": "The 4th term of a geometric sequence is -81 and a1 = -3. Find the common ratio r.",
+        "given": { "a1": -3, "an": -81, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["r = an / a1 × n", "r = an - a1 / (n-1)"],
+        "answer": 3
+      }
+    ]
+  }
+]
