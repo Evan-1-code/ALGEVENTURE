@@ -1,0 +1,59 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "Find the sum of the first 8 terms of a geometric sequence where a1 = 3 and r = 2.",
+        "given": { "a1": 3, "r": 2, "n": 8 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (r - 1)"],
+        "answer": 765
+      },
+      {
+        "text": "Find the sum of the first 6 terms where a1 = 5 and r = -2.",
+        "given": { "a1": 5, "r": -2, "n": 6 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 + r^n"],
+        "answer": -85
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "Find the sum of an infinite geometric sequence where a1 = 8 and r = 1/2.",
+        "given": { "a1": 8, "r": 0.5 },
+        "formula": "S∞ = a1 / (1 - r)",
+        "distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 × r / (1 - r)"],
+        "answer": 16
+      },
+      {
+        "text": "Find the sum of the first 10 terms of a geometric sequence where a1 = 2 and r = 3.",
+        "given": { "a1": 2, "r": 3, "n": 10 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+        "answer": 29524
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "Find the sum of an infinite geometric series where a1 = 7 and r = -1/3.",
+        "given": { "a1": 7, "r": -1/3 },
+        "formula": "S∞ = a1 / (1 - r)",
+        "distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+        "answer": 21/4
+      },
+      {
+        "text": "Find the sum of the first 12 terms of a geometric sequence where a1 = 1 and r = 2/3.",
+        "given": { "a1": 1, "r": 2/3, "n": 12 },
+        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+        "distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+        "answer": 1.9995
+      }
+    ]
+  }
+]

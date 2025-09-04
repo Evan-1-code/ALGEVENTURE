@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://blujy48h1exnx"]
+
+[ext_resource type="Script" uid="uid://niww10lokbgt" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
+
+[node name="LearningPortal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2pc2a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -2.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0547155, 0.0495686, 0.145245, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = -68.0
+offset_right = 239.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="arithmetic" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Arithmetic"
+
+[node name="geometric" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Geometric"
+
+[node name="Topic" type="Label" parent="."]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 143.0
+offset_right = 816.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 46
+text = "CHOOSE ONE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/arithmetic" to="." method="_on_arithmetic_pressed"]
+[connection signal="pressed" from="VBoxContainer/geometric" to="." method="_on_geometric_pressed"]

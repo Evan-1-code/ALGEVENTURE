@@ -1,0 +1,40 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "Find the 3rd term of the sequence: 25, 50, 100, ...",
+        "given": { "a1": 25, "r": 2, "n": 3 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = r^n", "an = a1 × r × n"],
+        "answer": 100
+      },
+      {
+        "text": "Find the 4th term of the sequence: 3, 9, 27, ...",
+        "given": { "a1": 3, "r": 3, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r^n", "an = r^(n-1)"],
+        "answer": 81
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "Find the 5th term of the sequence: 4, 8, 16, ...",
+        "given": { "a1": 4, "r": 2, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r × n", "an = a1 ÷ r^(n-1)"],
+        "answer": 64
+      },
+      {
+        "text": "Find the 4th term of the sequence: 7, 14, 28, ...",
+        "given": { "a1": 7, "r": 2, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 56
+      }
+    ]
+  }
+]

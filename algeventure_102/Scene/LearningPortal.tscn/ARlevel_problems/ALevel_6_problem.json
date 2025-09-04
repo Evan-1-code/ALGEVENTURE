@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "A tank is filled with 10 liters of water every 30 minutes. How much water is added after 6 intervals?",
+		"given": { "a": 10, "d": 0, "n": 6 },
+		"formula": "S_n = n × a",
+		"distractors": ["S_n = n × d",  "S_n = n/2 × a"],
+		"answer": 60
+	  },
+	  {
+		"text": "A plant grows 3 cm each week. If it was 5 cm tall at the start, how tall will it be after 8 weeks?",
+		"given": { "Initial height": 5, "Growth per week": 3, "Weeks": 8 },
+		"formula": "Height = a + (n - 1) × d",
+		"distractors": "Height = a + (n - 1) × d",
+		"answer": 26
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A brick tower increases by 3 bricks per layer. The first layer has 7 bricks. How many bricks are in the 20th layer?",
+		"given": { "a": 7, "d": 3, "n": 20 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = d + (n + 1)a",  "a_n = a × (n + 1) + d"],
+		"answer": 64
+	  },
+	  {
+		"text": "A student saves ₱200 in the first month and increases the amount saved by ₱50 each month. How much will he save in the 6th month?",
+		"given": { "First month saving": 200, "Monthly increase": 50, "Month": 6 },
+		"formula": "Saving = a + (n - 1) × d",
+		"distractors": ["Saving = a × n + d", "Saving = a + n × d"],
+		"answer": 450
+      }
+	]
+  },
+]

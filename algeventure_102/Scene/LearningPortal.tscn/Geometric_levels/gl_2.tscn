@@ -1,0 +1,117 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyqr1iaox6ckg"]
+
+[ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
+[ext_resource type="Texture2D" uid="uid://dnfdr6fx6cuco" path="res://Assets/Sprites/Learning_Mode_Preview.jpg" id="2_pda0v"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
+
+[node name="GL_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_2_problem.json"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 1, 1)
+
+[node name="LearningModePreview" type="Sprite2D" parent="."]
+position = Vector2(574.5, 324.5)
+scale = Vector2(1.80156, 1.79167)
+texture = ExtResource("2_pda0v")
+
+[node name="ProblemLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.069
+anchor_right = 0.495
+anchor_bottom = 0.069
+offset_left = -314.24
+offset_top = 42.288
+offset_right = 347.76
+offset_bottom = 233.288
+grow_horizontal = 2
+text = "problemtext"
+
+[node name="FormulaOptions" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 441.0
+offset_right = 846.0
+offset_bottom = 516.0
+
+[node name="SolutionSteps" type="Label" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 490.0
+offset_right = 347.0
+offset_bottom = 513.0
+text = "Answer"
+
+[node name="Given" type="Label" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 412.0
+offset_right = 259.0
+offset_bottom = 435.0
+text = "Given"
+
+[node name="FormulaFeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 485.0
+offset_right = 464.0
+offset_bottom = 508.0
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 454.0
+offset_right = 911.0
+offset_bottom = 493.0
+
+[node name="SolveFeedbackLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.035
+offset_left = 375.0
+offset_top = 414.0
+offset_right = 395.416
+offset_bottom = 414.32
+
+[node name="GivenInputContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 406.0
+offset_right = 503.0
+offset_bottom = 446.0
+
+[node name="SolveInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 519.0
+offset_right = 309.563
+offset_bottom = 550.0
+
+[node name="CalculatorButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 81.0
+offset_top = 134.0
+offset_right = 172.0
+offset_bottom = 165.0
+text = "Calculator"
+icon = SubResource("ImageTexture_lssfj")
+
+[connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]

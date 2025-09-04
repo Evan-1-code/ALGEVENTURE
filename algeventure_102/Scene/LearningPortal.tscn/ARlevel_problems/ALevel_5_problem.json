@@ -1,0 +1,40 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Alex walks 1 km on day 1, 1.5 km on day 2, 2 km on day 3, and so on. How far does he walk on day 8?",
+		"given": { "a": 1, "d": 0.5, "n": 8 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": [ "a_n = a + (n + 1)d",  "a_n = d + (n - 1)a"],
+		"answer": 4.5
+	  },
+	  {
+		"text": "A classroom has 4 chairs in the first row, 7 in the second, continuing in this pattern. How many in 6 rows?",
+		"given": { "First term (a)": 4, "Common difference (d)": 3, "Number of terms (n)": 6 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": [ "S_n = a + d × n",  "S_n = (a + d)/2 × n",  "S_n = n × a + d"],
+		"answer": 69
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A student scores 70 on the first test and increases the score by 5 in each following test. What is the score on the 5th test?",
+		"given": { "a": 70, "d": 5, "n": 5 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a + nd",  "a_n = (n - 1) × a + d"],
+		"answer": 90
+	  },
+	  {
+		"text": "A delivery truck drops off 10 bottles, then 12 the next day, 14 the next. How many bottles after 8 days?",
+		"given": { "First term (a)": 10, "Common difference (d)": 2, "Number of terms (n)": 8 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": [ "S_n = a + d × n", "S_n = (a + d) × n", "S_n = n × a + d"],
+		"answer": 136
+      }
+	]
+  },
+]

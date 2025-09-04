@@ -1,0 +1,59 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "A bacteria population doubles every hour. If there are initially 3 bacteria, how many bacteria are there after 8 hours?",
+        "given": { "a1": 3, "r": 2, "n": 8 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
+        "answer": 384
+      },
+      {
+        "text": "An investor deposits $1000 at 5% interest per year compounded annually. What is the total after 6 years?",
+        "given": { "a1": 1000, "r": 1.05, "n": 6 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + n × r"],
+        "answer": 1338.23
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "A ball is dropped from 2 meters and bounces to 3/4 of its previous height each time. How high does it bounce on the 5th bounce?",
+        "given": { "a1": 2, "r": 0.75, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 0.594
+      },
+      {
+        "text": "A tree grows 10% taller every year. If its current height is 5 meters, what will be its height after 7 years?",
+        "given": { "a1": 5, "r": 1.1, "n": 7 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + n × r"],
+        "answer": 9.74
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "A savings account deposits $500 each year, and each deposit earns 6% compounded annually. How much will the 10th deposit be worth after 10 years?",
+        "given": { "a1": 500, "r": 1.06, "n": 10 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
+        "answer": 894.52
+      },
+      {
+        "text": "A fungus grows at a rate of 1.5 times its previous size every day. If it starts at 2 grams, what is its weight on the 9th day?",
+        "given": { "a1": 2, "r": 1.5, "n": 9 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + (n-1) × r"],
+        "answer": 152.58
+      }
+    ]
+  }
+]
