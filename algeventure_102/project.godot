@@ -45,6 +45,11 @@ move_down={
 ]
 }
 
+[autoload]
+SceneManager="*res://scene_manager.gd"
+ProgressManager="*res://progress_manager.gd"
+
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
