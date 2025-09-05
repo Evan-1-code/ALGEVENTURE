@@ -1,0 +1,59 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+        "text": "A pyramid of stones is arranged so that the first layer has 120 stones, the second layer has 116, the third layer has 112, and so on. How many stones are there in the 25th layer?",
+        "given": { "a": 120, "d": -4, "n": 25 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × (n - 1) + d", "a_n = (a + d)(n - 1)"],
+        "answer": 24
+      },
+	  {
+        "text": "A stadium arranges chairs in rows. The first row has 50 seats, the second has 55, the third has 60, and so on. How many seats are there in total in the first 40 rows?",
+        "given": { "a": 50, "d": 5, "n": 40 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+        "answer": 4200
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+        "text": "A researcher studies bacteria that decrease in number each hour. At the start, there are 10,000 bacteria, and every hour the count decreases by 250. How many bacteria remain after 37 hours?",
+        "given": { "a": 10000, "d": -250, "n": 37 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = (a + d)(n - 1)", "a_n = a × n - d"],
+        "answer": 7750
+      },
+	  {
+        "text": "A charity receives donations daily in arithmetic sequence. On the first day, it receives 1,000 pesos, on the second day 1,050 pesos, the third 1,100 pesos, and so on. How much total money will the charity receive in the first 30 days?",
+        "given": { "a": 1000, "d": 50, "n": 30 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
+        "answer": 52500
+      }
+	]
+  },
+  {
+	"level": 3,
+	"problems": [
+	  {
+        "text": "A satellite sends signals every few seconds in an arithmetic pattern. The first signal takes 3 seconds, the second 7 seconds, the third 11 seconds, and so on. At what second does the 80th signal occur?",
+        "given": { "a": 3, "d": 4, "n": 80 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × n + d", "a_n = (a + d)(n + 1)"],
+        "answer": 319
+      },
+	  {
+        "text": "An engineer builds steps for a monument. The first step has 150 bricks, the second has 158, the third 166, and so on. How many bricks are needed in total for the first 20 steps?",
+        "given": { "a": 150, "d": 8, "n": 20 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+        "answer": 3880
+      }
+	]
+  },
+]

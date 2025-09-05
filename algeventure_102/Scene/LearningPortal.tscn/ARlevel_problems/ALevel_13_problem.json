@@ -1,0 +1,59 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+        "text": "An artist arranges candles in a straight line where the first candle is 12 cm tall, the second is 15 cm, the third 18 cm, and so on. What is the height of the 85th candle?",
+        "given": { "a": 12, "d": 3, "n": 85 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+        "answer": 264
+      },
+	  {
+         "text": "A research team collects data samples in arithmetic sequence. On the first day they gather 500 samples, the second day 520, the third 540, and so on. How many samples do they collect in the first 45 days?",
+         "given": { "a": 500, "d": 20, "n": 45 },
+         "formula": "S_n = (n/2)(2a + (n - 1)d)",
+         "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+         "answer": 22950
+      }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+        "text": "An auditorium arranges seats in rows following arithmetic sequence. The first row has 80 seats, the second has 76, the third has 72, and so on. How many seats are there in the 25th row?",
+        "given": { "a": 80, "d": -4, "n": 25 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × n + d", "a_n = (a + d)(n - 1)"],
+        "answer": -16
+      },
+	  {
+        "text": "A building installs lights on each floor in arithmetic sequence. The first floor has 12 lights, the second has 16, the third has 20, and so on. How many lights are there in total after 35 floors?",
+        "given": { "a": 12, "d": 4, "n": 35 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+        "answer": 2870
+      }
+	]
+  },
+  {
+	"level": 3,
+	"problems": [
+	  {
+        "text": "A scientist observes a pulsar whose light flashes in arithmetic sequence. The first flash interval is 1.2 seconds, the second is 1.6 seconds, the third is 2.0 seconds, and so on. What is the interval for the 100th flash?",
+        "given": { "a": 1.2, "d": 0.4, "n": 100 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+        "answer": 40.8
+      },
+	  {
+        "text": "A pyramid is built with blocks arranged in rows following arithmetic sequence. The first row has 80 blocks, the second has 77, the third has 74, and so on. How many blocks are there in total in the first 40 rows?",
+        "given": { "a": 80, "d": -3, "n": 40 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
+        "answer": 740
+      }
+	]
+  },
+]

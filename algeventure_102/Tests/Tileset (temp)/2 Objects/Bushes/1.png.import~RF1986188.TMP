@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7byd7x2k7y7s"
+<<<<<<<< HEAD:algeventure_102/Tests/Tileset (temp)/2 Objects/Bushes/1.png.import
+uid="uid://dx5yb8tqxm1m"
+path="res://.godot/imported/1.png-8c7460db19ae5d4db3ccf7a5b6a3039a.ctex"
+========
+uid="uid://c1rsib68quecm"
 path="res://.godot/imported/Spritesheet (1).png-7106b941fd1ac2f77811c3a13ce35172.ctex"
+>>>>>>>> movement:algeventure_102/Assets/Spritesheet (1).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:algeventure_102/Tests/Tileset (temp)/2 Objects/Bushes/1.png.import
+source_file="res://Tests/Tileset (temp)/2 Objects/Bushes/1.png"
+dest_files=["res://.godot/imported/1.png-8c7460db19ae5d4db3ccf7a5b6a3039a.ctex"]
+========
 source_file="res://Assets/Spritesheet (1).png"
 dest_files=["res://.godot/imported/Spritesheet (1).png-7106b941fd1ac2f77811c3a13ce35172.ctex"]
+>>>>>>>> movement:algeventure_102/Assets/Spritesheet (1).png.import
 
 [params]
 
