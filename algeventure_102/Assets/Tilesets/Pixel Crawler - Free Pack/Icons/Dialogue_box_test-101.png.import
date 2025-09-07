@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:algeventure_102/Tests/Tileset (temp)/2 Objects/Bushes/1.png.import
-uid="uid://dx5yb8tqxm1m"
-path="res://.godot/imported/1.png-8c7460db19ae5d4db3ccf7a5b6a3039a.ctex"
-========
-uid="uid://6hahah88pvg6"
+uid="uid://b32fh4cvax17t"
 path="res://.godot/imported/Dialogue_box_test-101.png-fce7e5c42bc3793ea3ee558440e91332.ctex"
->>>>>>>> dialogue-restore:algeventure_102/Assets/Tilesets/Pixel Crawler - Free Pack/Icons/Dialogue_box_test-101.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:algeventure_102/Tests/Tileset (temp)/2 Objects/Bushes/1.png.import
-source_file="res://Tests/Tileset (temp)/2 Objects/Bushes/1.png"
-dest_files=["res://.godot/imported/1.png-8c7460db19ae5d4db3ccf7a5b6a3039a.ctex"]
-========
 source_file="res://Assets/Tilesets/Pixel Crawler - Free Pack/Icons/Dialogue_box_test-101.png"
 dest_files=["res://.godot/imported/Dialogue_box_test-101.png-fce7e5c42bc3793ea3ee558440e91332.ctex"]
->>>>>>>> dialogue-restore:algeventure_102/Assets/Tilesets/Pixel Crawler - Free Pack/Icons/Dialogue_box_test-101.png.import
 
 [params]
 
