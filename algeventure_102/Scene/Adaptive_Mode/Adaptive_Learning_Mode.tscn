@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4v0ygdo0uwvo"]
+
+[ext_resource type="Script" uid="uid://dbi33wtd7srpm" path="res://Scene/Adaptive_Mode/adaptive_learning_mode.gd" id="1_52nv3"]
+
+[node name="AdaptiveLearningMode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52nv3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.411676, 0.526523, 0.452602, 1)
+
+[node name="ProblemLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 131.0
+offset_right = 1058.0
+offset_bottom = 307.0
+text = "problem"
+
+[node name="AnswerLine" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 388.0
+offset_right = 431.0
+offset_bottom = 430.0
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 440.0
+offset_right = 329.0
+offset_bottom = 478.0
+text = "SUBMIT"
+
+[node name="RatingContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 472.0
+offset_right = 729.0
+offset_bottom = 503.0
+
+[node name="EasyButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+text = "  Easy  "
+
+[node name="MediumButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+text = "Medium"
+
+[node name="HardButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " Hard  "
