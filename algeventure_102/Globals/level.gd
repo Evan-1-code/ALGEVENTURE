@@ -3,7 +3,7 @@ extends Node
 @export var PlayerScene = load("res://Animation/Player/player(test).tscn") as PackedScene# Drag Player.tscn here
 
 var player: Node2D 
-
+var player_inside = false
 
 func _ready():
 	if NavigationManager.is_first_load and get_name() == "town_map_1":
@@ -35,3 +35,5 @@ func _spawn_player_at_door(door_group: String) -> void:
 			return
 	
 	push_warning("Door with tag %s not found in this level!" % door_group)
+
+@export var target_scene: String = "res://Scene/LearningPortal.tscn/learning_portal.tscn"

@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://bvon6b3ydhufk"]
+[gd_scene load_steps=9 format=4 uid="uid://bvon6b3ydhufk"]
 
-[ext_resource type="PackedScene" uid="uid://dbmy2mm3i2p00" path="res://Animation/Player/player(test).tscn" id="1_35fot"]
 [ext_resource type="Script" uid="uid://bf2o5od3cwdqy" path="res://Globals/level.gd" id="1_hik4p"]
 [ext_resource type="Texture2D" uid="uid://oul76q8c1r1m" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="2_vxgha"]
 [ext_resource type="Script" uid="uid://ciswljb1we0b5" path="res://Globals/door.gd" id="4_hik4p"]
+[ext_resource type="Script" uid="uid://o1kmpqhg58p" path="res://portal.gd" id="4_qlmqc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hik4p"]
 texture = ExtResource("2_vxgha")
@@ -273,6 +273,9 @@ sources/0 = SubResource("TileSetAtlasSource_hik4p")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_excey"]
 size = Vector2(70, 82)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbfdg"]
+size = Vector2(334.5, 107.5)
+
 [node name="town_map_1" type="Node2D"]
 script = ExtResource("1_hik4p")
 
@@ -286,10 +289,6 @@ drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
 drag_bottom_margin = 0.0
-
-[node name="player(test)" parent="." instance=ExtResource("1_35fot")]
-visible = false
-position = Vector2(-347, -100)
 
 [node name="Node" type="Node" parent="."]
 
@@ -312,4 +311,14 @@ scale = Vector2(-5.18681, 6.48612)
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 
+[node name="Portal" type="Area2D" parent="."]
+position = Vector2(24, -52)
+script = ExtResource("4_qlmqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+position = Vector2(-94.75, -183.25)
+shape = SubResource("RectangleShape2D_nbfdg")
+
 [connection signal="body_entered" from="Node/Door_N" to="Node/Door_N" method="_on_body_entered"]
+[connection signal="body_entered" from="Portal" to="Portal" method="_on_body_entered"]
+[connection signal="body_exited" from="Portal" to="Portal" method="_on_body_exited"]

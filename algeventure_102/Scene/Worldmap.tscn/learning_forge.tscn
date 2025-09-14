@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://oul76q8c1r1m" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_51irs"]
 [ext_resource type="Script" uid="uid://bf2o5od3cwdqy" path="res://Globals/level.gd" id="1_dxoqu"]
-[ext_resource type="PackedScene" uid="uid://dbmy2mm3i2p00" path="res://Animation/Player/player(test).tscn" id="2_cv0i3"]
+[ext_resource type="PackedScene" uid="uid://bd12wtwow4lu3" path="res://Animation/Player/player(test).tscn" id="2_cv0i3"]
 [ext_resource type="Script" uid="uid://ciswljb1we0b5" path="res://Globals/door.gd" id="4_dxoqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxoqu"]
