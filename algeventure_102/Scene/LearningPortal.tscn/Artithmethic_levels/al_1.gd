@@ -16,11 +16,14 @@ var current_step: Step = Step.SHOW_PROBLEM
 @onready var SolveInput = $SolveInput
 @onready var SolveFeedbackLabel = $SolveFeedbackLabel
 @onready var CalculatorButton = $CalculatorButton
+@onready var GivenLabel = $Given
+@onready var AnswerLabel = $SolutionSteps
 
 var calculator_instance = null
 var calculator_scene = preload("res://Scene/Calculatorscene/calculator.tscn")
 
 func _ready():
+	ProblemLabel.bbcode_enabled = true
 	_load_levels_from_json(JSON_PATH)
 	_show_current_problem()
 	if not NextButton.pressed.is_connected(_on_NextButton_pressed):
@@ -59,6 +62,8 @@ func _show_current_problem():
 	var problem = _get_current_problem()
 	if problem == null:
 		ProblemLabel.text = "No more problems."
+		GivenLabel.hide()
+		AnswerLabel.hide()
 		NextButton.hide()
 		GivenInputContainer.hide()
 		FormulaOptions.hide()
@@ -81,6 +86,9 @@ func _show_current_problem():
 
 func _show_given_inputs():
 	current_step = Step.GIVEN
+	GivenLabel.text = "Given:"
+	GivenLabel.show()
+	AnswerLabel.hide()
 	NextButton.text = "Submit"
 	NextButton.show()
 	FormulaOptions.hide()
@@ -198,6 +206,9 @@ func _on_formula_selected(selected_formula):
 
 func _show_solve_phase():
 	current_step = Step.SOLVE
+	GivenLabel.hide()
+	AnswerLabel.text = "Answer:"
+	AnswerLabel.show()
 	NextButton.text = "Submit"
 	NextButton.show()
 	FormulaOptions.hide()

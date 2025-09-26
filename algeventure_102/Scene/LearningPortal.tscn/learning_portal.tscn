@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://blujy48h1exnx"]
+[gd_scene load_steps=3 format=3 uid="uid://blujy48h1exnx"]
 
 [ext_resource type="Script" uid="uid://niww10lokbgt" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_ia20t"]
 
 [node name="LearningPortal" type="Control"]
 layout_mode = 3
@@ -57,6 +58,15 @@ theme_override_font_sizes/font_size = 46
 text = "CHOOSE ONE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1102.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 35.0
+text = "Back"
+script = ExtResource("2_ia20t")
 
 [connection signal="pressed" from="VBoxContainer/arithmetic" to="." method="_on_arithmetic_pressed"]
 [connection signal="pressed" from="VBoxContainer/geometric" to="." method="_on_geometric_pressed"]

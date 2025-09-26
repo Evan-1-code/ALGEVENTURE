@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlgcwb2dfncnu"]
+[gd_scene load_steps=5 format=3 uid="uid://dlgcwb2dfncnu"]
 
 [ext_resource type="Script" uid="uid://c1cuce1jgxpdd" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.gd" id="1_bk81l"]
-[ext_resource type="PackedScene" uid="uid://cp152pr7bj3qc" path="res://Scene/back_button.tscn" id="2_sjl3w"]
+[ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="2_3013g"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_sjl3w"]
+[ext_resource type="Texture2D" uid="uid://b6qxydm14kc8t" path="res://Tests/buttonsui/Untitled13_20250922143711.png" id="3_q2dxk"]
 
 [node name="ArithmeticLevels" type="Control"]
 layout_mode = 3
@@ -41,11 +43,17 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 1"
+text = "              "
+icon = ExtResource("2_3013g")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 2"
+text = "               "
+icon = ExtResource("3_q2dxk")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -95,17 +103,12 @@ text = "LEVEL 13"
 layout_mode = 2
 text = "LEVEL 14"
 
-[node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="BackButton" parent="Control" instance=ExtResource("2_sjl3w")]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1079.0
-offset_top = 14.0
-offset_right = 1129.0
-offset_bottom = 45.0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_sjl3w")
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

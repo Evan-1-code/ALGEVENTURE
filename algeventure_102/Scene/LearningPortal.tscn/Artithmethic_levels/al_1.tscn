@@ -21,9 +21,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0, 1, 1)
+color = Color(9.62615e-08, 0.459551, 0.503395, 1)
 
 [node name="LearningModePreview" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(574.5, 324.5)
 scale = Vector2(1.80156, 1.79167)
 texture = ExtResource("2_pda0v")
@@ -44,10 +45,10 @@ text = "problemtext"
 
 [node name="FormulaOptions" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 441.0
-offset_right = 846.0
-offset_bottom = 516.0
+offset_left = 308.0
+offset_top = 432.0
+offset_right = 845.0
+offset_bottom = 507.0
 
 [node name="SolutionSteps" type="Label" parent="."]
 layout_mode = 0
@@ -59,10 +60,10 @@ text = "Answer"
 
 [node name="Given" type="Label" parent="."]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 412.0
-offset_right = 259.0
-offset_bottom = 435.0
+offset_left = 246.0
+offset_top = 415.0
+offset_right = 291.0
+offset_bottom = 438.0
 text = "Given"
 
 [node name="FormulaFeedbackLabel" type="Label" parent="."]
@@ -74,10 +75,10 @@ offset_bottom = 508.0
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 816.0
-offset_top = 454.0
-offset_right = 911.0
-offset_bottom = 493.0
+offset_left = 861.0
+offset_top = 474.0
+offset_right = 956.0
+offset_bottom = 513.0
 
 [node name="SolveFeedbackLabel" type="Label" parent="."]
 layout_mode = 1
@@ -91,10 +92,10 @@ offset_bottom = 414.32
 
 [node name="GivenInputContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 334.0
-offset_top = 406.0
-offset_right = 503.0
-offset_bottom = 446.0
+offset_left = 299.0
+offset_top = 422.0
+offset_right = 468.0
+offset_bottom = 462.0
 
 [node name="SolveInput" type="LineEdit" parent="."]
 layout_mode = 0

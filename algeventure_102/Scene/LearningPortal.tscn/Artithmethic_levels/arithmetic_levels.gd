@@ -6,6 +6,13 @@ extends Control
 @onready var al5_button: Button = $HBoxContainer/Button5
 @onready var al6_button: Button = $HBoxContainer/Button6
 @onready var al7_button: Button = $HBoxContainer/Button7
+@onready var al8_button: Button = $HBoxContainer/Button8
+@onready var al9_button: Button = $HBoxContainer/Button9
+@onready var al10_button: Button = $HBoxContainer/Button10
+@onready var al11_button: Button = $HBoxContainer/Button11
+@onready var al12_button: Button = $HBoxContainer/Button12
+@onready var al13_button: Button = $HBoxContainer/Button13
+@onready var al14_button: Button = $HBoxContainer/Button14
 
 func _ready():
 	al2_button.disabled = not ProgressManager.progress["al_1"]
@@ -14,6 +21,17 @@ func _ready():
 	al5_button.disabled = not ProgressManager.progress["al_4"]
 	al6_button.disabled = not ProgressManager.progress["al_5"]
 	al7_button.disabled = not ProgressManager.progress["al_6"]
+	al8_button.disabled = not ProgressManager.progress["al_7"]
+	al9_button.disabled = not ProgressManager.progress["al_8"]
+	al10_button.disabled = not ProgressManager.progress["al_9"]
+	al11_button.disabled = not ProgressManager.progress["al_10"]
+	al12_button.disabled = not ProgressManager.progress["al_11"]
+	al13_button.disabled = not ProgressManager.progress["al_12"]
+	al14_button.disabled = not ProgressManager.progress["al_13"]
+
+# Save the current scene's path before switching
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
+
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.tscn")

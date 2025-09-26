@@ -6,6 +6,13 @@ extends Control
 @onready var gl5_button: Button = $HBoxContainer/Button5
 @onready var gl6_button: Button = $HBoxContainer/Button6
 @onready var gl7_button: Button = $HBoxContainer/Button7
+@onready var gl8_button: Button = $HBoxContainer/Button8
+@onready var gl9_button: Button = $HBoxContainer/Button9
+@onready var gl10_button: Button = $HBoxContainer/Button10
+@onready var gl11_button: Button = $HBoxContainer/Button11
+@onready var gl12_button: Button = $HBoxContainer/Button12
+@onready var gl13_button: Button = $HBoxContainer/Button13
+@onready var gl14_button: Button = $HBoxContainer/Button14
 
 func _ready():
 	gl2_button.disabled = not ProgressManager.progress["gl_1"]
@@ -14,6 +21,15 @@ func _ready():
 	gl5_button.disabled = not ProgressManager.progress["gl_4"]
 	gl6_button.disabled = not ProgressManager.progress["gl_5"]
 	gl7_button.disabled = not ProgressManager.progress["gl_6"]
+	gl8_button.disabled = not ProgressManager.progress["gl_7"]
+	gl9_button.disabled = not ProgressManager.progress["gl_8"]
+	gl10_button.disabled = not ProgressManager.progress["gl_9"]
+	gl11_button.disabled = not ProgressManager.progress["gl_10"]
+	gl12_button.disabled = not ProgressManager.progress["gl_11"]
+	gl13_button.disabled = not ProgressManager.progress["gl_12"]
+	gl14_button.disabled = not ProgressManager.progress["gl_13"]
+
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_1.tscn")

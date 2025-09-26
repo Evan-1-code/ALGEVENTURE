@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://degcfcb0hgedb"]
 
 [ext_resource type="Script" uid="uid://bv26jdsl6rc1t" path="res://Scene/LearningPortal.tscn/Geometric_levels/geometric_levels.gd" id="1_4n6iw"]
-[ext_resource type="PackedScene" uid="uid://cp152pr7bj3qc" path="res://Scene/back_button.tscn" id="2_7ixvh"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_7ixvh"]
 
 [node name="GeometricLevels" type="Control"]
 layout_mode = 3
@@ -95,12 +95,14 @@ text = "LEVEL 13"
 layout_mode = 2
 text = "LEVEL 14"
 
-[node name="BackButton" parent="." instance=ExtResource("2_7ixvh")]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1060.0
-offset_top = 19.0
-offset_right = 1110.0
-offset_bottom = 50.0
+offset_left = 1102.0
+offset_top = 3.0
+offset_right = 1147.0
+offset_bottom = 34.0
+text = "Back"
+script = ExtResource("2_7ixvh")
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

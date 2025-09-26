@@ -247,6 +247,3 @@ scale = Vector2(0.875, 0.820313)
 position = Vector2(16.6667, 9.99999)
 scale = Vector2(0.875, 0.820313)
 shape = SubResource("RectangleShape2D_mq8vs")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
