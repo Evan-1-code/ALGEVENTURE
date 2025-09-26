@@ -16,3 +16,7 @@ func _on_arithmetic_pressed() -> void:
 
 func _on_geometric_pressed() -> void:
 	SceneManager.change_scene("res://Scene/LearningPortal.tscn/Geometric_levels/geometric_levels.tscn")
+
+
+func _on_button_pressed() -> void:
+	SceneManager.change_scene("res://Tests/Main_menu.tscn")

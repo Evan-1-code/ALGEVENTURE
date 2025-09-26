@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://3i8luc3qc2rh"]
+[gd_scene load_steps=44 format=4 uid="uid://3i8luc3qc2rh"]
 
 [ext_resource type="Texture2D" uid="uid://cegxub26ex3xh" path="res://Tests/background 1/1.png" id="1_3mwku"]
 [ext_resource type="Texture2D" uid="uid://daa4jdjmhjm4e" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Walls.png" id="1_5g8yf"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://cy31gtk8cfutn" path="res://Tests/animated_sprite_2d_2.gd" id="11_jjywk"]
 [ext_resource type="FontFile" uid="uid://b6auj3lgsivtl" path="res://Tests/UI (temp)/10 Font/CyberpunkCraftpixPixel.otf" id="12_m08es"]
 [ext_resource type="Script" uid="uid://dlkomvkttoog3" path="res://Tests/building_button.gd" id="13_u6c6w"]
+[ext_resource type="Script" uid="uid://bysw2ip5nttac" path="res://Tests/portal_button.gd" id="15_l0rcp"]
+[ext_resource type="PackedScene" uid="uid://djip6ofap3po4" path="res://Scene/manual_screen.tscn" id="15_na3vl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxfix"]
 texture = ExtResource("5_3mwku")
@@ -2394,5 +2396,19 @@ offset_left = 867.0
 offset_top = 191.0
 offset_right = 1007.0
 offset_bottom = 348.0
+script = ExtResource("15_l0rcp")
+target_scene = "res://Scene/Adaptive_Mode/Adaptive_Learning_Mode.tscn"
+
+[node name="ManualUser" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 309.0
+offset_right = 594.0
+offset_bottom = 357.0
+text = "Manual"
+
+[node name="ManualScreen" parent="." instance=ExtResource("15_na3vl")]
 
 [connection signal="pressed" from="Control/BuildingButton" to="AnimatedSprite2D" method="_on_building_button_pressed"]
+[connection signal="pressed" from="Control/PortalButton" to="." method="_on_portal_button_pressed"]
+[connection signal="pressed" from="Control/ManualUser" to="." method="_on_manual_user_pressed"]

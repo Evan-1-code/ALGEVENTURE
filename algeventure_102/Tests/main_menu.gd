@@ -8,3 +8,7 @@ func _ready() -> void:
 	
 	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
 	
+
+
+func _on_manual_user_pressed() -> void:
+	$ManualScreen.open()

@@ -1,0 +1,53 @@
+{
+  "title": "SeQuest Manual",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "content": [
+        "Welcome to SeQuest! This manual will guide you through the mechanics and strategies of the game.",
+        "SeQuest is an educational game designed to help you understand and apply algebraic concepts in a fun, interactive environment."
+      ]
+    },
+    {
+      "id": "symbols",
+      "title": "Symbols",
+      "content": [
+        "Here are the key symbols you'll encounter:",
+        "🔢 - Represents numerical values",
+        "⚙️ - Represents operations",
+        "🔍 - Represents equation solving"
+      ]
+    },
+    {
+      "id": "formula",
+      "title": "Formula",
+      "content": [
+        "The key formulas used in SeQuest are:",
+        "Linear Equations: y = mx + b",
+        "Quadratic Equations: ax² + bx + c = 0"
+      ]
+    },
+    {
+      "id": "steps",
+      "title": "Steps",
+      "content": [
+        "Follow these steps to solve puzzles:",
+        "1. Identify the equation type",
+        "2. Collect the required variables",
+        "3. Apply the appropriate formula",
+        "4. Verify your solution"
+      ]
+    },
+    {
+      "id": "tips",
+      "title": "Tips",
+      "content": [
+        "Here are some helpful tips:",
+        "- Take your time to understand each problem",
+        "- Use the in-game calculator when needed",
+        "- Remember to check your work before submitting"
+      ]
+    }
+  ]
+}
