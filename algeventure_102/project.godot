@@ -22,7 +22,8 @@ NavigationManager="*res://Globals/navigation_manager.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [global_group]
 

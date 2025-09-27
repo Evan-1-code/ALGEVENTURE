@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlgcwb2dfncnu"]
+[gd_scene load_steps=17 format=3 uid="uid://dlgcwb2dfncnu"]
 
 [ext_resource type="Script" uid="uid://c1cuce1jgxpdd" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.gd" id="1_bk81l"]
 [ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="2_3013g"]
 [ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_sjl3w"]
 [ext_resource type="Texture2D" uid="uid://b6qxydm14kc8t" path="res://Tests/buttonsui/Untitled13_20250922143711.png" id="3_q2dxk"]
+[ext_resource type="Texture2D" uid="uid://bx74v6smxrmcm" path="res://Tests/buttonsui/Untitled13_20250922143721.png" id="4_4w0ha"]
+[ext_resource type="Texture2D" uid="uid://bllkqhiapn6ua" path="res://Tests/buttonsui/Untitled13_20250922143731.png" id="5_8fp7t"]
+[ext_resource type="Texture2D" uid="uid://dvqbgfng5pe0u" path="res://Tests/buttonsui/Untitled13_20250922143742.png" id="6_wa35d"]
+[ext_resource type="Texture2D" uid="uid://dc016mei0dnxp" path="res://Tests/buttonsui/Untitled13_20250922143753.png" id="7_mhqkk"]
+[ext_resource type="Texture2D" uid="uid://31qxhn4uwsti" path="res://Tests/buttonsui/Untitled13_20250922143803.png" id="8_oixk6"]
+[ext_resource type="Texture2D" uid="uid://bmyqltbsq1shf" path="res://Tests/buttonsui/Untitled13_20250922143813.png" id="9_jf27b"]
+[ext_resource type="Texture2D" uid="uid://8cldivphk4c2" path="res://Tests/buttonsui/Untitled13_20250922143823.png" id="10_4wvyp"]
+[ext_resource type="Texture2D" uid="uid://byqlsjdje1swa" path="res://Tests/buttonsui/Untitled13_20250922143835.png" id="11_5tllt"]
+[ext_resource type="Texture2D" uid="uid://dqgrmsumdhpj4" path="res://Tests/buttonsui/Untitled13_20250922143847.png" id="12_2o46g"]
+[ext_resource type="Texture2D" uid="uid://ch81cg27y416m" path="res://Tests/buttonsui/Untitled13_20250922143857.png" id="13_ae7sy"]
+[ext_resource type="Texture2D" uid="uid://bggdvhy0vh1vq" path="res://Tests/buttonsui/Untitled13_20250922143908.png" id="14_m676w"]
+[ext_resource type="Texture2D" uid="uid://c2y2xa8832rfy" path="res://Tests/buttonsui/Untitled13_20250922143917.png" id="15_r362p"]
 
 [node name="ArithmeticLevels" type="Control"]
 layout_mode = 3
@@ -43,7 +55,7 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "              "
+text = "               "
 icon = ExtResource("2_3013g")
 icon_alignment = 1
 expand_icon = true
@@ -57,51 +69,87 @@ expand_icon = true
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 3"
+text = "               "
+icon = ExtResource("4_4w0ha")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 4"
+text = "               "
+icon = ExtResource("5_8fp7t")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button5" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 5"
+text = "               "
+icon = ExtResource("6_wa35d")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button6" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 6"
+text = "                "
+icon = ExtResource("7_mhqkk")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button7" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 7"
+text = "                 "
+icon = ExtResource("8_oixk6")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button8" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 8"
+text = "                "
+icon = ExtResource("9_jf27b")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button9" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 9"
+text = "                 "
+icon = ExtResource("10_4wvyp")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button10" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 10"
+text = "                "
+icon = ExtResource("11_5tllt")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button11" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 11"
+text = "                 "
+icon = ExtResource("12_2o46g")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button12" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 12"
+text = "                 "
+icon = ExtResource("13_ae7sy")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button13" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 13"
+text = "                 "
+icon = ExtResource("14_m676w")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button14" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "LEVEL 14"
+text = "                 "
+icon = ExtResource("15_r362p")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
