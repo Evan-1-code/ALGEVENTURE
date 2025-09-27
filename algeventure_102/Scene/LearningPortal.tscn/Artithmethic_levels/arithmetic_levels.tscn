@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlgcwb2dfncnu"]
+[gd_scene load_steps=19 format=3 uid="uid://dlgcwb2dfncnu"]
 
 [ext_resource type="Script" uid="uid://c1cuce1jgxpdd" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.gd" id="1_bk81l"]
 [ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="2_3013g"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://ch81cg27y416m" path="res://Tests/buttonsui/Untitled13_20250922143857.png" id="13_ae7sy"]
 [ext_resource type="Texture2D" uid="uid://bggdvhy0vh1vq" path="res://Tests/buttonsui/Untitled13_20250922143908.png" id="14_m676w"]
 [ext_resource type="Texture2D" uid="uid://c2y2xa8832rfy" path="res://Tests/buttonsui/Untitled13_20250922143917.png" id="15_r362p"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="17_wa35d"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="18_mhqkk"]
 
 [node name="ArithmeticLevels" type="Control"]
 layout_mode = 3
@@ -151,12 +153,23 @@ icon = ExtResource("15_r362p")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="."]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Back"
 script = ExtResource("2_sjl3w")
+
+[node name="option_menu" parent="." instance=ExtResource("17_wa35d")]
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("18_mhqkk")
+expand_icon = true
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
@@ -172,3 +185,4 @@ script = ExtResource("2_sjl3w")
 [connection signal="pressed" from="HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button14" to="." method="_on_button_14_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

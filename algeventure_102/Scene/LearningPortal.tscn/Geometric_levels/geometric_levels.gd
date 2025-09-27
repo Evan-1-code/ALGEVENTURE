@@ -85,3 +85,8 @@ func _on_button_13_pressed() -> void:
 
 func _on_button_14_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_14.tscn")
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	pass # Replace with function body.

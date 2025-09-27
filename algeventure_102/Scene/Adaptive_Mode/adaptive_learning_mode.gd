@@ -58,6 +58,13 @@ func _ready() -> void:
 	hard_button.pressed.connect(_on_HardButton_pressed)
 	load_problems()
 	show_new_problem()
+	# Save the current scene's path before switching
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()
 
 func load_problems() -> void:
 	var path: String = "res://Scene/Adaptive_Mode/adaptive_problems.json"

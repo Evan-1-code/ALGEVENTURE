@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://degcfcb0hgedb"]
+[gd_scene load_steps=5 format=3 uid="uid://degcfcb0hgedb"]
 
 [ext_resource type="Script" uid="uid://bv26jdsl6rc1t" path="res://Scene/LearningPortal.tscn/Geometric_levels/geometric_levels.gd" id="1_4n6iw"]
 [ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_7ixvh"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="3_al07p"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_qswse"]
 
 [node name="GeometricLevels" type="Control"]
 layout_mode = 3
@@ -104,6 +106,24 @@ offset_bottom = 34.0
 text = "Back"
 script = ExtResource("2_7ixvh")
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_7ixvh")
+
+[node name="option_menu" parent="." instance=ExtResource("3_al07p")]
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("4_qswse")
+expand_icon = true
+
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
@@ -117,3 +137,4 @@ script = ExtResource("2_7ixvh")
 [connection signal="pressed" from="HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

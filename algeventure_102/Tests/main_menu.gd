@@ -12,3 +12,11 @@ func _ready() -> void:
 
 func _on_manual_user_pressed() -> void:
 	$ManualScreen.open()
+
+
+
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()

@@ -22,12 +22,19 @@ var current_step: Step = Step.SHOW_PROBLEM
 var calculator_instance = null
 var calculator_scene = preload("res://Scene/Calculatorscene/calculator.tscn")
 
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()
+
 func _ready():
 	ProblemLabel.bbcode_enabled = true
 	_load_levels_from_json(JSON_PATH)
 	_show_current_problem()
 	if not NextButton.pressed.is_connected(_on_NextButton_pressed):
 		NextButton.pressed.connect(_on_NextButton_pressed)
+	# Save the current scene's path before switching
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
 
 func _load_levels_from_json(path):
 	var file = FileAccess.open(path, FileAccess.READ)

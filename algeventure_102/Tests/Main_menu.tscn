@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://3i8luc3qc2rh"]
+[gd_scene load_steps=46 format=4 uid="uid://3i8luc3qc2rh"]
 
 [ext_resource type="Texture2D" uid="uid://cegxub26ex3xh" path="res://Tests/background 1/1.png" id="1_3mwku"]
 [ext_resource type="Texture2D" uid="uid://daa4jdjmhjm4e" path="res://Assets/Tilesets/Pixel Crawler - Free Pack/Environment/Structures/Buildings/Walls.png" id="1_5g8yf"]
@@ -16,6 +16,8 @@
 [ext_resource type="Script" uid="uid://dlkomvkttoog3" path="res://Tests/building_button.gd" id="13_u6c6w"]
 [ext_resource type="Script" uid="uid://bysw2ip5nttac" path="res://Tests/portal_button.gd" id="15_l0rcp"]
 [ext_resource type="PackedScene" uid="uid://djip6ofap3po4" path="res://Scene/manual_screen.tscn" id="15_na3vl"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="16_pqohv"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="18_s3ijx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxfix"]
 texture = ExtResource("5_3mwku")
@@ -2407,8 +2409,24 @@ offset_right = 594.0
 offset_bottom = 357.0
 text = "Manual"
 
+[node name="SettingsButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("16_pqohv")
+expand_icon = true
+
 [node name="ManualScreen" parent="." instance=ExtResource("15_na3vl")]
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 3.0
+offset_bottom = 7.0
+
+[node name="option_menu" parent="." instance=ExtResource("18_s3ijx")]
 
 [connection signal="pressed" from="Control/BuildingButton" to="AnimatedSprite2D" method="_on_building_button_pressed"]
 [connection signal="pressed" from="Control/PortalButton" to="." method="_on_portal_button_pressed"]
 [connection signal="pressed" from="Control/ManualUser" to="." method="_on_manual_user_pressed"]
+[connection signal="pressed" from="Control/SettingsButton" to="." method="_on_settings_button_pressed"]

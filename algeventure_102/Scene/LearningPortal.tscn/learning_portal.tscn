@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://blujy48h1exnx"]
+[gd_scene load_steps=9 format=3 uid="uid://blujy48h1exnx"]
 
 [ext_resource type="Script" uid="uid://niww10lokbgt" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
 [ext_resource type="Texture2D" uid="uid://b0yl6x7pspdlw" path="res://Tests/buttonsui/Untitled13_20250922144106.png" id="2_5jpa5"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c15ohykap1wh5" path="res://Tests/buttonsui/Untitled13_20250922144112.png" id="3_0jukx"]
 [ext_resource type="Script" uid="uid://2y5whcplacxl" path="res://Scene/LearningPortal.tscn/button.gd" id="3_2rlpj"]
 [ext_resource type="Texture2D" uid="uid://bd7quy5bh43q1" path="res://Tests/buttonsui/Untitled13_20250922144102.png" id="4_k3wij"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="7_k3wij"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="8_fuapg"]
 
 [node name="LearningPortal" type="Control"]
 layout_mode = 3
@@ -122,6 +124,18 @@ offset_bottom = 36.0
 text = "Back"
 script = ExtResource("3_2rlpj")
 
+[node name="option_menu" parent="." instance=ExtResource("7_k3wij")]
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("8_fuapg")
+expand_icon = true
+
 [connection signal="pressed" from="VBoxContainer/arithmetic" to="." method="_on_arithmetic_pressed"]
 [connection signal="pressed" from="VBoxContainer/geometric" to="." method="_on_geometric_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

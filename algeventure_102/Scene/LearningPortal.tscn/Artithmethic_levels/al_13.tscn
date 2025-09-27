@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjl1hksgb42jp"]
+[gd_scene load_steps=4 format=3 uid="uid://bjl1hksgb42jp"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_yxu72"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
@@ -106,5 +107,11 @@ offset_right = 213.0
 offset_bottom = 141.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
+
+[node name="BackButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_yxu72")
 
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]

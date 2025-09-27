@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8jfc084wje11"]
+[gd_scene load_steps=5 format=3 uid="uid://b8jfc084wje11"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 [ext_resource type="Texture2D" uid="uid://dnfdr6fx6cuco" path="res://Assets/Sprites/Learning_Mode_Preview.jpg" id="2_pda0v"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="3_0wdox"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
@@ -25,6 +26,7 @@ grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
 [node name="LearningModePreview" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(574.5, 324.5)
 scale = Vector2(1.80156, 1.79167)
 texture = ExtResource("2_pda0v")
@@ -113,5 +115,12 @@ offset_right = 172.0
 offset_bottom = 165.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("3_0wdox")
 
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
