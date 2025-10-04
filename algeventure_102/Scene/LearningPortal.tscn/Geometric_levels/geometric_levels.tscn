@@ -1,7 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://degcfcb0hgedb"]
+[gd_scene load_steps=24 format=3 uid="uid://degcfcb0hgedb"]
 
 [ext_resource type="Script" uid="uid://bv26jdsl6rc1t" path="res://Scene/LearningPortal.tscn/Geometric_levels/geometric_levels.gd" id="1_4n6iw"]
 [ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_7ixvh"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="3_al07p"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_qswse"]
+[ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="5_ujrit"]
+[ext_resource type="Texture2D" uid="uid://b6qxydm14kc8t" path="res://Tests/buttonsui/Untitled13_20250922143711.png" id="6_yvykp"]
+[ext_resource type="Texture2D" uid="uid://bx74v6smxrmcm" path="res://Tests/buttonsui/Untitled13_20250922143721.png" id="7_ldcsn"]
+[ext_resource type="Texture2D" uid="uid://bllkqhiapn6ua" path="res://Tests/buttonsui/Untitled13_20250922143731.png" id="8_20fji"]
+[ext_resource type="Texture2D" uid="uid://dvqbgfng5pe0u" path="res://Tests/buttonsui/Untitled13_20250922143742.png" id="9_lyhad"]
+[ext_resource type="Texture2D" uid="uid://dc016mei0dnxp" path="res://Tests/buttonsui/Untitled13_20250922143753.png" id="10_v5sc8"]
+[ext_resource type="Texture2D" uid="uid://31qxhn4uwsti" path="res://Tests/buttonsui/Untitled13_20250922143803.png" id="11_c2cs1"]
+[ext_resource type="Texture2D" uid="uid://bmyqltbsq1shf" path="res://Tests/buttonsui/Untitled13_20250922143813.png" id="12_e64tx"]
+[ext_resource type="Texture2D" uid="uid://8cldivphk4c2" path="res://Tests/buttonsui/Untitled13_20250922143823.png" id="13_ux4cn"]
+[ext_resource type="Texture2D" uid="uid://byqlsjdje1swa" path="res://Tests/buttonsui/Untitled13_20250922143835.png" id="14_eb3hp"]
+[ext_resource type="Texture2D" uid="uid://dqgrmsumdhpj4" path="res://Tests/buttonsui/Untitled13_20250922143847.png" id="15_xqnys"]
+[ext_resource type="Texture2D" uid="uid://ch81cg27y416m" path="res://Tests/buttonsui/Untitled13_20250922143857.png" id="16_p4bwk"]
+[ext_resource type="Texture2D" uid="uid://bggdvhy0vh1vq" path="res://Tests/buttonsui/Untitled13_20250922143908.png" id="17_ojvft"]
+[ext_resource type="Texture2D" uid="uid://c2y2xa8832rfy" path="res://Tests/buttonsui/Untitled13_20250922143917.png" id="18_q1sqn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb4gx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtm4m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2akxw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qn8w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gl04"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="GeometricLevels" type="Control"]
 layout_mode = 3
@@ -25,76 +56,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0784314, 0.109804, 0.14902, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -495.0
-offset_top = -78.0
-offset_right = 495.0
-offset_bottom = 78.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 1"
-
-[node name="Button2" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 2"
-
-[node name="Button3" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 3"
-
-[node name="Button4" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 4"
-
-[node name="Button5" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 5"
-
-[node name="Button6" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 6"
-
-[node name="Button7" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 7"
-
-[node name="Button8" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 8"
-
-[node name="Button9" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 9"
-
-[node name="Button10" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 10"
-
-[node name="Button11" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 11"
-
-[node name="Button12" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 12"
-
-[node name="Button13" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 13"
-
-[node name="Button14" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-text = "LEVEL 14"
-
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1102.0
@@ -104,6 +65,208 @@ offset_bottom = 34.0
 text = "Back"
 script = ExtResource("2_7ixvh")
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_7ixvh")
+
+[node name="option_menu" parent="." instance=ExtResource("3_al07p")]
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("4_qswse")
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.5
+offset_top = -78.0
+offset_right = 517.5
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("5_ujrit")
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("6_yvykp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("7_ldcsn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("8_20fji")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("9_lyhad")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("10_v5sc8")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button7" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("11_c2cs1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button8" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("12_e64tx")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button9" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("13_ux4cn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button10" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("14_eb3hp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button11" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("15_xqnys")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button12" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("16_p4bwk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button13" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("17_ojvft")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button14" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2akxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3qn8w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2gl04")
+text = "               "
+icon = ExtResource("18_q1sqn")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

@@ -1,9 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8jfc084wje11"]
+[gd_scene load_steps=13 format=3 uid="uid://b8jfc084wje11"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 [ext_resource type="Texture2D" uid="uid://dnfdr6fx6cuco" path="res://Assets/Sprites/Learning_Mode_Preview.jpg" id="2_pda0v"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="3_0wdox"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_wp0ha"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="5_e84p4"]
+[ext_resource type="PackedScene" uid="uid://c6kae70op7f75" path="res://UI/achievement_popup.tscn" id="6_o1ack"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6b1q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eguy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26c7k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqbvx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0htj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="GL_4" type="Control"]
 layout_mode = 3
@@ -14,6 +33,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
 JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_4_problem.json"
+path_name = "geometric"
+progress_key_for_this_level = "gl_4"
+back_to_topics_scene = "uid://degcfcb0hgedb"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -25,6 +47,7 @@ grow_vertical = 2
 color = Color(1, 0, 1, 1)
 
 [node name="LearningModePreview" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(574.5, 324.5)
 scale = Vector2(1.80156, 1.79167)
 texture = ExtResource("2_pda0v")
@@ -114,4 +137,30 @@ offset_bottom = 165.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("3_0wdox")
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_c6b1q")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4eguy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26c7k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vqbvx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i0htj")
+icon = ExtResource("4_wp0ha")
+expand_icon = true
+
+[node name="option_menu" parent="." instance=ExtResource("5_e84p4")]
+
+[node name="AchievementPopup" parent="." instance=ExtResource("6_o1ack")]
+layout_mode = 1
+
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,7 +1,8 @@
 extends Control
 
 # File: res://Scene/Adaptive_Mode/Main.gd
-# Purpose: Robust adaptive-problem loader + generator for SeQuest (Godot 4.x)
+# Purpose: Robust adaptive-problem loader + generator + Achievement_Manager hooks
+
 func sum_arithmetic(a: float, d: float, n: int) -> float:
 	return (n / 2.0) * (2 * a + (n - 1) * d)
 
@@ -50,6 +51,9 @@ var formula_functions = {
 	"divide": Callable(self, "divide")
 }
 
+var _last_answer_correct: bool = false
+var _awaiting_rating: bool = false
+
 func _ready() -> void:
 	randomize()
 	submit_button.pressed.connect(_on_SubmitButton_pressed)
@@ -58,6 +62,22 @@ func _ready() -> void:
 	hard_button.pressed.connect(_on_HardButton_pressed)
 	load_problems()
 	show_new_problem()
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
+
+	# Start session safely using the renamed autoload
+	var mgr := _mgr()
+	if mgr:
+		mgr.call("start_session")
+
+func _exit_tree() -> void:
+	var mgr := _mgr()
+	if mgr:
+		mgr.call("end_session")
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()
 
 func load_problems() -> void:
 	var path: String = "res://Scene/Adaptive_Mode/adaptive_problems.json"
@@ -82,6 +102,7 @@ func load_problems() -> void:
 func show_new_problem() -> void:
 	answer_line.text = ""
 	rating_container.visible = false
+	_awaiting_rating = false
 
 	if problems.is_empty():
 		problem_label.text = "(No problems loaded)"
@@ -118,7 +139,6 @@ func generate_problem(template: Dictionary) -> Dictionary:
 	var problem_text: String = template["problem"]
 	var vars_dict: Dictionary = {}
 
-	# Generate random values
 	for var_name in var_defs.keys():
 		var range_vals: Array = var_defs[var_name]
 		var minv: int = int(range_vals[0])
@@ -127,7 +147,6 @@ func generate_problem(template: Dictionary) -> Dictionary:
 		vars_dict[var_name] = value
 		problem_text = problem_text.replace("{" + var_name + "}", str(value))
 
-	# Calculate answer using formula_type + args
 	var answer_val: float = 0.0
 	if template.has("formula_type") and template.has("args"):
 		answer_val = calculate_problem(template, vars_dict)
@@ -137,10 +156,9 @@ func generate_problem(template: Dictionary) -> Dictionary:
 		"difficulty": template.get("difficulty", 1),
 		"problem": problem_text,
 		"variables": var_defs,
-		"vars_dict": vars_dict,   # store the dict for reference
+		"vars_dict": vars_dict,
 		"answer": answer_val
 	}
-
 
 func _rand_int(minv: int, maxv: int) -> int:
 	if minv > maxv:
@@ -185,7 +203,6 @@ func calculate_problem(problem_data: Dictionary, vars: Dictionary) -> float:
 
 	return func_ref.callv(args_list)
 
-
 func _floats_equal(a: float, b: float, eps: float = 0.0001) -> bool:
 	return abs(a - b) <= eps
 
@@ -202,29 +219,58 @@ func _on_SubmitButton_pressed() -> void:
 	var player_val: float = player_text.to_float()
 	var correct_val: float = float(current_problem["answer"])
 
-	if _floats_equal(player_val, correct_val):
+	_last_answer_correct = _floats_equal(player_val, correct_val)
+
+	if _last_answer_correct:
 		problem_label.text += "\n✅ Correct!"
 	else:
 		problem_label.text += "\n❌ Wrong. Answer: %s" % str(correct_val)
 
 	rating_container.visible = true
+	_awaiting_rating = true
 
 func _on_EasyButton_pressed() -> void:
+	_record_adaptive_result_and_progress("Easy")
 	adjust_difficulty(-1)
 	show_new_problem()
 
 func _on_MediumButton_pressed() -> void:
+	_record_adaptive_result_and_progress("Medium")
 	adjust_difficulty(0)
 	show_new_problem()
 
 func _on_HardButton_pressed() -> void:
+	_record_adaptive_result_and_progress("Hard")
 	adjust_difficulty(1)
 	show_new_problem()
+
+func _record_adaptive_result_and_progress(rating_ui: String) -> void:
+	if not _awaiting_rating:
+		return
+	_awaiting_rating = false
+
+	var rating_for_manager := rating_ui
+	match rating_ui.to_lower():
+		"hard":
+			rating_for_manager = "Very Hard"
+		"medium":
+			rating_for_manager = "Just Right"
+		"easy":
+			rating_for_manager = "Easy"
+		_:
+			rating_for_manager = rating_ui
+
+	var mgr := _mgr()
+	if mgr:
+		mgr.call("record_adaptive_problem_result", _last_answer_correct, rating_for_manager, true)
 
 func adjust_difficulty(change: int) -> void:
 	difficulty_level = clamp(difficulty_level + change, 1, 4)
 	print("Difficulty adjusted to %d" % difficulty_level)
 
+# Helper to get the renamed autoload
+func _mgr() -> Node:
+	return get_node_or_null("/root/Achievement_Manager")
 
 
 

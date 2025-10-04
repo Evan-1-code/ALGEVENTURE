@@ -15,7 +15,7 @@
 		"formula": "S_n = n/2 [2a + (n - 1)d]",
 		"distractors": ["S_n = n/2 [a + d]", "S_n = n/2 [2a + (n + 1)d]"],
 		"answer": 380
-      }
+	  }
 	]
   },
   {
@@ -34,7 +34,7 @@
 		"formula": "S_n = n/2 [2a + (n - 1)d]",
 		"distractors": ["S_n = n × (a + d)", "S_n = n/2 [a + (n - 1)d]"],
 		"answer": 240
-      }
+	  }
 	]
   },
 ]
