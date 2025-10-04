@@ -18,9 +18,12 @@ var current_step: Step = Step.SHOW_PROBLEM
 @onready var CalculatorButton = $CalculatorButton
 @onready var GivenLabel = $Given
 @onready var AnswerLabel = $SolutionSteps
+@onready var HintButton = $HintButton
 
 var calculator_instance = null
 var calculator_scene = preload("res://Scene/Calculatorscene/calculator.tscn")
+var hint_system_instance = null
+var hint_system_scene = preload("res://UI/HintSystem/HintSystem.tscn")
 
 func _ready():
 	ProblemLabel.bbcode_enabled = true
@@ -28,6 +31,15 @@ func _ready():
 	_show_current_problem()
 	if not NextButton.pressed.is_connected(_on_NextButton_pressed):
 		NextButton.pressed.connect(_on_NextButton_pressed)
+	
+	# Set up hint button
+	if HintButton and not HintButton.pressed.is_connected(_on_hint_button_pressed):
+		HintButton.pressed.connect(_on_hint_button_pressed)
+	
+	# Initialize hint system
+	if hint_system_scene:
+		hint_system_instance = hint_system_scene.instantiate()
+		add_child(hint_system_instance)
 
 func _load_levels_from_json(path):
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -70,6 +82,8 @@ func _show_current_problem():
 		FormulaFeedbackLabel.hide()
 		SolveInput.hide()
 		SolveFeedbackLabel.hide()
+		if HintButton:
+			HintButton.hide()
 		return
 	if not problem.has("text"):
 		ProblemLabel.text = "[b]Problem text missing.[/b]"
@@ -83,6 +97,13 @@ func _show_current_problem():
 	SolveInput.hide()
 	SolveFeedbackLabel.hide()
 	CalculatorButton.hide()
+	
+	# Show hint button if hint is available
+	if HintButton:
+		if problem.has("hint") and problem.has("steps"):
+			HintButton.show()
+		else:
+			HintButton.hide()
 
 func _show_given_inputs():
 	current_step = Step.GIVEN
@@ -379,3 +400,23 @@ func _next_as_next_level():
 	NextButton.show()
 	CalculatorButton.hide()
 	_hide_calculator()
+
+func _on_hint_button_pressed():
+	"""Handle hint button press"""
+	var problem = _get_current_problem()
+	if problem == null:
+		return
+	
+	# Get hints and steps from the problem
+	var hints: Array = []
+	var steps: Array = []
+	
+	if problem.has("hint"):
+		hints.append(problem["hint"])
+	
+	if problem.has("steps"):
+		steps = problem["steps"]
+	
+	# Show hint system
+	if hint_system_instance and hints.size() > 0:
+		hint_system_instance.show_hint(hints, steps)

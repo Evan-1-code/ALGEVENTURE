@@ -114,4 +114,13 @@ offset_bottom = 165.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
 
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 81.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 111.0
+text = "💡 Hint"
+
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
