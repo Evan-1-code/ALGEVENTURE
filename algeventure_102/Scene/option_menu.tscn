@@ -72,6 +72,12 @@ text = "skill ladder"
 layout_mode = 2
 text = "adaptive mode"
 
+[node name="Achievements_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Achievements"
+
 [node name="exit_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "exit"
+
+[connection signal="pressed" from="VBoxContainer/Achievements_button" to="." method="_on_achievements_button_pressed"]

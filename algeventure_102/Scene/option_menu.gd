@@ -6,6 +6,7 @@ extends Control
 @onready var exit_btn: Button          = $VBoxContainer/exit_button
 @onready var main_menu_btn: Button     = $VBoxContainer/main_menu_button
 @onready var close_btn: Button         = $HBoxContainer/CloseButton   # Close button
+@onready var Achievements_btn: Button  = $VBoxContainer/Achievements_button
 
 # Volume controls
 @onready var volume_slider: HSlider = $HBoxContainer/MusicVolumeSlider
@@ -90,6 +91,7 @@ func _on_main_menu_pressed() -> void:
 	# get_tree().paused = false
 	get_tree().change_scene_to_file("res://Tests/Main_menu.tscn")
 
+
 func _on_mute_button_pressed() -> void:
 	if is_muted:
 		is_muted = false
@@ -109,3 +111,8 @@ func _on_music_volume_slider_value_changed(value: float) -> void:
 	volume_label.text = "Music Volume: %d%%" % percent
 	if not is_muted and value > 0.0:
 		last_volume = value
+
+
+func _on_achievements_button_pressed() -> void:
+	print("Achievements pressed!")
+	get_tree().change_scene_to_file("res://UI/achievements_menu.tscn")

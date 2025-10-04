@@ -19,6 +19,8 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 ProgressManager="*res://progress_manager.gd"
 SceneManager="*res://scene_manager.gd"
 NavigationManager="*res://Globals/navigation_manager.gd"
+Achievement_Manager="*res://achievement_manager.gd"
+UserDataManager="*res://userdata_manager.gd"
 
 [display]
 

@@ -1,5 +1,6 @@
 extends Control
 
+@onready var al1_button: Button = $HBoxContainer/Button
 @onready var al2_button: Button = $HBoxContainer/Button2
 @onready var al3_button: Button = $HBoxContainer/Button3
 @onready var al4_button: Button = $HBoxContainer/Button4
@@ -15,6 +16,7 @@ extends Control
 @onready var al14_button: Button = $HBoxContainer/Button14
 
 func _ready():
+	al1_button.disabled = false
 	al2_button.disabled = not ProgressManager.progress["al_1"]
 	al3_button.disabled = not ProgressManager.progress["al_2"]
 	al4_button.disabled = not ProgressManager.progress["al_3"]
@@ -31,6 +33,11 @@ func _ready():
 
 # Save the current scene's path before switching
 	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
+	print("al1:", !al1_button.disabled)
+	print("al2:", !al2_button.disabled)
+	print("al3:", !al3_button.disabled)
+	print("al4:", !al4_button.disabled)
+	
 
 @onready var settings_overlay := $option_menu # adjust the path to your overlay
 

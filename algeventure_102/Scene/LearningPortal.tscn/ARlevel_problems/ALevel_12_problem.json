@@ -3,57 +3,57 @@
 	"level": 1,
 	"problems": [
 	  {
-        "text": "A teacher arranges chairs in rows. The first row has 45 chairs, the second 49, the third 53, and so on. How many chairs are there in the 60th row?",
-        "given": { "a": 45, "d": 4, "n": 60 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
-        "answer": 281
-      },
+		"text": "A teacher arranges chairs in rows. The first row has 45 chairs, the second 49, the third 53, and so on. How many chairs are there in the 60th row?",
+		"given": { "a": 45, "d": 4, "n": 60 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+		"answer": 281
+	  },
 	  {
-        "text": "A theater expands its rows in arithmetic sequence. The first row has 25 seats, the second has 32, the third has 39, and so on. How many seats are there in total in the first 60 rows?",
-        "given": { "a": 25, "d": 7, "n": 60 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
-        "answer": 12450
-      }
+		"text": "A theater expands its rows in arithmetic sequence. The first row has 25 seats, the second has 32, the third has 39, and so on. How many seats are there in total in the first 60 rows?",
+		"given": { "a": 25, "d": 7, "n": 60 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+		"answer": 12450
+	  }
 	]
   },
   {
 	"level": 2,
 	"problems": [
 	  {
-        "text": "A scientist records temperatures hourly in an experiment. At 8 AM, the temperature is 95°C, and each hour it decreases by 1.8°C. What is the temperature at the 45th hour?",
-        "given": { "a": 95, "d": -1.8, "n": 45 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n + 1)"],
-        "answer": 16.2
-      },
+		"text": "A scientist records temperatures hourly in an experiment. At 8 AM, the temperature is 95°C, and each hour it decreases by 1.8°C. What is the temperature at the 45th hour?",
+		"given": { "a": 95, "d": -1.8, "n": 45 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = n(a + d)", "a_n = (a + d)(n + 1)"],
+		"answer": 16.2
+	  },
 	  {
-        "text": "A painter arranges tiles in arithmetic order. The first row has 200 tiles, the second has 190, the third 180, and so on. How many tiles are there in total in the first 40 rows?",
-        "given": { "a": 200, "d": -10, "n": 40 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
-        "answer": 4000
-      }
+		"text": "A painter arranges tiles in arithmetic order. The first row has 200 tiles, the second has 190, the third 180, and so on. How many tiles are there in total in the first 40 rows?",
+		"given": { "a": 200, "d": -10, "n": 40 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+		"answer": 4000
+	  }
 	]
   },
   {
 	"level": 3,
 	"problems": [
 	  {
-        "text": "A factory increases its daily production of machines in arithmetic sequence. On the first day, it produces 320 machines, the second day 335, the third 350, and so on. How many machines are produced on the 70th day?",
-        "given": { "a": 320, "d": 15, "n": 70 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = (a + d)(n - 1)", "a_n = a × (n - 1) + d"],
-        "answer": 1355
-      },
+		"text": "A factory increases its daily production of machines in arithmetic sequence. On the first day, it produces 320 machines, the second day 335, the third 350, and so on. How many machines are produced on the 70th day?",
+		"given": { "a": 320, "d": 15, "n": 70 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = (a + d)(n - 1)", "a_n = a × (n - 1) + d"],
+		"answer": 1355
+	  },
 	  {
-        "text": "A runner trains by increasing the number of laps each day. On the first day, he runs 3 laps, on the second 6 laps, on the third 9 laps, and so on. How many laps does he run in the first 50 days?",
-        "given": { "a": 3, "d": 3, "n": 50 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
-        "answer": 3825
-      }
+		"text": "A runner trains by increasing the number of laps each day. On the first day, he runs 3 laps, on the second 6 laps, on the third 9 laps, and so on. How many laps does he run in the first 50 days?",
+		"given": { "a": 3, "d": 3, "n": 50 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+		"answer": 3825
+	  }
 	]
   },
 ]

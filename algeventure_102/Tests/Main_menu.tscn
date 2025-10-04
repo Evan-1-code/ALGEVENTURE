@@ -2419,12 +2419,14 @@ icon = ExtResource("16_pqohv")
 expand_icon = true
 
 [node name="ManualScreen" parent="." instance=ExtResource("15_na3vl")]
+visible = false
 offset_left = 3.0
 offset_top = 7.0
 offset_right = 3.0
 offset_bottom = 7.0
 
 [node name="option_menu" parent="." instance=ExtResource("18_s3ijx")]
+visible = false
 
 [connection signal="pressed" from="Control/BuildingButton" to="AnimatedSprite2D" method="_on_building_button_pressed"]
 [connection signal="pressed" from="Control/PortalButton" to="." method="_on_portal_button_pressed"]

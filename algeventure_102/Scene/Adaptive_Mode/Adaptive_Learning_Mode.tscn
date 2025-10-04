@@ -149,6 +149,7 @@ text = "Back"
 script = ExtResource("2_piok7")
 
 [node name="option_menu" parent="." instance=ExtResource("3_a2rha")]
+visible = false
 offset_left = 1.0
 offset_top = 8.0
 offset_right = 1156.0

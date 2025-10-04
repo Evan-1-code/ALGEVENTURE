@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dlgcwb2dfncnu"]
+[gd_scene load_steps=24 format=3 uid="uid://dlgcwb2dfncnu"]
 
 [ext_resource type="Script" uid="uid://c1cuce1jgxpdd" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/arithmetic_levels.gd" id="1_bk81l"]
 [ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="2_3013g"]
@@ -18,6 +18,21 @@
 [ext_resource type="Texture2D" uid="uid://c2y2xa8832rfy" path="res://Tests/buttonsui/Untitled13_20250922143917.png" id="15_r362p"]
 [ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="17_wa35d"]
 [ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="18_mhqkk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa35d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhqkk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oixk6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf27b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wvyp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="ArithmeticLevels" type="Control"]
 layout_mode = 3
@@ -57,6 +72,11 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "               "
 icon = ExtResource("2_3013g")
 icon_alignment = 1
@@ -64,6 +84,11 @@ expand_icon = true
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "               "
 icon = ExtResource("3_q2dxk")
 icon_alignment = 1
@@ -71,6 +96,11 @@ expand_icon = true
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "               "
 icon = ExtResource("4_4w0ha")
 icon_alignment = 1
@@ -78,6 +108,11 @@ expand_icon = true
 
 [node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "               "
 icon = ExtResource("5_8fp7t")
 icon_alignment = 1
@@ -85,6 +120,11 @@ expand_icon = true
 
 [node name="Button5" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "               "
 icon = ExtResource("6_wa35d")
 icon_alignment = 1
@@ -92,6 +132,11 @@ expand_icon = true
 
 [node name="Button6" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                "
 icon = ExtResource("7_mhqkk")
 icon_alignment = 1
@@ -99,6 +144,11 @@ expand_icon = true
 
 [node name="Button7" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("8_oixk6")
 icon_alignment = 1
@@ -106,6 +156,11 @@ expand_icon = true
 
 [node name="Button8" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                "
 icon = ExtResource("9_jf27b")
 icon_alignment = 1
@@ -113,6 +168,11 @@ expand_icon = true
 
 [node name="Button9" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("10_4wvyp")
 icon_alignment = 1
@@ -120,6 +180,11 @@ expand_icon = true
 
 [node name="Button10" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                "
 icon = ExtResource("11_5tllt")
 icon_alignment = 1
@@ -127,6 +192,11 @@ expand_icon = true
 
 [node name="Button11" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("12_2o46g")
 icon_alignment = 1
@@ -134,6 +204,11 @@ expand_icon = true
 
 [node name="Button12" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("13_ae7sy")
 icon_alignment = 1
@@ -141,6 +216,11 @@ expand_icon = true
 
 [node name="Button13" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("14_m676w")
 icon_alignment = 1
@@ -148,6 +228,11 @@ expand_icon = true
 
 [node name="Button14" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jf27b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wvyp")
 text = "                 "
 icon = ExtResource("15_r362p")
 icon_alignment = 1
@@ -161,6 +246,7 @@ text = "Back"
 script = ExtResource("2_sjl3w")
 
 [node name="option_menu" parent="." instance=ExtResource("17_wa35d")]
+visible = false
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 0

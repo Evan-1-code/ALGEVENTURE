@@ -1,12 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://drye3g6mrtxq5"]
+[gd_scene load_steps=13 format=3 uid="uid://drye3g6mrtxq5"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
 [ext_resource type="Texture2D" uid="uid://dnfdr6fx6cuco" path="res://Assets/Sprites/Learning_Mode_Preview.jpg" id="2_pda0v"]
 [ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="3_ssgqd"]
 [ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="4_73jfl"]
 [ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="5_o3wsy"]
+[ext_resource type="PackedScene" uid="uid://c6kae70op7f75" path="res://UI/achievement_popup.tscn" id="6_o3wsy"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3wsy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1lho"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sqd7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jphw6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3rqa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="AL_1" type="Control"]
 layout_mode = 3
@@ -16,6 +32,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_1_problem.json"
+progress_key_for_this_level = "al_1"
+back_to_topics_scene = "uid://dlgcwb2dfncnu"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -134,8 +153,16 @@ offset_left = 1064.0
 offset_top = 13.0
 offset_right = 1145.0
 offset_bottom = 89.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_o3wsy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k1lho")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0sqd7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jphw6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j3rqa")
 icon = ExtResource("5_o3wsy")
 expand_icon = true
+
+[node name="AchievementPopup" parent="." instance=ExtResource("6_o3wsy")]
+layout_mode = 1
 
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
