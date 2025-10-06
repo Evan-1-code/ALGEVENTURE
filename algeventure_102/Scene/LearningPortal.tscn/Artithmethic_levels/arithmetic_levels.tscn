@@ -47,18 +47,12 @@ script = ExtResource("1_bk81l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.00520833
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0784314, 0.109804, 0.14902, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -67,15 +61,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -497.0
-offset_top = -78.0
-offset_right = 497.0
-offset_bottom = 78.0
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -88,6 +85,8 @@ expand_icon = true
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -100,6 +99,8 @@ expand_icon = true
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -112,6 +113,8 @@ expand_icon = true
 
 [node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -124,6 +127,8 @@ expand_icon = true
 
 [node name="Button5" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -136,6 +141,8 @@ expand_icon = true
 
 [node name="Button6" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -148,6 +155,8 @@ expand_icon = true
 
 [node name="Button7" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -160,6 +169,8 @@ expand_icon = true
 
 [node name="Button8" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -172,6 +183,8 @@ expand_icon = true
 
 [node name="Button9" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -184,6 +197,8 @@ expand_icon = true
 
 [node name="Button10" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -196,6 +211,8 @@ expand_icon = true
 
 [node name="Button11" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -208,6 +225,8 @@ expand_icon = true
 
 [node name="Button12" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -220,6 +239,8 @@ expand_icon = true
 
 [node name="Button13" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -232,6 +253,8 @@ expand_icon = true
 
 [node name="Button14" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_wa35d")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mhqkk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oixk6")
@@ -253,11 +276,15 @@ script = ExtResource("2_sjl3w")
 visible = false
 
 [node name="SettingsButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1064.0
-offset_top = 13.0
-offset_right = 1145.0
-offset_bottom = 89.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 90.0
+grow_horizontal = 0
 icon = ExtResource("18_mhqkk")
 expand_icon = true
 
