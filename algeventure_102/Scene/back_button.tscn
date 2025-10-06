@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://rh2pr334ahbj" path="res://Scene/back_button.gd" id="1_0mda3"]
 
 [node name="BackButton" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 50.0
 text = "BACK"
 script = ExtResource("1_0mda3")

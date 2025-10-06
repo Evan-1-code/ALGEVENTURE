@@ -12,56 +12,61 @@ grow_vertical = 2
 script = ExtResource("1_87mjc")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = 4.0
-offset_right = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0.0509804, 0.054902, 0.690196)
-
-[node name="HBoxContainer" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 22.0
-offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.987971, 1)
+color = Color(0, 0.0509804, 0.054902, 0.690196)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NavPanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
-offset_right = 167.0
-offset_bottom = 648.0
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(150, 0)
 
 [node name="NavContainer" type="VBoxContainer" parent="HBoxContainer/NavPanel"]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="MainPanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
-offset_left = 181.0
-offset_top = 3.0
-offset_right = 1158.0
-offset_bottom = 648.0
-size_flags_horizontal = 6
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MainPanel"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="ContentContainer" type="VBoxContainer" parent="HBoxContainer/MainPanel/ScrollContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 
 [node name="ManualTitle" type="Label" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "     dada "
 
 [node name="Content" type="RichTextLabel" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_font_sizes/bold_italics_font_size = 8
 text = " asdsa
 
@@ -72,4 +77,5 @@ tab_size = 5
 
 [node name="Header" type="Label" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "dada"
