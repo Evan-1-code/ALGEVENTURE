@@ -51,39 +51,54 @@ texture = ExtResource("2_pda0v")
 
 [node name="ProblemLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.495
-anchor_top = 0.069
-anchor_right = 0.495
-anchor_bottom = 0.069
-offset_left = -314.24
-offset_top = 42.288
-offset_right = 347.76
-offset_bottom = 233.288
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = 250.0
 grow_horizontal = 2
 text = "problemtext"
 
 [node name="FormulaOptions" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 309.0
-offset_top = 441.0
-offset_right = 846.0
-offset_bottom = 516.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SolutionSteps" type="Label" parent="."]
-layout_mode = 0
-offset_left = 236.0
-offset_top = 490.0
-offset_right = 347.0
-offset_bottom = 513.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -100.0
+offset_right = -150.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Answer"
 
 [node name="Given" type="Label" parent="."]
-layout_mode = 0
-offset_left = 214.0
-offset_top = 412.0
-offset_right = 259.0
-offset_bottom = 435.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -15.0
+offset_right = 120.0
+offset_bottom = 15.0
+grow_vertical = 2
 text = "Given"
 
 [node name="FormulaFeedbackLabel" type="Label" parent="."]
@@ -94,11 +109,18 @@ offset_right = 464.0
 offset_bottom = 508.0
 
 [node name="NextButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 816.0
-offset_top = 454.0
-offset_right = 911.0
-offset_bottom = 493.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="SolveFeedbackLabel" type="Label" parent="."]
 layout_mode = 1
@@ -147,11 +169,15 @@ layout_mode = 1
 [node name="option_menu" parent="." instance=ExtResource("5_70i3y")]
 
 [node name="SettingsButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1064.0
-offset_top = 13.0
-offset_right = 1145.0
-offset_bottom = 89.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 90.0
+grow_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxFlat_miihm")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_6ojhn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ccsdh")

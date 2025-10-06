@@ -53,21 +53,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = -4.0
-offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_52nv3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-offset_right = 2340.0
-offset_bottom = 1280.0
-scale = Vector2(0.5, 0.5)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_dbeyr")
-expand_mode = 2
-stretch_mode = 4
+expand_mode = 1
+stretch_mode = 6
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -80,42 +79,52 @@ grow_vertical = 2
 color = Color(0.411676, 0.526523, 0.452602, 1)
 
 [node name="ProblemLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 111.0
-offset_top = 173.0
-offset_right = 1039.0
-offset_bottom = 361.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 50.0
+offset_top = 100.0
+offset_right = -50.0
+offset_bottom = 250.0
+grow_horizontal = 2
 text = "problem"
-metadata/_edit_use_anchors_ = true
 
 [node name="SubmitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 253.0
-offset_top = 440.0
-offset_right = 329.0
-offset_bottom = 478.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "SUBMIT"
-metadata/_edit_use_anchors_ = true
 
 [node name="RatingContainer" type="HBoxContainer" parent="."]
 visibility_layer = 6
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.205
-anchor_top = 0.581
-anchor_right = 0.942
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 0.454987
-offset_top = -46.907
-offset_right = 689.642
-offset_bottom = 333.0
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = -50.0
 grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.550918, 0.527282)
+grow_vertical = 0
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="EasyButton" type="Button" parent="RatingContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/disabled = SubResource("StyleBoxFlat_dbeyr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7x1si")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_d44x4")
@@ -123,29 +132,38 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_xdn30")
 text = " "
 icon = ExtResource("3_7x1si")
 icon_alignment = 1
+expand_icon = true
 
 [node name="MediumButton" type="Button" parent="RatingContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_c4wvw")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ug6iq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wk6p8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ks40p")
 theme_override_styles/normal = SubResource("StyleBoxFlat_f6qd5")
 icon = ExtResource("4_xdn30")
+expand_icon = true
 
 [node name="HardButton" type="Button" parent="RatingContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/focus = SubResource("StyleBoxFlat_yy83k")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0fmo2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l4swq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_un4mb")
 icon = ExtResource("5_d44x4")
+expand_icon = true
 
 [node name="BackButton" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 50.0
 text = "Back"
 script = ExtResource("2_piok7")
 metadata/_edit_use_anchors_ = true

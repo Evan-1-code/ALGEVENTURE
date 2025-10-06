@@ -25,7 +25,10 @@ MusicPlayer="*res://Scene/MusicPlayer.tscn"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/viewport_width=1152
+window/size/viewport_height=648
+window/size/resizable=true
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [global_group]
