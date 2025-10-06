@@ -1,59 +1,107 @@
 [
   {
-	"level": 1,
-	"problems": [
-	  {
+    "level": 1,
+    "problems": [
+      {
         "text": "A pyramid of stones is arranged so that the first layer has 120 stones, the second layer has 116, the third layer has 112, and so on. How many stones are there in the 25th layer?",
         "given": { "a": 120, "d": -4, "n": 25 },
         "formula": "a_n = a + (n - 1)d",
         "distractors": ["a_n = a × (n - 1) + d", "a_n = (a + d)(n - 1)"],
-        "answer": 24
+        "answer": 24,
+        "hint": "This is an arithmetic sequence. Each layer has 4 fewer stones than the previous layer.",
+        "steps": [
+          "Identify the first term (a = 120)",
+          "Find the common difference (d = -4)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_25 = 120 + (25 - 1) × -4",
+          "Calculate: 120 + 24 × -4 = 120 - 96 = ?"
+        ]
       },
-	  {
+      {
         "text": "A stadium arranges chairs in rows. The first row has 50 seats, the second has 55, the third has 60, and so on. How many seats are there in total in the first 40 rows?",
         "given": { "a": 50, "d": 5, "n": 40 },
         "formula": "S_n = (n/2)(2a + (n - 1)d)",
         "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
-        "answer": 4200
+        "answer": 4200,
+        "hint": "This is the sum of an arithmetic sequence for seats in the first 40 rows.",
+        "steps": [
+          "Identify the first term (a = 50)",
+          "Find the common difference (d = 5)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_40 = 40/2 (2×50 + (40 - 1) × 5)",
+          "Calculate: 20 × (100 + 195) = 20 × 295 = ?"
+        ]
       }
-	]
+    ]
   },
   {
-	"level": 2,
-	"problems": [
-	  {
+    "level": 2,
+    "problems": [
+      {
         "text": "A researcher studies bacteria that decrease in number each hour. At the start, there are 10,000 bacteria, and every hour the count decreases by 250. How many bacteria remain after 37 hours?",
         "given": { "a": 10000, "d": -250, "n": 37 },
         "formula": "a_n = a + (n - 1)d",
         "distractors": ["a_n = (a + d)(n - 1)", "a_n = a × n - d"],
-        "answer": 7750
+        "answer": 7750,
+        "hint": "This is an arithmetic sequence. Each hour, the number of bacteria decreases by 250.",
+        "steps": [
+          "Identify the initial count (a = 10000)",
+          "Find the common difference (d = -250)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_37 = 10000 + (37 - 1) × -250",
+          "Calculate: 10000 + 36 × -250 = 10000 - 9000 = ?"
+        ]
       },
-	  {
+      {
         "text": "A charity receives donations daily in arithmetic sequence. On the first day, it receives 1,000 pesos, on the second day 1,050 pesos, the third 1,100 pesos, and so on. How much total money will the charity receive in the first 30 days?",
         "given": { "a": 1000, "d": 50, "n": 30 },
         "formula": "S_n = (n/2)(2a + (n - 1)d)",
         "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
-        "answer": 52500
+        "answer": 52500,
+        "hint": "This is the sum of an arithmetic sequence for donations over 30 days.",
+        "steps": [
+          "Identify the first term (a = 1000)",
+          "Find the common difference (d = 50)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_30 = 30/2 (2×1000 + (30 - 1) × 50)",
+          "Calculate: 15 × (2000 + 1450) = 15 × 3450 = ?"
+        ]
       }
-	]
+    ]
   },
   {
-	"level": 3,
-	"problems": [
-	  {
+    "level": 3,
+    "problems": [
+      {
         "text": "A satellite sends signals every few seconds in an arithmetic pattern. The first signal takes 3 seconds, the second 7 seconds, the third 11 seconds, and so on. At what second does the 80th signal occur?",
         "given": { "a": 3, "d": 4, "n": 80 },
         "formula": "a_n = a + (n - 1)d",
         "distractors": ["a_n = a × n + d", "a_n = (a + d)(n + 1)"],
-        "answer": 319
+        "answer": 319,
+        "hint": "This is an arithmetic sequence. Each signal occurs 4 seconds later than the previous one.",
+        "steps": [
+          "Identify the first term (a = 3)",
+          "Find the common difference (d = 4)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_80 = 3 + (80 - 1) × 4",
+          "Calculate: 3 + 79 × 4 = 3 + 316 = ?"
+        ]
       },
-	  {
+      {
         "text": "An engineer builds steps for a monument. The first step has 150 bricks, the second has 158, the third 166, and so on. How many bricks are needed in total for the first 20 steps?",
         "given": { "a": 150, "d": 8, "n": 20 },
         "formula": "S_n = (n/2)(2a + (n - 1)d)",
         "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
-        "answer": 3880
+        "answer": 3880,
+        "hint": "This is the sum of an arithmetic sequence for bricks needed for 20 steps.",
+        "steps": [
+          "Identify the first term (a = 150)",
+          "Find the common difference (d = 8)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_20 = 20/2 (2×150 + (20 - 1) × 8)",
+          "Calculate: 10 × (300 + 152) = 10 × 452 = ?"
+        ]
       }
-	]
-  },
+    ]
+  }
 ]

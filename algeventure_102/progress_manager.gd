@@ -31,7 +31,7 @@ var progress = {
 	"gl_14": false,
 }
 
-const SAVE_PATH = "user://progress.save"
+const SAVE_PATH = "user://userdata.save"
 
 func _ready():
 	load_progress()

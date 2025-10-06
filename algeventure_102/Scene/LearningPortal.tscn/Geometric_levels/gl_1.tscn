@@ -33,9 +33,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
 JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_1_problem.json"
-path_name = "geometric"
-progress_key_for_this_level = "gl_1"
-back_to_topics_scene = "uid://degcfcb0hgedb"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -145,6 +142,7 @@ text = "Back"
 script = ExtResource("3_uiamv")
 
 [node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1064.0
 offset_top = 13.0
 offset_right = 1145.0
@@ -161,6 +159,15 @@ expand_icon = true
 layout_mode = 1
 
 [node name="option_menu" parent="." instance=ExtResource("6_3tgd7")]
+
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 91.0
+offset_top = 352.0
+offset_right = 182.0
+offset_bottom = 383.0
+text = "💡 Hint"
 
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

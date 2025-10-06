@@ -32,8 +32,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
 JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_8_problem.json"
-progress_key_for_this_level = "al_8"
-back_to_topics_scene = "uid://dlgcwb2dfncnu"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -162,6 +160,15 @@ offset_left = 1.0
 offset_top = 2.0
 offset_right = 1.0
 offset_bottom = 2.0
+
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 91.0
+offset_top = 352.0
+offset_right = 182.0
+offset_bottom = 383.0
+text = "💡 Hint"
 
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

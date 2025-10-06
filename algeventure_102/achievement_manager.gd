@@ -3,7 +3,7 @@ extends Node
 
 signal achievement_unlocked(id: String, name: String, description: String, category: String)
 
-const SAVE_PATH := "user://achievements.cfg"
+const SAVE_PATH := "user://userdata.save"
 
 const CATEGORY_PROGRESSION := "Progression"
 const CATEGORY_MODE_MASTERY := "Mode Mastery"

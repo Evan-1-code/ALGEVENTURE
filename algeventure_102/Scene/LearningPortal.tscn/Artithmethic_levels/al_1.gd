@@ -40,10 +40,12 @@ func _ready():
 	if hint_system_scene:
 		hint_system_instance = hint_system_scene.instantiate()
 		add_child(hint_system_instance)
+	MusicPlayer.play()
 
 func _load_levels_from_json(path):
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file:
+		var _text = file.get_as_text()
 		var json = JSON.parse_string(file.get_as_text())
 		if typeof(json) == TYPE_ARRAY:
 			levels = json
@@ -51,6 +53,10 @@ func _load_levels_from_json(path):
 			push_error("JSON root is not an array!")
 	else:
 		push_error("Could not open JSON file.")
+	MusicPlayer.play()  # starts playback
+	MusicPlayer.set_music_volume(0.5)  # sets volume to 50%
+	MusicPlayer.mute_music()           # mutes music
+	
 
 func _get_current_problem():
 	if levels.size() == 0:
@@ -420,3 +426,8 @@ func _on_hint_button_pressed():
 	# Show hint system
 	if hint_system_instance and hints.size() > 0:
 		hint_system_instance.show_hint(hints, steps)
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()

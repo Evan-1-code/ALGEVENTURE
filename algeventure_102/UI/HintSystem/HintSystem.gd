@@ -31,8 +31,8 @@ func _ready():
 	
 	# Set up character position
 	if character:
-		character_start_y = get_viewport_rect().size.y
-		character_target_y = get_viewport_rect().size.y - 200
+		character_start_y = get_viewport().size.y
+		character_target_y = get_viewport().size.y - 200
 
 func show_hint(hints: Array, steps: Array):
 	"""Display hint system with provided hints and step-by-step instructions"""

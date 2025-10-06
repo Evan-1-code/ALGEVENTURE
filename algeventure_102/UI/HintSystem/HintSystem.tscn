@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4x8vqm5jq7w2"]
 
-[ext_resource type="Script" path="res://UI/HintSystem/HintSystem.gd" id="1_hint_system"]
+[ext_resource type="Script" uid="uid://bxflf8gcnijat" path="res://UI/HintSystem/HintSystem.gd" id="1_hint_system"]
 
 [node name="HintSystem" type="CanvasLayer"]
 script = ExtResource("1_hint_system")
@@ -14,8 +14,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.7)
 
 [node name="Character" type="Sprite2D" parent="."]
-position = Vector2(200, 500)
-scale = Vector2(2, 2)
+visible = false
+position = Vector2(2533, 1242)
+scale = Vector2(0.943332, 0.869224)
 
 [node name="DialogueBox" type="PanelContainer" parent="."]
 anchors_preset = 7

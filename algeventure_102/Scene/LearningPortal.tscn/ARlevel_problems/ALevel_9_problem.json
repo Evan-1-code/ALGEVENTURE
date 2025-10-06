@@ -7,14 +7,30 @@
 		"given": { "a": 25000, "d": 1200, "n": 10 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = a × (n - 1) + d", "a_n = a + (n + 1)d"],
-		"answer": 35800
+		"answer": 35800,
+		"hint": "This is an arithmetic sequence. Each year, the salary increases by 1,200 pesos.",
+		"steps": [
+		  "Identify the first term (a = 25000)",
+		  "Find the common difference (d = 1200)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_10 = 25000 + (10 - 1) × 1200",
+		  "Calculate: 25000 + 9 × 1200 = 25000 + 10800 = 35800"
+		]
 	  },
 	  {
 		"text": "A group of friends decides to contribute money daily in an arithmetic way. On the first day they put 50 pesos, on the second 60 pesos, on the third 70 pesos, and so on. How much money do they collect after 12 days?",
 		"given": { "a": 50, "d": 10, "n": 12 },
 		"formula": "S_n = (n/2)(2a + (n - 1)d)",
 		"distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d/2)"],
-		"answer": 1020
+		"answer": 1020,
+		"hint": "This is the sum of an arithmetic sequence. Each day, their contribution increases by 10 pesos.",
+		"steps": [
+		  "Identify the first term (a = 50)",
+		  "Find the common difference (d = 10)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_12 = 12/2 (2×50 + (12 - 1) × 10)",
+		  "Calculate: 6 × (100 + 110) = 6 × 210 = 1260"
+		]
 	  }
 	]
   },
@@ -26,14 +42,30 @@
 		"given": { "a": 18, "d": 4, "n": 30 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = a × n + d", "a_n = a + (n + 1)d"],
-		"answer": 134
+		"answer": 134,
+		"hint": "This is an arithmetic sequence. Each row has 4 more chairs than the previous row.",
+		"steps": [
+		  "Identify the first term (a = 18)",
+		  "Find the common difference (d = 4)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_30 = 18 + (30 - 1) × 4",
+		  "Calculate: 18 + 29 × 4 = 18 + 116 = ?"
+		]
 	  },
 	  {
 		"text": "A farmer plants corn in rows such that the first row has 40 plants, the second has 44, the third has 48, and so on. How many corn plants are planted in total after 20 rows?",
 		"given": { "a": 40, "d": 4, "n": 20 },
 		"formula": "S_n = (n/2)(2a + (n - 1)d)",
 		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
-		"answer": 1040
+		"answer": 1040,
+		"hint": "This is the sum of an arithmetic sequence for plants in each row.",
+		"steps": [
+		  "Identify the first term (a = 40)",
+		  "Find the common difference (d = 4)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_20 = 20/2 (2×40 + (20 - 1) × 4)",
+		  "Calculate: 10 × (80 + 76) = 10 × 156 = ?"
+		]
 	  }
 	]
   },
@@ -45,15 +77,31 @@
 		"given": { "a": 10, "d": 2, "n": 40 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = (a + d)(n - 1)", "a_n = a + (n + 1)d"],
-		"answer": 88
+		"answer": 88,
+		"hint": "This is an arithmetic sequence. Each step is 2 cm higher than the previous step.",
+		"steps": [
+		  "Identify the first term (a = 10)",
+		  "Find the common difference (d = 2)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_40 = 10 + (40 - 1) × 2",
+		  "Calculate: 10 + 39 × 2 = 10 + 78 = ?"
+		]
 	  },
 	  {
 		"text": "A stadium has rows of seats arranged in arithmetic sequence. The first row has 25 seats, the second 30 seats, the third 35 seats, and so on. How many seats are there in total in the first 15 rows?",
 		"given": { "a": 25, "d": 5, "n": 15 },
 		"formula": "S_n = (n/2)(2a + (n - 1)d)",
 		"distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
-		"answer": 900
+		"answer": 900,
+		"hint": "This is the sum of an arithmetic sequence for seats in rows.",
+		"steps": [
+		  "Identify the first term (a = 25)",
+		  "Find the common difference (d = 5)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_15 = 15/2 (2×25 + (15 - 1) × 5)",
+		  "Calculate: 7.5 × (50 + 70) = 7.5 × 120 = ?"
+		]
 	  }
 	]
-  },
+  }
 ]

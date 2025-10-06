@@ -14,7 +14,7 @@ extends Control
 @onready var mute_button: Button    = $HBoxContainer/MuteButton
 
 # Background music
-@onready var bgm_player: AudioStreamPlayer = $BGMPlayer
+
 
 # State
 var last_volume: float = 0.5
@@ -29,12 +29,12 @@ func _ready() -> void:
 		$HBoxContainer.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	# Background music
-	if bgm_player:
-		if bgm_player.stream == null:
-			push_warning("No audio file assigned to BGMPlayer. Set one in the Inspector!")
+	if MusicPlayer:
+		if MusicPlayer.stream == null:
+			push_warning("No audio file assigned to MusicPlayer. Set one in the Inspector!")
 		else:
-			bgm_player.autoplay = true
-			bgm_player.play()
+			MusicPlayer.autoplay = true
+			MusicPlayer.play()
 
 	# Connect buttons (including Close)
 	if close_btn:
@@ -97,20 +97,19 @@ func _on_mute_button_pressed() -> void:
 		is_muted = false
 		volume_slider.value = last_volume
 		mute_button.text = "Mute"
+		MusicPlayer.set_music_volume(last_volume)
 	else:
 		is_muted = true
 		last_volume = volume_slider.value
 		volume_slider.value = 0.0
 		mute_button.text = "Unmute"
+		MusicPlayer.mute_music()
 
 # --- Volume Slider Callback ---
 func _on_music_volume_slider_value_changed(value: float) -> void:
-	if bgm_player:
-		bgm_player.volume_db = linear_to_db(value if value > 0.0 else 0.0001)
-	var percent := int(value * 100.0)
-	volume_label.text = "Music Volume: %d%%" % percent
-	if not is_muted and value > 0.0:
-		last_volume = value
+	var safe_value = max(value, 0.05)
+	MusicPlayer.volume_db = linear_to_db(safe_value)
+
 
 
 func _on_achievements_button_pressed() -> void:

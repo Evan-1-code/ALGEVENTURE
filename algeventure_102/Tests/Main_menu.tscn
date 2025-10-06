@@ -2313,6 +2313,7 @@ animations = [{
 }]
 
 [node name="Main_menu" type="Node2D"]
+scale = Vector2(0.980087, 0.983837)
 script = ExtResource("1_ievus")
 
 [node name="4" type="Sprite2D" parent="."]
