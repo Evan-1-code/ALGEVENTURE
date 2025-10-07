@@ -42,10 +42,17 @@ func _ready():
 		add_child(hint_system_instance)
 	MusicPlayer.play()
 
+func set_json_path(new_path: String) -> void:
+	JSON_PATH = new_path
+	_load_levels_from_json(JSON_PATH)
+	_show_current_problem()
+
 func _load_levels_from_json(path):
+	if not FileAccess.file_exists(path):
+		push_error("JSON file not found: " + path)
+		return
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file:
-		var _text = file.get_as_text()
 		var json = JSON.parse_string(file.get_as_text())
 		if typeof(json) == TYPE_ARRAY:
 			levels = json

@@ -32,7 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
-JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_14_problem.json"
+JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/Glevel_14_problems.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -7,14 +7,31 @@
         "given": { "a1": 2, "r": 4, "n": 4 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
-        "answer": 128
+        "answer": 128,
+        "hint": "The population multiplies by 4 every 3 months. After 12 months, that’s 4 intervals.",
+        "steps": [
+          "Identify the first term (a1 = 2)",
+          "Find the common ratio (r = 4)",
+          "Number of periods: n = 12 / 3 = 4",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a4 = 2 × 4^(4-1)",
+          "Calculate: 2 × 4^3 = 2 × 64 = 128"
+        ]
       },
       {
         "text": "An investor deposits $1500 at 6% interest compounded annually. What will it be worth after 10 years?",
         "given": { "a1": 1500, "r": 1.06, "n": 10 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × r × n", "an = a1 + n × r"],
-        "answer": 2678.29
+        "answer": 2678.29,
+        "hint": "Each year, the investment multiplies by 1.06.",
+        "steps": [
+          "Identify the first term (a1 = 1500)",
+          "Find the common ratio (r = 1.06)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a10 = 1500 × 1.06^(10-1)",
+          "Calculate: 1500 × 1.06^9 ≈ 1500 × 1.689 = 2533.5"
+        ]
       }
     ]
   },
@@ -26,14 +43,30 @@
         "given": { "a1": 5, "r": 0.7, "n": 9 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
-        "answer": 0.60
+        "answer": 0.60,
+        "hint": "Each bounce is 0.7 times the previous height.",
+        "steps": [
+          "Identify the first term (a1 = 5)",
+          "Find the common ratio (r = 0.7)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a9 = 5 × 0.7^(9-1)",
+          "Calculate: 5 × 0.7^8 ≈ 5 × 0.077 = ?"
+        ]
       },
       {
         "text": "A tree grows 8% taller each year. If current height is 4 meters, what is height after 15 years?",
         "given": { "a1": 4, "r": 1.08, "n": 15 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + n × r"],
-        "answer": 14.37
+        "answer": 14.37,
+        "hint": "Multiply by 1.08 for each year.",
+        "steps": [
+          "Identify the first term (a1 = 4)",
+          "Find the common ratio (r = 1.08)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a15 = 4 × 1.08^(15-1)",
+          "Calculate: 4 × 1.08^14 ≈ 4 × 3.518 = ?"
+        ]
       }
     ]
   },
@@ -45,14 +78,31 @@
         "given": { "a1": 1.5, "r": 2, "n": 5 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + (n-1) × r"],
-        "answer": 24
+        "answer": 24,
+        "hint": "Ten days means 5 periods of doubling.",
+        "steps": [
+          "Identify the first term (a1 = 1.5)",
+          "Find the common ratio (r = 2)",
+          "Number of periods: n = 10 / 2 = 5",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a5 = 1.5 × 2^(5-1)",
+          "Calculate: 1.5 × 2^4 = 1.5 × 16 = ?"
+        ]
       },
       {
         "text": "A savings account deposits $800 annually, earning 7% compounded yearly. What is the value of the 15th deposit after 15 years?",
         "given": { "a1": 800, "r": 1.07, "n": 15 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + (n-1) × r"],
-        "answer": 2395.84
+        "answer": 2395.84,
+        "hint": "Each year, multiply by 1.07. Find the value of the 15th deposit.",
+        "steps": [
+          "Identify the first term (a1 = 800)",
+          "Find the common ratio (r = 1.07)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a15 = 800 × 1.07^(15-1)",
+          "Calculate: 800 × 1.07^14 ≈ 800 × 2.759 = ?"
+        ]
       }
     ]
   }

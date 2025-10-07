@@ -7,14 +7,30 @@
         "given": { "a1": 3, "r": 2, "n": 8 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
-        "answer": 384
+        "answer": 384,
+        "hint": "This is a geometric sequence. Each hour the population is multiplied by 2.",
+        "steps": [
+          "Identify the first term (a1 = 3)",
+          "Find the common ratio (r = 2)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a8 = 3 × 2^(8-1)",
+          "Calculate: 3 × 2^7 = 3 × 128 = ?"
+        ]
       },
       {
         "text": "An investor deposits $1000 at 5% interest per year compounded annually. What is the total after 6 years?",
         "given": { "a1": 1000, "r": 1.05, "n": 6 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × r × n", "an = a1 + n × r"],
-        "answer": 1338.23
+        "answer": 1338.23,
+        "hint": "This is a geometric sequence. Each year the amount is multiplied by 1.05.",
+        "steps": [
+          "Identify the first term (a1 = 1000)",
+          "Find the common ratio (r = 1.05)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a6 = 1000 × 1.05^(6-1)",
+          "Calculate: 1000 × 1.05^5 ≈ 1000 × 1.27628 = ?"
+        ]
       }
     ]
   },
@@ -26,14 +42,30 @@
         "given": { "a1": 2, "r": 0.75, "n": 5 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
-        "answer": 0.594
+        "answer": 0.594,
+        "hint": "Each bounce is 0.75 times the previous height.",
+        "steps": [
+          "Identify the first term (a1 = 2)",
+          "Find the common ratio (r = 0.75)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a5 = 2 × 0.75^(5-1)",
+          "Calculate: 2 × 0.75^4 = 2 × 0.3164 ≈ ?"
+        ]
       },
       {
         "text": "A tree grows 10% taller every year. If its current height is 5 meters, what will be its height after 7 years?",
         "given": { "a1": 5, "r": 1.1, "n": 7 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + n × r"],
-        "answer": 9.74
+        "answer": 9.74,
+        "hint": "Each year the tree multiplies its height by 1.1.",
+        "steps": [
+          "Identify the first term (a1 = 5)",
+          "Find the common ratio (r = 1.1)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a7 = 5 × 1.1^(7-1)",
+          "Calculate: 5 × 1.1^6 ≈ 5 × 1.771561 = ?"
+        ]
       }
     ]
   },
@@ -45,14 +77,30 @@
         "given": { "a1": 500, "r": 1.06, "n": 10 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
-        "answer": 894.52
+        "answer": 894.52,
+        "hint": "Each year, the value multiplies by 1.06. Use the formula for the 10th term.",
+        "steps": [
+          "Identify the first term (a1 = 500)",
+          "Find the common ratio (r = 1.06)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a10 = 500 × 1.06^(10-1)",
+          "Calculate: 500 × 1.06^9 ≈ 500 × 1.68948 = ?"
+        ]
       },
       {
         "text": "A fungus grows at a rate of 1.5 times its previous size every day. If it starts at 2 grams, what is its weight on the 9th day?",
         "given": { "a1": 2, "r": 1.5, "n": 9 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["an = a1 × r × n", "an = a1 + (n-1) × r"],
-        "answer": 152.58
+        "answer": 152.58,
+        "hint": "Each day, the fungus multiplies its weight by 1.5.",
+        "steps": [
+          "Identify the first term (a1 = 2)",
+          "Find the common ratio (r = 1.5)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a9 = 2 × 1.5^(9-1)",
+          "Calculate: 2 × 1.5^8 ≈ 2 × 25.628906 = ?"
+        ]
       }
     ]
   }

@@ -7,14 +7,27 @@
         "given": { "an": 48, "r": 2, "n": 5 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["a1 = an × r^(n-1)", "a1 = an / (n × r)"],
-        "answer": 3
+        "answer": 3,
+        "hint": "Work backwards using the geometric sequence formula to find the first term.",
+        "steps": [
+          "Write the formula: an = a1 × r^(n-1)",
+          "Rearrange: a1 = an / r^(n-1)",
+          "Substitute: a1 = 48 / 2^(5-1)",
+          "Calculate: a1 = 48 / 16 = ?"
+        ]
       },
       {
         "text": "Find the sum of the first 6 terms of a geometric sequence where a1 = 3 and r = -2.",
         "given": { "a1": 3, "r": -2, "n": 6 },
         "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
         "distractors": ["Sn = a1 × n × r", "Sn = n × (a1 + an)/2"],
-        "answer": -189
+        "answer": -189,
+        "hint": "Use the geometric sum formula and substitute the values.",
+        "steps": [
+          "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+          "Substitute: Sn = 3 × ((-2)^6 - 1) / (-2 - 1)",
+          "Calculate: 3 × (64 - 1) / -3 = 3 × 63 / -3 = 189 / -3 = ?"
+        ]
       }
     ]
   },
@@ -26,14 +39,30 @@
         "given": { "a1": 8, "a5": 128, "n": 5 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["r = a5 / (a1 × n)", "r = (a5 - a1)/(n-1)"],
-        "answer": 2
+        "answer": 2,
+        "hint": "Use the formula for the nth term and solve for r.",
+        "steps": [
+          "Write the formula: a5 = a1 × r^(5-1)",
+          "Substitute: 128 = 8 × r^4",
+          "Divide: 128 / 8 = r^4",
+          "Calculate: 16 = r^4",
+          "Take the fourth root: r = ?"
+        ]
       },
       {
         "text": "The 4th term of a geometric sequence is -81 and a1 = -3. Find r.",
         "given": { "a1": -3, "an": -81, "n": 4 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["r = an / a1 × n", "r = an - a1 / (n-1)"],
-        "answer": 3
+        "answer": 3,
+        "hint": "Use the geometric formula to solve for r.",
+        "steps": [
+          "Write the formula: an = a1 × r^(n-1)",
+          "Substitute: -81 = -3 × r^(4-1)",
+          "Divide: -81 / -3 = r^3",
+          "Calculate: 27 = r^3",
+          "Take the cube root: r = ?"
+        ]
       }
     ]
   },
@@ -45,14 +74,28 @@
         "given": { "a1": 2, "r": 3, "n": 7 },
         "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
         "distractors": ["Sn = a1 × n × r", "Sn = n × (a1 + an)/2"],
-        "answer": 2186
+        "answer": 2186,
+        "hint": "Use the geometric sum formula and substitute the values.",
+        "steps": [
+          "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+          "Substitute: Sn = 2 × (3^7 - 1) / (3 - 1)",
+          "Calculate: 2 × (2187 - 1) / 2 = 2 × 2186 / 2 = ?"
+        ]
       },
       {
         "text": "A geometric sequence has a1 = 5 and a6 = 160. Find the common ratio r.",
         "given": { "a1": 5, "a6": 160, "n": 6 },
         "formula": "an = a1 × r^(n-1)",
         "distractors": ["r = a6 / (a1 × n)", "r = (a6 - a1)/(n-1)"],
-        "answer": 2
+        "answer": 2,
+        "hint": "Use the formula for the nth term and solve for r.",
+        "steps": [
+          "Write the formula: a6 = a1 × r^(6-1)",
+          "Substitute: 160 = 5 × r^5",
+          "Divide: 160 / 5 = r^5",
+          "Calculate: 32 = r^5",
+          "Take the fifth root: r = ?"
+        ]
       }
     ]
   }
