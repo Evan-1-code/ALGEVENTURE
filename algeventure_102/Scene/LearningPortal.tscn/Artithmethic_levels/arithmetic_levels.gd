@@ -1,19 +1,19 @@
 extends Control
 
-@onready var al1_button: Button = $HBoxContainer/Button
-@onready var al2_button: Button = $HBoxContainer/Button2
-@onready var al3_button: Button = $HBoxContainer/Button3
-@onready var al4_button: Button = $HBoxContainer/Button4
-@onready var al5_button: Button = $HBoxContainer/Button5
-@onready var al6_button: Button = $HBoxContainer/Button6
-@onready var al7_button: Button = $HBoxContainer/Button7
-@onready var al8_button: Button = $HBoxContainer/Button8
-@onready var al9_button: Button = $HBoxContainer/Button9
-@onready var al10_button: Button = $HBoxContainer/Button10
-@onready var al11_button: Button = $HBoxContainer/Button11
-@onready var al12_button: Button = $HBoxContainer/Button12
-@onready var al13_button: Button = $HBoxContainer/Button13
-@onready var al14_button: Button = $HBoxContainer/Button14
+@onready var al1_button: Button = $ScrollContainer/HBoxContainer/Button
+@onready var al2_button: Button = $ScrollContainer/HBoxContainer/Button2
+@onready var al3_button: Button = $ScrollContainer/HBoxContainer/Button3
+@onready var al4_button: Button = $ScrollContainer/HBoxContainer/Button4
+@onready var al5_button: Button = $ScrollContainer/HBoxContainer/Button5
+@onready var al6_button: Button = $ScrollContainer/HBoxContainer/Button6
+@onready var al7_button: Button = $ScrollContainer/HBoxContainer/Button7
+@onready var al8_button: Button = $ScrollContainer/HBoxContainer/Button8
+@onready var al9_button: Button = $ScrollContainer/HBoxContainer/Button9
+@onready var al10_button: Button = $ScrollContainer/HBoxContainer/Button10
+@onready var al11_button: Button = $ScrollContainer/HBoxContainer/Button11
+@onready var al12_button: Button = $ScrollContainer/HBoxContainer/Button12
+@onready var al13_button: Button = $ScrollContainer/HBoxContainer/Button13
+@onready var al14_button: Button = $ScrollContainer/HBoxContainer/Button14
 
 func _ready():
 	al1_button.disabled = false

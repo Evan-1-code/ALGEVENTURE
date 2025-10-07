@@ -26,7 +26,6 @@ MusicPlayer="*res://Scene/MusicPlayer.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [global_group]
 
