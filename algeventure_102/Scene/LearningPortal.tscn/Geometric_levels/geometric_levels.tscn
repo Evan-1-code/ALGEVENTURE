@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://degcfcb0hgedb"]
+[gd_scene load_steps=25 format=3 uid="uid://degcfcb0hgedb"]
 
 [ext_resource type="Script" uid="uid://bv26jdsl6rc1t" path="res://Scene/LearningPortal.tscn/Geometric_levels/geometric_levels.gd" id="1_4n6iw"]
 [ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_7ixvh"]
 [ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="3_al07p"]
 [ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_qswse"]
 [ext_resource type="Texture2D" uid="uid://c6adlypk5hvp8" path="res://Tests/buttonsui/Untitled13_20250922143702.png" id="5_ujrit"]
+[ext_resource type="Script" uid="uid://dl7phoqnmx102" path="res://Scene/LearningPortal.tscn/Geometric_levels/h_box_container.gd" id="5_yvykp"]
 [ext_resource type="Texture2D" uid="uid://b6qxydm14kc8t" path="res://Tests/buttonsui/Untitled13_20250922143711.png" id="6_yvykp"]
 [ext_resource type="Texture2D" uid="uid://bx74v6smxrmcm" path="res://Tests/buttonsui/Untitled13_20250922143721.png" id="7_ldcsn"]
 [ext_resource type="Texture2D" uid="uid://bllkqhiapn6ua" path="res://Tests/buttonsui/Untitled13_20250922143731.png" id="8_20fji"]
@@ -67,8 +68,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
+offset_left = 4.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -81,21 +84,21 @@ offset_bottom = 89.0
 icon = ExtResource("4_qswse")
 expand_icon = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -5.99998
-offset_top = 2.0
-offset_right = -6.0
-offset_bottom = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.08, 1)
-alignment = 1
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 287.0
+offset_right = 431.0
+offset_bottom = 334.0
+scale = Vector2(3, 3)
+vertical_scroll_mode = 0
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("5_yvykp")
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -108,7 +111,7 @@ alignment = 2
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button2" type="Button" parent="HBoxContainer"]
+[node name="Button2" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -120,7 +123,7 @@ icon = ExtResource("6_yvykp")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button3" type="Button" parent="HBoxContainer"]
+[node name="Button3" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -132,7 +135,7 @@ icon = ExtResource("7_ldcsn")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button4" type="Button" parent="HBoxContainer"]
+[node name="Button4" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -144,7 +147,7 @@ icon = ExtResource("8_20fji")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button5" type="Button" parent="HBoxContainer"]
+[node name="Button5" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -156,7 +159,7 @@ icon = ExtResource("9_lyhad")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button6" type="Button" parent="HBoxContainer"]
+[node name="Button6" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -168,7 +171,7 @@ icon = ExtResource("10_v5sc8")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button7" type="Button" parent="HBoxContainer"]
+[node name="Button7" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -180,7 +183,7 @@ icon = ExtResource("11_c2cs1")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button8" type="Button" parent="HBoxContainer"]
+[node name="Button8" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -192,7 +195,7 @@ icon = ExtResource("12_e64tx")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button9" type="Button" parent="HBoxContainer"]
+[node name="Button9" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -204,7 +207,7 @@ icon = ExtResource("13_ux4cn")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button10" type="Button" parent="HBoxContainer"]
+[node name="Button10" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -216,7 +219,7 @@ icon = ExtResource("14_eb3hp")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button11" type="Button" parent="HBoxContainer"]
+[node name="Button11" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -228,7 +231,7 @@ icon = ExtResource("15_xqnys")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button12" type="Button" parent="HBoxContainer"]
+[node name="Button12" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -240,7 +243,7 @@ icon = ExtResource("16_p4bwk")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button13" type="Button" parent="HBoxContainer"]
+[node name="Button13" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -252,7 +255,7 @@ icon = ExtResource("17_ojvft")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button14" type="Button" parent="HBoxContainer"]
+[node name="Button14" type="Button" parent="ScrollContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_wb4gx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_vtm4m")
@@ -265,16 +268,16 @@ icon_alignment = 1
 expand_icon = true
 
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button7" to="." method="_on_button_7_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button10" to="." method="_on_button_10_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
