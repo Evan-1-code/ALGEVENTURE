@@ -1,5 +1,6 @@
 extends Control
 
+const NUM_AL_LEVELS := 14
 
 var al_buttons: Array = []
 
