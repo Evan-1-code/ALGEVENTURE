@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bvdegncumwsqs"]
+
+[ext_resource type="FontFile" uid="uid://crphh4kgdq0h1" path="res://Assets/Fonts/NotoSansMath-Regular.ttf" id="1_p4gly"]
+
+[resource]
+base_font = ExtResource("1_p4gly")
+opentype_features = {
+1667329140: 0
+}

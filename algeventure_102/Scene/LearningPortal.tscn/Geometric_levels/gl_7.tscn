@@ -100,15 +100,15 @@ offset_top = 454.0
 offset_right = 911.0
 offset_bottom = 493.0
 
-[node name="SolveFeedbackLabel" type="Label" parent="."]
+[node name="SolveFeedbackLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.017
 anchor_bottom = 0.035
 offset_left = 375.0
 offset_top = 414.0
-offset_right = 395.416
-offset_bottom = 414.32
+offset_right = 795.416
+offset_bottom = 474.32
 
 [node name="GivenInputContainer" type="VBoxContainer" parent="."]
 layout_mode = 0

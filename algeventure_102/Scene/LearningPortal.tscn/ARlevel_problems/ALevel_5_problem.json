@@ -1,72 +1,72 @@
 [
   {
-    "level": 1,
-    "problems": [
-      {
-        "text": "Alex walks 1 km on day 1, 1.5 km on day 2, 2 km on day 3, and so on. How far does he walk on day 8?",
-        "given": { "a": 1, "d": 0.5, "n": 8 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": [ "a_n = a + (n + 1)d",  "a_n = d + (n - 1)a"],
-        "answer": 4.5,
-        "hint": "This is an arithmetic sequence. Each day he walks 0.5 km more than the previous day.",
-        "steps": [
-          "Identify the first term (a = 1)",
-          "Find the common difference (d = 0.5)",
-          "Use the formula: a_n = a + (n - 1)d",
-          "Substitute: a_8 = 1 + (8 - 1) × 0.5",
-          "Calculate: 1 + 7 × 0.5 = 1 + 3.5 = ?"
-        ]
-      },
-      {
-        "text": "A classroom has 4 chairs in the first row, 7 in the second, continuing in this pattern. How many in 6 rows?",
-        "given": { "First term (a)": 4, "Common difference (d)": 3, "Number of terms (n)": 6 },
-        "formula": "S_n = n/2 × (2a + (n - 1)d)",
-        "distractors": [ "S_n = a + d × n",  "S_n = (a + d)/2 × n",  "S_n = n × a + d"],
-        "answer": 69,
-        "hint": "This is the sum of an arithmetic sequence. Each row has 3 more chairs than the previous row.",
-        "steps": [
-          "Identify the first term (a = 4)",
-          "Find the common difference (d = 3)",
-          "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
-          "Substitute: S_6 = 6/2 × (2×4 + (6 - 1) × 3)",
-          "Calculate: 3 × (8 + 15) = 3 × 23 = ?"
-        ]
-      }
-    ]
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Alex walks 1 km on day 1, 1.5 km on day 2, 2 km on day 3, and so on. How far does he walk on day 8?",
+		"given": { "a": 1, "d": 0.5, "n": 8 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": [ "a_n = a + (n + 1)d",  "a_n = d + (n - 1)a"],
+		"answer": 4.5,
+		"hint": "This is an arithmetic sequence. Each day he walks 0.5 km more than the previous day.",
+		"steps": [
+		  "Identify the first term (a = 1)",
+		  "Find the common difference (d = 0.5)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_8 = 1 + (8 - 1) × 0.5",
+		  "Calculate: 1 + 7 × 0.5 = 1 + 3.5 = ?"
+		]
+	  },
+	  {
+		"text": "A classroom has 4 chairs in the first row, 7 in the second, continuing in this pattern. How many in 6 rows?",
+		"given": { "First term (a)": 4, "Common difference (d)": 3, "Number of terms (n)": 6 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": [ "S_n = a + d × n",  "S_n = (a + d)/2 × n",  "S_n = n × a + d"],
+		"answer": 69,
+		"hint": "This is the sum of an arithmetic sequence. Each row has 3 more chairs than the previous row.",
+		"steps": [
+		  "Identify the first term (a = 4)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_6 = 6/2 × (2×4 + (6 - 1) × 3)",
+		  "Calculate: 3 × (8 + 15) = 3 × 23 = ?"
+		]
+	  }
+	]
   },
   {
-    "level": 2,
-    "problems": [
-      {
-        "text": "A student scores 70 on the first test and increases the score by 5 in each following test. What is the score on the 5th test?",
-        "given": { "a": 70, "d": 5, "n": 5 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = a + nd",  "a_n = (n - 1) × a + d"],
-        "answer": 90,
-        "hint": "This is an arithmetic sequence. Each test score increases by 5.",
-        "steps": [
-          "Identify the first term (a = 70)",
-          "Find the common difference (d = 5)",
-          "Use the formula: a_n = a + (n - 1)d",
-          "Substitute: a_5 = 70 + (5 - 1) × 5",
-          "Calculate: 70 + 4 × 5 = 70 + 20 = ?"
-        ]
-      },
-      {
-        "text": "A delivery truck drops off 10 bottles, then 12 the next day, 14 the next. How many bottles after 8 days?",
-        "given": { "First term (a)": 10, "Common difference (d)": 2, "Number of terms (n)": 8 },
-        "formula": "S_n = n/2 × (2a + (n - 1)d)",
-        "distractors": [ "S_n = a + d × n", "S_n = (a + d) × n", "S_n = n × a + d"],
-        "answer": 136,
-        "hint": "This is the sum of an arithmetic sequence. Each day the number of bottles increases by 2.",
-        "steps": [
-          "Identify the first term (a = 10)",
-          "Find the common difference (d = 2)",
-          "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
-          "Substitute: S_8 = 8/2 × (2×10 + (8 - 1) × 2)",
-          "Calculate: 4 × (20 + 14) = 4 × 34 = ?"
-        ]
-      }
-    ]
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A student scores 70 on the first test and increases the score by 5 in each following test. What is the score on the 5th test?",
+		"given": { "a": 70, "d": 5, "n": 5 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a + nd",  "a_n = (n - 1) × a + d"],
+		"answer": 90,
+		"hint": "This is an arithmetic sequence. Each test score increases by 5.",
+		"steps": [
+		  "Identify the first term (a = 70)",
+		  "Find the common difference (d = 5)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_5 = 70 + (5 - 1) × 5",
+		  "Calculate: 70 + 4 × 5 = 70 + 20 = ?"
+		]
+	  },
+	  {
+		"text": "A delivery truck drops off 10 bottles, then 12 the next day, 14 the next. How many bottles after 8 days?",
+		"given": { "First term (a)": 10, "Common difference (d)": 2, "Number of terms (n)": 8 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": [ "S_n = a + d × n", "S_n = (a + d) × n", "S_n = n × a + d"],
+		"answer": 136,
+		"hint": "This is the sum of an arithmetic sequence. Each day the number of bottles increases by 2.",
+		"steps": [
+		  "Identify the first term (a = 10)",
+		  "Find the common difference (d = 2)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_8 = 8/2 × (2×10 + (8 - 1) × 2)",
+		  "Calculate: 4 × (20 + 14) = 4 × 34 = ?"
+		]
+	  }
+	]
   }
 ]

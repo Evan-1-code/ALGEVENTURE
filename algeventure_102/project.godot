@@ -31,6 +31,10 @@ window/stretch/mode="viewport"
 
 Doors=""
 
+[gui]
+
+theme/custom_font="uid://bvdegncumwsqs"
+
 [input]
 
 interact={

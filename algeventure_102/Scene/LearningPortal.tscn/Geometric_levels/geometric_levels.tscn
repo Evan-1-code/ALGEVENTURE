@@ -56,33 +56,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0784314, 0.109804, 0.14902, 1)
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 1
-offset_right = 45.0
-offset_bottom = 31.0
-text = "Back"
-script = ExtResource("2_7ixvh")
-
-[node name="option_menu" parent="." instance=ExtResource("3_al07p")]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = -1.0
-offset_right = 4.0
-offset_bottom = -1.0
+offset_left = -5.99999
+offset_top = 2.0
+offset_right = -6.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="SettingsButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1064.0
-offset_top = 13.0
-offset_right = 1145.0
-offset_bottom = 89.0
-icon = ExtResource("4_qswse")
-expand_icon = true
+scale = Vector2(1.08, 1)
+alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
@@ -267,17 +253,43 @@ icon = ExtResource("18_q1sqn")
 icon_alignment = 1
 expand_icon = true
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+offset_right = 45.0
+offset_bottom = 31.0
+text = "Back"
+script = ExtResource("2_7ixvh")
+
+[node name="option_menu" parent="." instance=ExtResource("3_al07p")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+icon = ExtResource("4_qswse")
+expand_icon = true
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button13" to="." method="_on_button_13_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button6" to="." method="_on_button_6_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button7" to="." method="_on_button_7_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button8" to="." method="_on_button_8_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button10" to="." method="_on_button_10_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button11" to="." method="_on_button_11_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button12" to="." method="_on_button_12_pressed"]
-[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button13" to="." method="_on_button_13_pressed"]

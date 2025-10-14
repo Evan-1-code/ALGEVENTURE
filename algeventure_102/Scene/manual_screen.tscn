@@ -42,10 +42,11 @@ layout_mode = 2
 
 [node name="MainPanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
-offset_left = 181.0
-offset_top = 3.0
-offset_right = 1158.0
-offset_bottom = 648.0
+offset_left = 390.7
+offset_top = 1.0
+offset_right = 1367.7
+offset_bottom = 646.0
+scale = Vector2(0.797565, 1)
 size_flags_horizontal = 6
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MainPanel"]
@@ -54,22 +55,6 @@ layout_mode = 2
 [node name="ContentContainer" type="VBoxContainer" parent="HBoxContainer/MainPanel/ScrollContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
-
-[node name="ManualTitle" type="Label" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
-layout_mode = 2
-text = "     dada "
-
-[node name="Content" type="RichTextLabel" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
-layout_mode = 2
-theme_override_font_sizes/bold_italics_font_size = 8
-text = " asdsa
-
-
-
-"
-tab_size = 5
-
-[node name="Header" type="Label" parent="HBoxContainer/MainPanel/ScrollContainer/ContentContainer"]
-layout_mode = 2
-text = "dada"
