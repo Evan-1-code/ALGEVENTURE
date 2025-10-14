@@ -7,15 +7,31 @@
 		"given": { "a": 10, "d": 3, "n": 4 },
 		"formula": "S_n = n/2 × [2a + (n - 1)d]",
 		"distractors": ["S_n = n × [a + (n - 1)d]", "S_n = a + d × n"],
-		"answer": 58
+		"answer": 58,
+		"hint": "This is the sum of an arithmetic sequence. Each day the cyclist rides 3 km more than the previous day.",
+		"steps": [
+		  "Identify the first term (a = 10)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = n/2 × [2a + (n - 1)d]",
+		  "Substitute: S_4 = 4/2 × [2×10 + (4 - 1) × 3]",
+		  "Calculate: 2 × (20 + 9) = 2 × 29 = ?"
+		]
 	  },
 	  {
 		"text": "A theater has 20 seats in the first row, 24 seats in the second row, 28 seats in the third row, and so on. How many seats are there in the first 10 rows?",
 		"given": { "a": 20, "d": 4, "n": 10 },
 		"formula": "S_n = n/2 [2a + (n - 1)d]",
 		"distractors": ["S_n = n/2 [a + d]", "S_n = n/2 [2a + (n + 1)d]"],
-		"answer": 380
-      }
+		"answer": 380,
+		"hint": "This is the sum of an arithmetic sequence for the total seats in 10 rows.",
+		"steps": [
+		  "Identify the first term (a = 20)",
+		  "Find the common difference (d = 4)",
+		  "Use the sum formula: S_n = n/2 [2a + (n - 1)d]",
+		  "Substitute: S_10 = 10/2 [2×20 + (10 - 1) × 4]",
+		  "Calculate: 5 × (40 + 36) = 5 × 76 = ?"
+		]
+	  }
 	]
   },
   {
@@ -26,15 +42,31 @@
 		"given": { "a": 50, "d": 50, "n": 12 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = a × n + d", "a_n = a + n × d"],
-		"answer": 600
+		"answer": 600,
+		"hint": "This is an arithmetic sequence. Each week, the amount saved increases by ₱50.",
+		"steps": [
+		  "Identify the first term (a = 50)",
+		  "Find the common difference (d = 50)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_12 = 50 + (12 - 1) × 50",
+		  "Calculate: 50 + 11 × 50 = 50 + 550 = ?"
+		]
 	  },
 	  {
 		"text": "A runner jogs 2 km on the first day, 4 km on the second day, 6 km on the third day, and continues this pattern. How many kilometers will the runner complete after 15 days?",
 		"given": { "a": 2, "d": 2, "n": 15 },
 		"formula": "S_n = n/2 [2a + (n - 1)d]",
 		"distractors": ["S_n = n × (a + d)", "S_n = n/2 [a + (n - 1)d]"],
-		"answer": 240
-      }
+		"answer": 240,
+		"hint": "This is the sum of an arithmetic sequence for the total kilometers in 15 days.",
+		"steps": [
+		  "Identify the first term (a = 2)",
+		  "Find the common difference (d = 2)",
+		  "Use the sum formula: S_n = n/2 [2a + (n - 1)d]",
+		  "Substitute: S_15 = 15/2 [2×2 + (15 - 1) × 2]",
+		  "Calculate: 7.5 × (4 + 28) = 7.5 × 32 = ?"
+		]
+	  }
 	]
-  },
+  }
 ]

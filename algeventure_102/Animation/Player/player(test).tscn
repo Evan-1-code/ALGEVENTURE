@@ -237,7 +237,7 @@ script = ExtResource("1_1ts5u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1ts5u")
-animation = &"walk_up"
+animation = &"idle_down"
 
 [node name="player" type="Sprite2D" parent="."]
 position = Vector2(2.99994, 3)
@@ -247,6 +247,3 @@ scale = Vector2(0.875, 0.820313)
 position = Vector2(16.6667, 9.99999)
 scale = Vector2(0.875, 0.820313)
 shape = SubResource("RectangleShape2D_mq8vs")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true

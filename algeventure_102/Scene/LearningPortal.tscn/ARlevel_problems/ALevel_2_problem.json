@@ -7,15 +7,31 @@
 		"given": { "a": 10, "d": 5, "n": 12 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = a × d × n", "a_n = a + nd" ],
-		"answer": 65
+		"answer": 65,
+		"hint": "This is an arithmetic sequence. Each step is 5 cm higher than the previous one.",
+		"steps": [
+		  "Identify the first term (a = 10)",
+		  "Find the common difference (d = 5)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_12 = 10 + (12 - 1) × 5",
+		  "Calculate: 10 + 11 × 5 = 10 + 55 = ?"
+		]
 	  },
 	  {
 		"text": "A student reads 5 pages on Day 1 and increases by 2 pages each day. How many pages does she read in 12 days?",
 		"given": { "First term (a)": 5, "Common difference (d)": 2, "Number of terms (n)": 12 },
 		"formula": "S_n = n/2 × (2a + (n - 1)d)",
 		"distractors": [ "S_n = n × d + a",  "S_n = a × d × n",  "S_n = (a + d)/2 × n"],
-		"answer": 192
-      }
+		"answer": 192,
+		"hint": "This is the sum of an arithmetic sequence. Each day she reads 2 more pages than the previous day.",
+		"steps": [
+		  "Identify the first term (a = 5)",
+		  "Find the common difference (d = 2)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_12 = 12/2 × (2×5 + (12 - 1) × 2)",
+		  "Calculate: 6 × (10 + 22) = 6 × 32 = ?"
+		]
+	  }
 	]
   },
   {
@@ -26,15 +42,31 @@
 		"given": { "a": 20, "d": 4, "n": 7 },
 		"formula": "a_n = a + (n - 1)d",
 		"distractors": ["a_n = a - (n - 1)d", "a_n = a × d × n"],
-		"answer": 44
+		"answer": 44,
+		"hint": "This is an arithmetic sequence. Each row has 4 more seats than the previous row.",
+		"steps": [
+		  "Identify the first term (a = 20)",
+		  "Find the common difference (d = 4)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_7 = 20 + (7 - 1) × 4",
+		  "Calculate: 20 + 6 × 4 = 20 + 24 = ?"
+		]
 	  },
 	  {
 		"text": "John’s salary is ₱20,000 and increases by ₱1,000 annually. What is his total salary for 5 years?",
 		"given": { "First term (a)": 20000, "Common difference (d)": 1000, "Number of terms (n)": 5 },
 		"formula": "S_n = n/2 × (2a + (n - 1)d)",
 		"distractors": ["S_n = a + d × n", "S_n = n × (a + d)", "S_n = (a + d)/2 × n"],
-		"answer": 110000
-      }
+		"answer": 110000,
+		"hint": "This is the sum of an arithmetic sequence. Each year his salary increases by ₱1,000.",
+		"steps": [
+		  "Identify the first term (a = 20000)",
+		  "Find the common difference (d = 1000)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_5 = 5/2 × (2×20000 + (5 - 1) × 1000)",
+		  "Calculate: 2.5 × (40000 + 4000) = 2.5 × 44000 = ?"
+		]
+	  }
 	]
-  },
+  }
 ]

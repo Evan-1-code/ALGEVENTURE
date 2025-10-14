@@ -1,6 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://blujy48h1exnx"]
+[gd_scene load_steps=21 format=3 uid="uid://blujy48h1exnx"]
 
 [ext_resource type="Script" uid="uid://niww10lokbgt" path="res://Scene/LearningPortal.tscn/learning_portal.gd" id="1_2pc2a"]
+[ext_resource type="Texture2D" uid="uid://b0yl6x7pspdlw" path="res://Tests/buttonsui/Untitled13_20250922144106.png" id="2_5jpa5"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_ia20t"]
+[ext_resource type="Texture2D" uid="uid://c15ohykap1wh5" path="res://Tests/buttonsui/Untitled13_20250922144112.png" id="3_0jukx"]
+[ext_resource type="Script" uid="uid://2y5whcplacxl" path="res://Scene/LearningPortal.tscn/button.gd" id="3_2rlpj"]
+[ext_resource type="Texture2D" uid="uid://bd7quy5bh43q1" path="res://Tests/buttonsui/Untitled13_20250922144102.png" id="4_k3wij"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="7_k3wij"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="8_fuapg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3wij"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fuapg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lnli"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljp4j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rerj6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0ki5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y2rk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmuqq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cii7l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk57j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_365ld"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg4y2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="LearningPortal" type="Control"]
 layout_mode = 3
@@ -26,37 +69,119 @@ color = Color(0.0547155, 0.0495686, 0.145245, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -247.0
-offset_top = -68.0
-offset_right = 239.0
-offset_bottom = 49.0
+anchor_bottom = 1.0
+offset_left = -243.0
+offset_top = -469.0
+offset_right = 243.0
+offset_bottom = 11.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="arithmetic" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Arithmetic"
+tooltip_text = "
+"
+theme_override_styles/focus = SubResource("StyleBoxFlat_k3wij")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fuapg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5lnli")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ljp4j")
+text = "
+
+
+
+
+
+
+
+
+
+"
+icon = ExtResource("2_5jpa5")
+icon_alignment = 1
+expand_icon = true
 
 [node name="geometric" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-text = "Geometric"
+theme_override_styles/focus = SubResource("StyleBoxFlat_rerj6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p0ki5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6y2rk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xmuqq")
+text = "
+
+
+
+
+
+
+
+
+
+"
+icon = ExtResource("3_0jukx")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Topic" type="Label" parent="."]
 layout_mode = 0
-offset_left = 314.0
-offset_top = 143.0
-offset_right = 816.0
-offset_bottom = 214.0
+offset_left = 339.0
+offset_top = 53.0
+offset_right = 841.0
+offset_bottom = 124.0
 theme_override_font_sizes/font_size = 46
-text = "CHOOSE ONE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="Topic"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 154.0
+offset_right = 1806.0
+offset_bottom = 5260.0
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_k3wij")
+
+[node name="BackButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1102.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 35.0
+text = "Back"
+script = ExtResource("2_ia20t")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 48.0
+offset_bottom = 36.0
+text = "Back"
+script = ExtResource("3_2rlpj")
+
+[node name="option_menu" parent="." instance=ExtResource("7_k3wij")]
+visible = false
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_cii7l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mk57j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_365ld")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mg4y2")
+icon = ExtResource("8_fuapg")
+expand_icon = true
+
 [connection signal="pressed" from="VBoxContainer/arithmetic" to="." method="_on_arithmetic_pressed"]
 [connection signal="pressed" from="VBoxContainer/geometric" to="." method="_on_geometric_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4x8vqm5jq7w2"]
+
+[ext_resource type="Script" uid="uid://bxflf8gcnijat" path="res://UI/HintSystem/HintSystem.gd" id="1_hint_system"]
+
+[node name="HintSystem" type="CanvasLayer"]
+script = ExtResource("1_hint_system")
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="Character" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2533, 1242)
+scale = Vector2(0.943332, 0.869224)
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="DialogueBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "💡 Hint"
+horizontal_alignment = 1
+
+[node name="HintText" type="RichTextLabel" parent="DialogueBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+bbcode_enabled = true
+text = "This is where the hint text will appear..."
+fit_content = true
+scroll_active = false
+
+[node name="StepsLabel" type="Label" parent="DialogueBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Step-by-Step:"
+
+[node name="StepText" type="RichTextLabel" parent="DialogueBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+bbcode_enabled = true
+text = "1. First step
+2. Second step
+3. Third step"
+fit_content = true
+scroll_active = false
+
+[node name="CloseButton" type="Button" parent="DialogueBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Close (ESC)"

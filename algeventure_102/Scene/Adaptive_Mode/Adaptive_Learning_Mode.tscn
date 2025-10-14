@@ -1,0 +1,187 @@
+[gd_scene load_steps=22 format=3 uid="uid://b4v0ygdo0uwvo"]
+
+[ext_resource type="Script" uid="uid://dbi33wtd7srpm" path="res://Scene/Adaptive_Mode/adaptive_learning_mode.gd" id="1_52nv3"]
+[ext_resource type="Texture2D" uid="uid://chal5xsict5ws" path="res://Tests/UI (temp)/Adaptive_mode_UI.jpg" id="2_dbeyr"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_piok7"]
+[ext_resource type="Texture2D" uid="uid://dms843pnygth" path="res://Tests/UI (temp)/easy_button-removebg-preview.png" id="3_7x1si"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="3_a2rha"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_5p6io"]
+[ext_resource type="Texture2D" uid="uid://bqdwwawygpove" path="res://Tests/UI (temp)/Medium-removebg-preview.png" id="4_xdn30"]
+[ext_resource type="Texture2D" uid="uid://5scjijdd7a1x" path="res://Tests/UI (temp)/Hard_button-removebg-preview.png" id="5_d44x4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbeyr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x1si"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d44x4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdn30"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4wvw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug6iq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wk6p8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks40p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6qd5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yy83k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fmo2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4swq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_un4mb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="AdaptiveLearningMode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52nv3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 2680.0
+offset_bottom = 1440.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dbeyr")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.411676, 0.526523, 0.452602, 1)
+
+[node name="ProblemLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 173.0
+offset_right = 1039.0
+offset_bottom = 361.0
+text = "problem"
+metadata/_edit_use_anchors_ = true
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.054816
+anchor_top = 0.034965
+anchor_right = -0.054816
+anchor_bottom = 0.034965
+offset_left = 253.0
+offset_top = 440.0
+offset_right = 329.0
+offset_bottom = 478.0
+text = "SUBMIT"
+metadata/_edit_use_anchors_ = true
+
+[node name="RatingContainer" type="HBoxContainer" parent="."]
+visibility_layer = 6
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.205
+anchor_top = 0.581
+anchor_right = 0.942
+anchor_bottom = 1.0
+offset_left = 68.215
+offset_top = -67.415
+offset_right = 757.402
+offset_bottom = 312.492
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.550918, 0.527282)
+alignment = 1
+
+[node name="EasyButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dbeyr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7x1si")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d44x4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xdn30")
+text = " "
+icon = ExtResource("3_7x1si")
+icon_alignment = 1
+
+[node name="MediumButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_c4wvw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ug6iq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wk6p8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ks40p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f6qd5")
+icon = ExtResource("4_xdn30")
+
+[node name="HardButton" type="Button" parent="RatingContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxFlat_yy83k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0fmo2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l4swq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_un4mb")
+icon = ExtResource("5_d44x4")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_piok7")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerLine" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 146.0
+offset_top = -195.0
+offset_right = 326.0
+offset_bottom = -153.0
+grow_vertical = 0
+
+[node name="option_menu" parent="." instance=ExtResource("3_a2rha")]
+visible = false
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 1156.0
+offset_bottom = 645.0
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -81.0
+offset_bottom = 76.0
+grow_horizontal = 0
+icon = ExtResource("4_5p6io")
+expand_icon = true
+
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

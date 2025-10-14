@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://cttd81k0irk5p"]
+[gd_scene load_steps=12 format=3 uid="uid://cttd81k0irk5p"]
 
 [ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_a1hsg"]
+[ext_resource type="PackedScene" uid="uid://c6kae70op7f75" path="res://UI/achievement_popup.tscn" id="3_sbxrg"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="4_lmuc8"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="5_50eg2"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
 
-[node name="AL_1" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23355"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu1sd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7p8j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyc80"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ahlc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="AL_12" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +31,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
+JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_12_problem.json"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -73,15 +93,15 @@ offset_top = 465.0
 offset_right = 749.0
 offset_bottom = 504.0
 
-[node name="SolveFeedbackLabel" type="Label" parent="."]
+[node name="SolveFeedbackLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.017
 anchor_bottom = 0.035
 offset_left = 375.0
 offset_top = 414.0
-offset_right = 395.416
-offset_bottom = 414.32
+offset_right = 633.416
+offset_bottom = 478.32
 
 [node name="GivenInputContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -107,4 +127,44 @@ offset_bottom = 141.0
 text = "Calculator"
 icon = SubResource("ImageTexture_lssfj")
 
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_a1hsg")
+
+[node name="AchievementPopup" parent="." instance=ExtResource("3_sbxrg")]
+layout_mode = 1
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_23355")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wu1sd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u7p8j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fyc80")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ahlc")
+icon = ExtResource("4_lmuc8")
+expand_icon = true
+
+[node name="option_menu" parent="." instance=ExtResource("5_50eg2")]
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1156.0
+offset_bottom = 640.0
+
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 91.0
+offset_top = 352.0
+offset_right = 182.0
+offset_bottom = 383.0
+text = "💡 Hint"
+
 [connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

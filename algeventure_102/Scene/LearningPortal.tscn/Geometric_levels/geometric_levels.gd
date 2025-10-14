@@ -1,71 +1,48 @@
 extends Control
 
-@onready var gl2_button: Button = $HBoxContainer/Button2
-@onready var gl3_button: Button = $HBoxContainer/Button3
-@onready var gl4_button: Button = $HBoxContainer/Button4
-@onready var gl5_button: Button = $HBoxContainer/Button5
-@onready var gl6_button: Button = $HBoxContainer/Button6
-@onready var gl7_button: Button = $HBoxContainer/Button7
+const NUM_GL_LEVELS := 14
+var gl_buttons: Array = []
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
 
 func _ready():
-	gl2_button.disabled = not ProgressManager.progress["gl_1"]
-	gl3_button.disabled = not ProgressManager.progress["gl_2"]
-	gl4_button.disabled = not ProgressManager.progress["gl_3"]
-	gl5_button.disabled = not ProgressManager.progress["gl_4"]
-	gl6_button.disabled = not ProgressManager.progress["gl_5"]
-	gl7_button.disabled = not ProgressManager.progress["gl_6"]
+	ProgressManager.load_progress()
+	gl_buttons = [
+		$HBoxContainer/Button,
+		$HBoxContainer/Button2,
+		$HBoxContainer/Button3,
+		$HBoxContainer/Button4,
+		$HBoxContainer/Button5,
+		$HBoxContainer/Button6,
+		$HBoxContainer/Button7,
+		$HBoxContainer/Button8,
+		$HBoxContainer/Button9,
+		$HBoxContainer/Button10,
+		$HBoxContainer/Button11,
+		$HBoxContainer/Button12,
+		$HBoxContainer/Button13,
+		$HBoxContainer/Button14
+	]
+	for i in range(NUM_GL_LEVELS):
+		if i == 0:
+			gl_buttons[i].disabled = false
+		else:
+			var prev_key = "gl_" + str(i)
+			gl_buttons[i].disabled = not ProgressManager.progress.get(prev_key, false)
+	for i in range(NUM_GL_LEVELS):
+		print("gl", i + 1, ":", !gl_buttons[i].disabled)
+	for i in range(NUM_GL_LEVELS):
+		gl_buttons[i].pressed.connect(_on_gl_button_pressed.bind(i))
+	for btn in gl_buttons:
+		if !btn.disabled:
+			btn.grab_focus()
+			break
+	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_1.tscn")
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()
 
-
-func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_2.tscn")
-
-
-func _on_button_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_3.tscn")
-
-
-func _on_button_4_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_4.tscn")
-
-
-func _on_button_5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_5.tscn")
-
-
-func _on_button_6_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_6.tscn")
-
-
-func _on_button_7_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_7.tscn")
-
-
-func _on_button_8_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_8.tscn")
-
-
-func _on_button_9_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_9.tscn")
-
-
-func _on_button_10_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_10.tscn")
-
-
-func _on_button_11_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_11.tscn")
-
-
-func _on_button_12_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_12.tscn")
-
-
-func _on_button_13_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_13.tscn")
-
-
-func _on_button_14_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_14.tscn")
+func _on_gl_button_pressed(idx: int) -> void:
+	ProgressManager.current_level_index = idx
+	ProgressManager.current_level_key = "gl_" + str(idx + 1)
+	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_%d.tscn" % (idx + 1))

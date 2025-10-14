@@ -1,0 +1,191 @@
+{
+  "title": "SeQuest Manual — Arithmetic and Geometric Sequences & Series",
+  "topics": [
+    "Introduction",
+    "Common Symbols and Definitions",
+    "Arithmetic Sequence",
+    "Arithmetic Series (Sum of Arithmetic Sequence)",
+    "Geometric Sequence",
+    "Geometric Series (Sum of Geometric Sequence)",
+    "Infinite Geometric Series",
+    "Arithmetic vs Geometric Comparison",
+    "Real-World Applications of Sequences and Series",
+    "Step-by-Step Solving Guide",
+    "Formula Summary",
+    "Tips and Checks",
+    "Summary of Learning Coverage"
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "content": [
+        "This manual provides a complete guide to Arithmetic and Geometric Sequences and Series.",
+        "It compiles every topic and concept from both Arithmetic and Geometric problem sets used in A-level and G-level exercises.",
+        "You will learn all the key formulas, relationships, and how to find unknown quantities like a[sub]1[/sub], d, r, n, Sₙ, and aₙ.",
+        "All definitions, formulas, and solving procedures are provided for study and quick reference."
+      ]
+    },
+    {
+      "id": "symbols",
+      "title": "Common Symbols and Definitions",
+      "content": [
+        "a [sub]1[/sub] — first term of the sequence",
+        "aₙ — nth term (any term in the sequence)",
+        "d — common difference (arithmetic sequence)",
+        "r — common ratio (geometric sequence)",
+        "n — number of terms or term position",
+        "Sₙ — sum of the first n terms (finite series)",
+        "S∞ — sum to infinity (only for convergent geometric series, |r| < 1)",
+        "l — last term (used in arithmetic series)",
+        "Σ — summation notation, representing the total sum of a series"
+      ]
+    },
+    {
+      "id": "arithmetic_sequence",
+      "title": "Arithmetic Sequence",
+      "content": [
+        "An Arithmetic Sequence (A.S.) is a sequence of numbers where each term after the first is obtained by adding a constant difference (d).",
+        "General Form: a [sub] 1 [/sub], a [sub] 1 [/sub] + d, a [sub] 1 [/sub] + 2d, a [sub] 1 [/sub] + 3d, ...",
+        "nth Term Formula: aₙ = a [sub] 1 [/sub] + (n − 1)d",
+        "Common Difference: d = a₂ − a [sub] 1 [/sub] or d = (aₙ − a [sub] 1 [/sub]) / (n − 1)",
+        "To find n when aₙ is known: n = ((aₙ − a [sub] 1 [/sub]) / d) + 1",
+        "If a term’s position is not an integer, that term does not exist in the sequence."
+      ]
+    },
+    {
+      "id": "arithmetic_series",
+      "title": "Arithmetic Series (Sum of Arithmetic Sequence)",
+      "content": [
+        "An Arithmetic Series is the sum of the first n terms of an arithmetic sequence.",
+        "Formula using first and last term: Sₙ = (n/2)(a [sub] 1 [/sub] + l)",
+        "Formula using common difference: Sₙ = (n/2)[2a [sub] 1 [/sub] + (n − 1)d]",
+        "Relationship between last term and first term: l = a [sub] 1 [/sub] + (n − 1)d",
+        "If d = 0, all terms are equal and Sₙ = n × a [sub] 1 [/sub].",
+        "To find n given Sₙ, rearrange the sum formula into a quadratic: d n² + (2a [sub] 1 [/sub] − d)n − 2Sₙ = 0, and solve for n."
+      ]
+    },
+    {
+      "id": "geometric_sequence",
+      "title": "Geometric Sequence",
+      "content": [
+        "A Geometric Sequence (G.S.) is a sequence of numbers where each term is obtained by multiplying the previous term by a fixed ratio (r).",
+        "General Form: a [sub] 1 [/sub], a₁r, a₁r², a₁r³, ...",
+        "nth Term Formula: aₙ = a₁ × r^(n − 1)",
+        "Common Ratio: r = a₂ / a [sub] 1 [/sub] or r = (aₙ / a [sub] 1 [/sub])^(1 / (n − 1))",
+        "To find a₁ given aₙ and r: a [sub] 1 [/sub] = aₙ / r^(n − 1)",
+        "To find n when aₙ, a₁, and r are known: n = [log(aₙ / a [sub] 1 [/sub]) / log(r)] + 1",
+        "If r > 1, the sequence grows (exponential growth). If 0 < r < 1, the sequence decreases (exponential decay)."
+      ]
+    },
+    {
+      "id": "geometric_series",
+      "title": "Geometric Series (Sum of Geometric Sequence)",
+      "content": [
+        "A Geometric Series is the sum of the first n terms of a geometric sequence.",
+        "Formula (r ≠ 1): Sₙ = a [sub] 1 [/sub] × (rⁿ − 1) / (r − 1)",
+        "If r < 1, you can also use: Sₙ = a [sub] 1 [/sub] × (1 − rⁿ) / (1 − r)",
+        "Relationship with next term: Sₙ = (a [sub] 1 [/sub] − a [sub] 1 [/sub] rⁿ) / (1 − r) = (a [sub] 1 [/sub] − aₙ₊₁) / (1 − r)",
+        "To find a₁ given Sₙ, r, and n: a₁ = Sₙ × (r − 1) / (rⁿ − 1)",
+        "To find r when a₁, aₙ, and n are known: r = (aₙ / a [sub] 1 [/sub] )^(1 / (n − 1))"
+      ]
+    },
+    {
+      "id": "geometric_infinite_series",
+      "title": "Infinite Geometric Series",
+      "content": [
+        "When the ratio r satisfies |r| < 1, the geometric series has a finite sum even as n → ∞.",
+        "Formula: S∞ = a [sub] 1 [/sub] / (1 − r)",
+        "If |r| ≥ 1, the series diverges and has no finite sum.",
+        "For alternating ratios (negative r), the terms alternate in sign, but convergence still depends on |r| < 1.",
+        "Infinite series are common in real-life applications like physics, finance, and computer science (e.g., repeated depreciation, signal decay, or iterative algorithms)."
+      ]
+    },
+    {
+      "id": "arithmetic_vs_geometric",
+      "title": "Arithmetic vs Geometric Comparison",
+      "content": [
+        "Arithmetic sequences involve addition or subtraction of a fixed amount (d).",
+        "Geometric sequences involve multiplication or division by a fixed amount (r).",
+        "Arithmetic: linear growth or decay — constant difference.",
+        "Geometric: exponential growth or decay — constant ratio.",
+        "Example comparison:",
+        "A.S.: 2, 4, 6, 8, 10 → difference d = 2",
+        "G.S.: 2, 4, 8, 16, 32 → ratio r = 2",
+        "Graphically, arithmetic sequences form straight lines, while geometric sequences form exponential curves."
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Real-World Applications of Sequences and Series",
+      "content": [
+        "1. Compound Interest — Geometric sequence with r = 1 + (interest rate).",
+        "2. Population Growth — Each generation multiplies by a growth rate (geometric).",
+        "3. Radioactive Decay — Successive quantities form a geometric decay series (0 < r < 1).",
+        "4. Depreciation of Assets — Value decreases geometrically over time.",
+        "5. Loan Payments and Investments — Use arithmetic or geometric series to model total payments or accumulated value.",
+        "6. Physics and Engineering — Patterns of vibrations, waves, or signal loss can follow geometric series.",
+        "7. Repeated Patterns or Tilings — Arithmetic and geometric progressions describe spacing, scaling, or layering."
+      ]
+    },
+    {
+      "id": "solving_guide",
+      "title": "Step-by-Step Solving Guide",
+      "content": [
+        "1. Identify the sequence type (arithmetic or geometric).",
+        "2. Write down known variables (a₁, aₙ, d/r, n, Sₙ).",
+        "3. Choose the appropriate formula based on what you are solving for.",
+        "4. Rearrange formula algebraically to isolate the unknown.",
+        "5. Substitute values carefully.",
+        "6. Simplify and interpret your result — ensure n is a positive integer when required.",
+        "7. For series, verify conditions (|r| < 1 for convergence)."
+      ]
+    },
+    {
+      "id": "formula_summary",
+      "title": "Formula Summary",
+      "content": [
+        "Arithmetic Sequence: aₙ = a [sub] 1 [/sub] + (n − 1)d",
+        "Arithmetic Series: Sₙ = (n/2)(2a [sub] 1 [/sub] + (n − 1)d)",
+        "Arithmetic Last Term: l = a [sub] 1 [/sub] + (n − 1)d",
+        "Geometric Sequence: aₙ = a [sub] 1 [/sub] × r^(n − 1)",
+        "Geometric Series: Sₙ = a [sub] 1 [/sub] × (rⁿ − 1) / (r − 1)",
+        "Infinite Geometric Series: S∞ = a [sub] 1 [/sub] / (1 − r)",
+        "Find d: d = (aₙ − a [sub] 1 [/sub] ) / (n − 1)",
+        "Find r: r = (aₙ / a [sub] 1 [/sub] )^(1 / (n − 1))",
+        "Find n (Arithmetic): n = ((aₙ − a [sub] 1 [/sub] ) / d) + 1",
+        "Find n (Geometric): n = [log(aₙ / a [sub] 1 [/sub]) / log(r)] + 1",
+        "Find a₁ (Geometric): a [sub] 1 [/sub] = aₙ / r^(n − 1)",
+        "Find a₁ (Arithmetic): a [sub] 1 [/sub] = aₙ − (n − 1)d"
+      ]
+    },
+    {
+      "id": "tips",
+      "title": "Tips and Checks",
+      "content": [
+        " Always check the type of sequence before applying a formula.",
+        " For arithmetic, check if the difference is constant.",
+        " For geometric, check if the ratio is constant.",
+        " When solving for n, ensure your answer is a positive integer.",
+        " Use logarithms only for geometric equations involving powers.",
+        " For infinite series, ensure |r| < 1 before using S∞ formula.",
+        " In word problems, translate situations into a₁, r/d, and n carefully (e.g., years, months, intervals).",
+        " Use the rearranged form a [sub] 1 [/sub] = Sₙ × (r − 1)/(rⁿ − 1) when finding first term from total sum."
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "Summary of Learning Coverage",
+      "content": [
+        "This manual integrates all covered concepts from A-level and G-level progression data:",
+        "• Arithmetic and Geometric Sequences (finding a [sub] 1 [/sub], aₙ, d, r, n)",
+        "• Finite and Infinite Series (finding Sₙ, S∞)",
+        "• Determining sequence type",
+        "• Rearranging formulas to solve for unknowns",
+        "• Applications in finance, population, physics, and more",
+        "• Convergence conditions for infinite series",
+        "• Step-by-step solving structure and formula interconnections"
+      ]
+    }
+  ]
+}

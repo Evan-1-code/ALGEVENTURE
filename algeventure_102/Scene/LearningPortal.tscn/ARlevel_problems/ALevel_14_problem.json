@@ -3,57 +3,105 @@
 	"level": 1,
 	"problems": [
 	  {
-        "text": "An auditorium has rows of seats in an arithmetic sequence. The first row has 28 seats, the second row has 33, the third has 38, and so on. How many seats are there in the 55th row?",
-        "given": { "a": 28, "d": 5, "n": 55 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = (a + d)(n - 1)", "a_n = a × n + d"],
-        "answer": 298
-      },
+		"text": "An auditorium has rows of seats in an arithmetic sequence. The first row has 28 seats, the second row has 33, the third has 38, and so on. How many seats are there in the 55th row?",
+		"given": { "a": 28, "d": 5, "n": 55 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = (a + d)(n - 1)", "a_n = a × n + d"],
+		"answer": 298,
+		"hint": "This is an arithmetic sequence. Each row has 5 more seats than the previous row.",
+		"steps": [
+		  "Identify the first term (a = 28)",
+		  "Find the common difference (d = 5)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_55 = 28 + (55 - 1) × 5",
+		  "Calculate: 28 + 54 × 5 = 28 + 270 = ?"
+		]
+	  },
 	  {
-        "text": "A stadium arranges seats in rows with an arithmetic sequence. The first row has 20 seats, the second 25 seats, the third 30 seats, and so on. How many seats are there in total after 60 rows?",
-        "given": { "a": 20, "d": 5, "n": 60 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = n(a + d/2)", "S_n = (n/2)(a + d)"],
-        "answer": 9300
-      }
+		"text": "A stadium arranges seats in rows with an arithmetic sequence. The first row has 20 seats, the second 25 seats, the third 30 seats, and so on. How many seats are there in total after 60 rows?",
+		"given": { "a": 20, "d": 5, "n": 60 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d/2)", "S_n = (n/2)(a + d)"],
+		"answer": 9300,
+		"hint": "This is the sum of an arithmetic sequence for seats in 60 rows.",
+		"steps": [
+		  "Identify the first term (a = 20)",
+		  "Find the common difference (d = 5)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_60 = 60/2 (2×20 + (60 - 1) × 5)",
+		  "Calculate: 30 × (40 + 295) = 30 × 335 = ?"
+		]
+	  }
 	]
   },
   {
 	"level": 2,
 	"problems": [
 	  {
-        "text": "In a library, shelves increase the number of books in arithmetic progression. The first shelf has 120 books, the second 128, the third 136, and so on. How many books are on the 40th shelf?",
-        "given": { "a": 120, "d": 8, "n": 40 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = (a + d) × n", "a_n = a + nd"],
-        "answer": 432
-      },
+		"text": "In a library, shelves increase the number of books in arithmetic progression. The first shelf has 120 books, the second 128, the third 136, and so on. How many books are on the 40th shelf?",
+		"given": { "a": 120, "d": 8, "n": 40 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = (a + d) × n", "a_n = a + nd"],
+		"answer": 432,
+		"hint": "This is an arithmetic sequence. Each shelf has 8 more books than the previous shelf.",
+		"steps": [
+		  "Identify the first term (a = 120)",
+		  "Find the common difference (d = 8)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_40 = 120 + (40 - 1) × 8",
+		  "Calculate: 120 + 39 × 8 = 120 + 312 = ?"
+		]
+	  },
 	  {
-        "text": "An engineer designs a spiral staircase. The first step is 15 cm high, the second 16 cm, the third 17 cm, and so on. What is the total height after 80 steps?",
-        "given": { "a": 15, "d": 1, "n": 80 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
-        "answer": 3920
-      }
+		"text": "An engineer designs a spiral staircase. The first step is 15 cm high, the second 16 cm, the third 17 cm, and so on. What is the total height after 80 steps?",
+		"given": { "a": 15, "d": 1, "n": 80 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+		"answer": 3920,
+		"hint": "This is the sum of an arithmetic sequence for the total height of 80 steps.",
+		"steps": [
+		  "Identify the first term (a = 15)",
+		  "Find the common difference (d = 1)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_80 = 80/2 (2×15 + (80 - 1) × 1)",
+		  "Calculate: 40 × (30 + 79) = 40 × 109 = ?"
+		]
+	  }
 	]
   },
   {
 	"level": 3,
 	"problems": [
 	  {
-        "text": "A marathon training plan increases running distance in arithmetic sequence. On the first day, a runner covers 3 km, the second day 4.5 km, the third 6 km, and so on. How many kilometers will the runner cover on the 25th day?",
-        "given": { "a": 3, "d": 1.5, "n": 25 },
-        "formula": "a_n = a + (n - 1)d",
-        "distractors": ["a_n = a × (n - 1) + d", "a_n = a + (n + 1)d"],
-        "answer": 39
-      },
+		"text": "A marathon training plan increases running distance in arithmetic sequence. On the first day, a runner covers 3 km, the second day 4.5 km, the third 6 km, and so on. How many kilometers will the runner cover on the 25th day?",
+		"given": { "a": 3, "d": 1.5, "n": 25 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = a × (n - 1) + d", "a_n = a + (n + 1)d"],
+		"answer": 39,
+		"hint": "This is an arithmetic sequence. Each day the runner covers 1.5 km more than the previous day.",
+		"steps": [
+		  "Identify the first term (a = 3)",
+		  "Find the common difference (d = 1.5)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_25 = 3 + (25 - 1) × 1.5",
+		  "Calculate: 3 + 24 × 1.5 = 3 + 36 = ?"
+		]
+	  },
 	  {
-        "text": "A farmer arranges mango trees in rows where the first row has 18 trees, the second 22, the third 26, and so on. How many mango trees are planted in total in the first 45 rows?",
-        "given": { "a": 18, "d": 4, "n": 45 },
-        "formula": "S_n = (n/2)(2a + (n - 1)d)",
-        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n - 1)d)"],
-        "answer": 4455
-       }
+		"text": "A farmer arranges mango trees in rows where the first row has 18 trees, the second 22, the third 26, and so on. How many mango trees are planted in total in the first 45 rows?",
+		"given": { "a": 18, "d": 4, "n": 45 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n - 1)d)"],
+		"answer": 4455,
+		"hint": "This is the sum of an arithmetic sequence for trees in 45 rows.",
+		"steps": [
+		  "Identify the first term (a = 18)",
+		  "Find the common difference (d = 4)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_45 = 45/2 (2×18 + (45 - 1) × 4)",
+		  "Calculate: 22.5 × (36 + 176) = 22.5 × 212 = ?"
+		]
+	  }
 	]
-  },
+  }
 ]

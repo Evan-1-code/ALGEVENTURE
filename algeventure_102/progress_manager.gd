@@ -1,5 +1,7 @@
 extends Node
 
+var current_level_index: int = 0
+var current_level_key: String = ""
 var progress = {
 	"al_1": false,
 	"al_2": false,
@@ -31,7 +33,7 @@ var progress = {
 	"gl_14": false,
 }
 
-const SAVE_PATH = "user://progress.save"
+const SAVE_PATH = "user://userdata.save"
 
 func _ready():
 	load_progress()
@@ -51,6 +53,10 @@ func load_progress() -> void:
 	var cf = ConfigFile.new()
 	var err = cf.load(SAVE_PATH)
 	if err == OK:
+		# Load all keys from file, overwrite defaults
+		for key in cf.get_section_keys("progress"):
+			progress[key] = cf.get_value("progress", key, false)
+		# Ensure any new levels (not in save) are set to false
 		for key in progress.keys():
-			if cf.has_section_key("progress", key):
-				progress[key] = cf.get_value("progress", key, false)
+			if not cf.has_section_key("progress", key):
+				progress[key] = false
