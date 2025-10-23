@@ -1,0 +1,95 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Find the sum of the first 15 terms of a geometric sequence where a1 = 4 and r = 3/2.",
+		"given": { "a1": 4, "r": 1.5, "n": 15 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+		"answer": 32766,
+		"hint": "Use the geometric sum formula and substitute the values.",
+		"steps": [
+		  "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+		  "Substitute: Sn = 4 × (1.5^15 - 1) / (1.5 - 1)",
+		  "Calculate: 4 × (437.89 - 1) / 0.5 = 4 × 436.89 / 0.5 = 1747.56 / 0.5 = ?"
+		]
+	  },
+	  {
+		"text": "Find the sum of the first 10 terms where a1 = 5 and r = -1/2.",
+		"given": { "a1": 5, "r": -0.5, "n": 10 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 + r^n) / (1 + r)"],
+		"answer": 3.9922,
+		"hint": "Use the geometric sum formula and substitute the values.",
+		"steps": [
+		  "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+		  "Substitute: Sn = 5 × ((-0.5)^10 - 1) / (-0.5 - 1)",
+		  "Calculate: 5 × (0.0009766 - 1) / (-1.5) = 5 × (-0.9990234) / -1.5 = -4.995117 / -1.5 = ?"
+		]
+	  }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "Find the sum of an infinite geometric series where a1 = 12 and r = 1/4.",
+		"given": { "a1": 12, "r": 0.25 },
+		"formula": "S∞ = a1 / (1 - r)",
+		"distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+		"answer": 16,
+		"hint": "For infinite geometric series, use the formula S∞ = a1 / (1 - r) when |r| < 1.",
+		"steps": [
+		  "Use the formula: S∞ = a1 / (1 - r)",
+		  "Substitute: S∞ = 12 / (1 - 0.25)",
+		  "Calculate: 12 / 0.75 = ?"
+		]
+	  },
+	  {
+		"text": "Find the sum of an infinite geometric series where a1 = 9 and r = -2/3.",
+		"given": { "a1": 9, "r": -2/3 },
+		"formula": "S∞ = a1 / (1 - r)",
+		"distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+		"answer": 27,
+		"hint": "Use the formula for infinite geometric series S∞ = a1 / (1 - r) when |r| < 1.",
+		"steps": [
+		  "Use the formula: S∞ = a1 / (1 - r)",
+		  "Substitute: S∞ = 9 / (1 - (-2/3))",
+		  "Calculate: 9 / (1 + 2/3) = 9 / (5/3) = 9 × 3/5 = 27/5 = ?"
+		]
+	  }
+	]
+  },
+  {
+	"level": 3,
+	"problems": [
+	  {
+		"text": "Find the sum of the first 20 terms of a geometric sequence where a1 = 1/2 and r = 3/4.",
+		"given": { "a1": 0.5, "r": 0.75, "n": 20 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["Sn = a1 × n × r", "Sn = a1 × (1 - r^n) / (1 - r)"],
+		"answer": 1.9966,
+		"hint": "Use the geometric sum formula and substitute the values.",
+		"steps": [
+		  "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+		  "Substitute: Sn = 0.5 × (0.75^20 - 1) / (0.75 - 1)",
+		  "Calculate: 0.5 × (0.00317 - 1) / -0.25 = 0.5 × (-0.99683) / -0.25 = -0.49842 / -0.25 = ?"
+		]
+	  },
+	  {
+		"text": "Find the sum of an infinite geometric series where a1 = 5 and r = -0.8.",
+		"given": { "a1": 5, "r": -0.8 },
+		"formula": "S∞ = a1 / (1 - r)",
+		"distractors": ["S∞ = a1 × (1 - r)", "S∞ = a1 / (1 + r)"],
+		"answer": 2.7778,
+		"hint": "For infinite geometric series, use S∞ = a1 / (1 - r) if |r| < 1.",
+		"steps": [
+		  "Use the formula: S∞ = a1 / (1 - r)",
+		  "Substitute: S∞ = 5 / (1 - (-0.8))",
+		  "Calculate: 5 / (1 + 0.8) = 5 / 1.8 = ?"
+		]
+	  }
+	]
+  }
+]

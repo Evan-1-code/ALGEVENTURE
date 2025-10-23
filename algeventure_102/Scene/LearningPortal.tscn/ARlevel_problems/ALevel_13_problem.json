@@ -1,0 +1,107 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "An artist arranges candles in a straight line where the first candle is 12 cm tall, the second is 15 cm, the third 18 cm, and so on. What is the height of the 85th candle?",
+        "given": { "a": 12, "d": 3, "n": 85 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+        "answer": 264,
+        "hint": "This is an arithmetic sequence. Each candle is 3 cm taller than the previous one.",
+        "steps": [
+          "Identify the first term (a = 12)",
+          "Find the common difference (d = 3)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_85 = 12 + (85 - 1) × 3",
+          "Calculate: 12 + 84 × 3 = 12 + 252 = ?"
+        ]
+      },
+      {
+        "text": "A research team collects data samples in arithmetic sequence. On the first day they gather 500 samples, the second day 520, the third 540, and so on. How many samples do they collect in the first 45 days?",
+        "given": { "a": 500, "d": 20, "n": 45 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+        "answer": 22950,
+        "hint": "This is the sum of an arithmetic sequence for samples collected in 45 days.",
+        "steps": [
+          "Identify the first term (a = 500)",
+          "Find the common difference (d = 20)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_45 = 45/2 (2×500 + (45 - 1) × 20)",
+          "Calculate: 22.5 × (1000 + 880) = 22.5 × 1880 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "An auditorium arranges seats in rows following arithmetic sequence. The first row has 80 seats, the second has 76, the third has 72, and so on. How many seats are there in the 25th row?",
+        "given": { "a": 80, "d": -4, "n": 25 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × n + d", "a_n = (a + d)(n - 1)"],
+        "answer": -16,
+        "hint": "This is an arithmetic sequence. Each row has 4 fewer seats than the previous row.",
+        "steps": [
+          "Identify the first term (a = 80)",
+          "Find the common difference (d = -4)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_25 = 80 + (25 - 1) × -4",
+          "Calculate: 80 + 24 × -4 = 80 - 96 = ?"
+        ]
+      },
+      {
+        "text": "A building installs lights on each floor in arithmetic sequence. The first floor has 12 lights, the second has 16, the third has 20, and so on. How many lights are there in total after 35 floors?",
+        "given": { "a": 12, "d": 4, "n": 35 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+        "answer": 2870,
+        "hint": "This is the sum of an arithmetic sequence for lights in 35 floors.",
+        "steps": [
+          "Identify the first term (a = 12)",
+          "Find the common difference (d = 4)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_35 = 35/2 (2×12 + (35 - 1) × 4)",
+          "Calculate: 17.5 × (24 + 136) = 17.5 × 160 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "A scientist observes a pulsar whose light flashes in arithmetic sequence. The first flash interval is 1.2 seconds, the second is 1.6 seconds, the third is 2.0 seconds, and so on. What is the interval for the 100th flash?",
+        "given": { "a": 1.2, "d": 0.4, "n": 100 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+        "answer": 40.8,
+        "hint": "This is an arithmetic sequence. Each flash interval increases by 0.4 seconds.",
+        "steps": [
+          "Identify the first term (a = 1.2)",
+          "Find the common difference (d = 0.4)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_100 = 1.2 + (100 - 1) × 0.4",
+          "Calculate: 1.2 + 99 × 0.4 = 1.2 + 39.6 = ?"
+        ]
+      },
+      {
+        "text": "A pyramid is built with blocks arranged in rows following arithmetic sequence. The first row has 80 blocks, the second has 77, the third has 74, and so on. How many blocks are there in total in the first 40 rows?",
+        "given": { "a": 80, "d": -3, "n": 40 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
+        "answer": 740,
+        "hint": "This is the sum of an arithmetic sequence for blocks in 40 rows.",
+        "steps": [
+          "Identify the first term (a = 80)",
+          "Find the common difference (d = -3)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_40 = 40/2 (2×80 + (40 - 1) × -3)",
+          "Calculate: 20 × (160 - 117) = 20 × 43 =?"
+        ]
+      }
+    ]
+  }
+]

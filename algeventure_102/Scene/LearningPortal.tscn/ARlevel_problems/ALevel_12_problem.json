@@ -1,0 +1,107 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "A teacher arranges chairs in rows. The first row has 45 chairs, the second 49, the third 53, and so on. How many chairs are there in the 60th row?",
+		"given": { "a": 45, "d": 4, "n": 60 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+		"answer": 281,
+		"hint": "This is an arithmetic sequence. Each row has 4 more chairs than the previous row.",
+		"steps": [
+		  "Identify the first term (a = 45)",
+		  "Find the common difference (d = 4)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_60 = 45 + (60 - 1) × 4",
+		  "Calculate: 45 + 59 × 4 = 45 + 236 = ?"
+		]
+	  },
+	  {
+		"text": "A theater expands its rows in arithmetic sequence. The first row has 25 seats, the second has 32, the third has 39, and so on. How many seats are there in total in the first 60 rows?",
+		"given": { "a": 25, "d": 7, "n": 60 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+		"answer": 12450,
+		"hint": "This is the sum of an arithmetic sequence for seats in 60 rows.",
+		"steps": [
+		  "Identify the first term (a = 25)",
+		  "Find the common difference (d = 7)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_60 = 60/2 (2×25 + (60 - 1) × 7)",
+		  "Calculate: 30 × (50 + 413) = 30 × 463 = ?"
+		]
+	  }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A scientist records temperatures hourly in an experiment. At 8 AM, the temperature is 95°C, and each hour it decreases by 1.8°C. What is the temperature at the 45th hour?",
+		"given": { "a": 95, "d": -1.8, "n": 45 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = n(a + d)", "a_n = (a + d)(n + 1)"],
+		"answer": 16.2,
+		"hint": "This is an arithmetic sequence. Each hour the temperature decreases by 1.8°C.",
+		"steps": [
+		  "Identify the first temperature (a = 95)",
+		  "Find the common difference (d = -1.8)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_45 = 95 + (45 - 1) × -1.8",
+		  "Calculate: 95 + 44 × -1.8 = 95 - 79.2 = ?"
+		]
+	  },
+	  {
+		"text": "A painter arranges tiles in arithmetic order. The first row has 200 tiles, the second has 190, the third 180, and so on. How many tiles are there in total in the first 40 rows?",
+		"given": { "a": 200, "d": -10, "n": 40 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+		"answer": 4000,
+		"hint": "This is the sum of an arithmetic sequence for tiles in 40 rows.",
+		"steps": [
+		  "Identify the first term (a = 200)",
+		  "Find the common difference (d = -10)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_40 = 40/2 (2×200 + (40 - 1) × -10)",
+		  "Calculate: 20 × (400 - 390) = 20 × 10 = ?"
+		]
+	  }
+	]
+  },
+  {
+	"level": 3,
+	"problems": [
+	  {
+		"text": "A factory increases its daily production of machines in arithmetic sequence. On the first day, it produces 320 machines, the second day 335, the third 350, and so on. How many machines are produced on the 70th day?",
+		"given": { "a": 320, "d": 15, "n": 70 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = (a + d)(n - 1)", "a_n = a × (n - 1) + d"],
+		"answer": 1355,
+		"hint": "This is an arithmetic sequence. Each day the production increases by 15 machines.",
+		"steps": [
+		  "Identify the first term (a = 320)",
+		  "Find the common difference (d = 15)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_70 = 320 + (70 - 1) × 15",
+		  "Calculate: 320 + 69 × 15 = 320 + 1035 = ?"
+		]
+	  },
+	  {
+		"text": "A runner trains by increasing the number of laps each day. On the first day, he runs 3 laps, on the second 6 laps, on the third 9 laps, and so on. How many laps does he run in the first 50 days?",
+		"given": { "a": 3, "d": 3, "n": 50 },
+		"formula": "S_n = (n/2)(2a + (n - 1)d)",
+		"distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+		"answer": 3825,
+		"hint": "This is the sum of an arithmetic sequence for laps in 50 days.",
+		"steps": [
+		  "Identify the first term (a = 3)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+		  "Substitute: S_50 = 50/2 (2×3 + (50 - 1) × 3)",
+		  "Calculate: 25 × (6 + 147) = 25 × 153 = ?"
+		]
+	  }
+	]
+  }
+]

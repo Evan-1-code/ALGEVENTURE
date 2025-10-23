@@ -1,0 +1,169 @@
+[gd_scene load_steps=12 format=3 uid="uid://cmxpb05l6lnxq"]
+
+[ext_resource type="Script" uid="uid://cwvaxlxly6htj" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/al_1.gd" id="1_lssfj"]
+[ext_resource type="Script" uid="uid://c4heu6c77qcm0" path="res://Scene/LearningPortal.tscn/Artithmethic_levels/Backbutton.gd" id="2_ctsej"]
+[ext_resource type="Texture2D" uid="uid://dgqc3bx6iwmlh" path="res://Scene/settins icon.png" id="3_7jsht"]
+[ext_resource type="PackedScene" uid="uid://d1h0jyygsrih6" path="res://Scene/option_menu.tscn" id="4_4stnh"]
+[ext_resource type="PackedScene" uid="uid://c6kae70op7f75" path="res://UI/achievement_popup.tscn" id="5_4stnh"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_lssfj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbrbd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsmxq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05hhe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03jny"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3i0h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="AL_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lssfj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.619087, 0.000282142, 0.619083, 1)
+
+[node name="ProblemLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.069
+anchor_right = 0.495
+anchor_bottom = 0.069
+offset_left = -205.24
+offset_top = 72.288
+offset_right = 213.76
+offset_bottom = 299.288
+grow_horizontal = 2
+text = "problemtext"
+
+[node name="FormulaOptions" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 360.0
+offset_right = 846.0
+offset_bottom = 435.0
+
+[node name="SolutionSteps" type="Label" parent="."]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 469.0
+offset_right = 412.0
+offset_bottom = 492.0
+text = "Answer"
+
+[node name="Given" type="Label" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 348.0
+offset_right = 363.0
+offset_bottom = 371.0
+text = "Given"
+
+[node name="FormulaFeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 485.0
+offset_right = 464.0
+offset_bottom = 508.0
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 654.0
+offset_top = 465.0
+offset_right = 749.0
+offset_bottom = 504.0
+
+[node name="SolveFeedbackLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.035
+offset_left = 375.0
+offset_top = 414.0
+offset_right = 632.416
+offset_bottom = 482.32
+
+[node name="GivenInputContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 406.0
+offset_right = 503.0
+offset_bottom = 446.0
+
+[node name="SolveInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 508.0
+offset_right = 402.563
+offset_bottom = 539.0
+
+[node name="CalculatorButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 122.0
+offset_top = 110.0
+offset_right = 213.0
+offset_bottom = 141.0
+text = "Calculator"
+icon = SubResource("ImageTexture_lssfj")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back"
+script = ExtResource("2_ctsej")
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 13.0
+offset_right = 1145.0
+offset_bottom = 89.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_nbrbd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gsmxq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_05hhe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_03jny")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w3i0h")
+icon = ExtResource("3_7jsht")
+expand_icon = true
+
+[node name="option_menu" parent="." instance=ExtResource("4_4stnh")]
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1156.0
+offset_bottom = 641.0
+
+[node name="AchievementPopup" parent="." instance=ExtResource("5_4stnh")]
+layout_mode = 1
+
+[node name="HintButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 91.0
+offset_top = 352.0
+offset_right = 182.0
+offset_bottom = 383.0
+text = "💡 Hint"
+
+[connection signal="pressed" from="CalculatorButton" to="." method="_on_calculator_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1h0jyygsrih6"]
+
+[ext_resource type="Script" uid="uid://nsn0tu8derv4" path="res://Scene/option_menu.gd" id="1_t6fkd"]
+
+[node name="option_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 637.0
+script = ExtResource("1_t6fkd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.689003
+anchor_bottom = 0.726984
+offset_right = 364.0
+offset_bottom = 182.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.654902)
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -630.0
+offset_top = -112.0
+offset_right = -437.0
+offset_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VolumeLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Music Volume:"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="MuteButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "mute"
+
+[node name="CloseButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "CLOSE"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 373.0
+offset_top = 213.0
+offset_right = 522.0
+offset_bottom = 364.0
+metadata/_edit_use_anchors_ = true
+
+[node name="main_menu_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="skill_Ladder_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "skill ladder"
+
+[node name="AdaptiveModeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "adaptive mode"
+
+[node name="Achievements_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Achievements"
+
+[node name="exit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "exit"
+
+[connection signal="pressed" from="VBoxContainer/Achievements_button" to="." method="_on_achievements_button_pressed"]

@@ -1,0 +1,107 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "A population of fish triples every year. If there are 5 fish initially, how many will there be after 6 years?",
+        "given": { "a1": 5, "r": 3, "n": 6 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + r^(n-1)"],
+        "answer": 1215,
+        "hint": "Each year the population is multiplied by 3.",
+        "steps": [
+          "Identify the first term (a1 = 5)",
+          "Find the common ratio (r = 3)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a6 = 5 × 3^(6-1)",
+          "Calculate: 5 × 243 = ?"
+        ]
+      },
+      {
+        "text": "An investor deposits $2000 at 4% interest compounded annually. What will the investment be worth after 8 years?",
+        "given": { "a1": 2000, "r": 1.04, "n": 8 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + n × r"],
+        "answer": 2661.19,
+        "hint": "Each year the amount is multiplied by 1.04.",
+        "steps": [
+          "Identify the first term (a1 = 2000)",
+          "Find the common ratio (r = 1.04)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a8 = 2000 × 1.04^(8-1)",
+          "Calculate: 2000 × 1.04^7 ≈ 2000 × 1.316074 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "A bouncing ball reaches 2/3 of its previous height each time. If dropped from 9 meters, how high is the 7th bounce?",
+        "given": { "a1": 9, "r": 0.6667, "n": 7 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 0.98,
+        "hint": "Each bounce is 2/3 the previous height.",
+        "steps": [
+          "Identify the first term (a1 = 9)",
+          "Find the common ratio (r = 2/3)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a7 = 9 × (2/3)^(7-1)",
+          "Calculate: 9 × (2/3)^6 ≈ 9 × 0.108 = ?"
+        ]
+      },
+      {
+        "text": "A tree grows 12% taller each year. If its current height is 3.5 meters, what will be its height after 10 years?",
+        "given": { "a1": 3.5, "r": 1.12, "n": 10 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + n × r"],
+        "answer": 11.55,
+        "hint": "Each year the tree multiplies its height by 1.12.",
+        "steps": [
+          "Identify the first term (a1 = 3.5)",
+          "Find the common ratio (r = 1.12)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a10 = 3.5 × 1.12^(10-1)",
+          "Calculate: 3.5 × 1.12^9 ≈ 3.5 × 2.773 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "A savings account deposits $600 each year, and each deposit earns 5% compounded annually. What is the value of the 12th deposit after 12 years?",
+        "given": { "a1": 600, "r": 1.05, "n": 12 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × n × r", "an = a1 + (n-1) × r"],
+        "answer": 1052.61,
+        "hint": "Each year the deposit multiplies by 1.05.",
+        "steps": [
+          "Identify the first term (a1 = 600)",
+          "Find the common ratio (r = 1.05)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a12 = 600 × 1.05^(12-1)",
+          "Calculate: 600 × 1.05^11 ≈ 600 × 1.710 = ?"
+        ]
+      },
+      {
+        "text": "A mold grows 1.6 times its previous size every day. If it starts at 3 grams, what is its weight on the 8th day?",
+        "given": { "a1": 3, "r": 1.6, "n": 8 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + (n-1) × r"],
+        "answer": 157.29,
+        "hint": "Each day the mold multiplies its weight by 1.6.",
+        "steps": [
+          "Identify the first term (a1 = 3)",
+          "Find the common ratio (r = 1.6)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a8 = 3 × 1.6^(8-1)",
+          "Calculate: 3 × 1.6^7 ≈ 3 × 40.96 = ?"
+        ]
+      }
+    ]
+  }
+]

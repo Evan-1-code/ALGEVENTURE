@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbr81ietg8mr3"
+path="res://.godot/imported/Muse_Algorithm_Alternate_Reality_Version_Ringtone_(by Fringster.com).mp3-e65ae5b9304c9913d8e063934ae39d5b.mp3str"
+
+[deps]
+
+source_file="res://Scene/Muse_Algorithm_Alternate_Reality_Version_Ringtone_(by Fringster.com).mp3"
+dest_files=["res://.godot/imported/Muse_Algorithm_Alternate_Reality_Version_Ringtone_(by Fringster.com).mp3-e65ae5b9304c9913d8e063934ae39d5b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

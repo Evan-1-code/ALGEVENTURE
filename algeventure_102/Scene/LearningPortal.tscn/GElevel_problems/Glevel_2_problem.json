@@ -1,0 +1,72 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "Find the 3rd term of the sequence: 1, 2, 4, ...",
+        "given": { "a1": 1, "r": 2, "n": 3 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = r^n", "an = a1 × r × n"],
+        "answer": 4,
+        "hint": "This is a geometric sequence. Each term is multiplied by 2 to get the next.",
+        "steps": [
+          "Identify the first term (a1 = 1)",
+          "Find the common ratio (r = 2)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a3 = 1 × 2^(3-1)",
+          "Calculate: 1 × 2^2 = 1 × 4 = ?"
+        ]
+      },
+      {
+        "text": "Find the 4th term of the sequence: 10, 30, 90, ...",
+        "given": { "a1": 10, "r": 3, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + r^n", "an = r^(n-1)"],
+        "answer": 270,
+        "hint": "Each term is multiplied by 3. Find the fourth term.",
+        "steps": [
+          "Identify the first term (a1 = 10)",
+          "Find the common ratio (r = 3)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a4 = 10 × 3^(4-1)",
+          "Calculate: 10 × 3^3 = 10 × 27 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "Find the 5th term of the sequence: 4, 12, 36, ...",
+        "given": { "a1": 4, "r": 3, "n": 5 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 + n × r", "an = a1 ÷ r^(n-1)"],
+        "answer": 324,
+        "hint": "Multiply each term by 3 to get the next. Calculate the 5th term.",
+        "steps": [
+          "Identify the first term (a1 = 4)",
+          "Find the common ratio (r = 3)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a5 = 4 × 3^(5-1)",
+          "Calculate: 4 × 3^4 = 4 × 81 = ?"
+        ]
+      },
+      {
+        "text": "Find the 4th term of the sequence: 2, 10, 50, ...",
+        "given": { "a1": 2, "r": 5, "n": 4 },
+        "formula": "an = a1 × r^(n-1)",
+        "distractors": ["an = a1 × r × n", "an = a1 + r^(n-1)"],
+        "answer": 250,
+        "hint": "Each term is multiplied by 5. Find the fourth term.",
+        "steps": [
+          "Identify the first term (a1 = 2)",
+          "Find the common ratio (r = 5)",
+          "Use the formula: an = a1 × r^(n-1)",
+          "Substitute: a4 = 2 × 5^(4-1)",
+          "Calculate: 2 × 5^3 = 2 × 125 = ?"
+        ]
+      }
+    ]
+  }
+]

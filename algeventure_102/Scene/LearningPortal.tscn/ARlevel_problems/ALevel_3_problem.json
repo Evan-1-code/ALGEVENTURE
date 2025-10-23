@@ -1,0 +1,72 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Ben sells candies in a pattern: 3 on day 1, 6 on day 2, 9 on day 3. How many will he sell on day 15?",
+		"given": { "a": 3, "d": 3, "n": 15 },
+		"formula": "a_n = a + (n - 1)d",
+		"distractors": ["a_n = d + (n - 1)a",  "a_n = a × d × n"],
+		"answer": 45,
+		"hint": "This is an arithmetic sequence. Each day he sells 3 more candies than the previous day.",
+		"steps": [
+		  "Identify the first term (a = 3)",
+		  "Find the common difference (d = 3)",
+		  "Use the formula: a_n = a + (n - 1)d",
+		  "Substitute: a_15 = 3 + (15 - 1) × 3",
+		  "Calculate: 3 + 14 × 3 = 3 + 42 = ?"
+		]
+	  },
+	  {
+		"text": "A wall is built by placing 10 bricks on the first row, 13 on the second, and so on. How many bricks are in 7 rows?",
+		"given": { "First term (a)": 10, "Common difference (d)": 3, "Number of terms (n)": 7 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a × n + d",  "S_n = n × d + a",  "S_n = a × d × n"],
+		"answer": 133,
+		"hint": "This is the sum of an arithmetic sequence for the total bricks in 7 rows.",
+		"steps": [
+		  "Identify the first term (a = 10)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_7 = 7/2 × (2×10 + (7 - 1) × 3)",
+		  "Calculate: 3.5 × (20 + 18) = 3.5 × 38 = ?"
+		]
+	  }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "A student scores 5 points in game 1, 8 in game 2, 11 in game 3. What is the total score after 6 games?",
+		"given": { "a": 5, "d": 3, "n": 6 },
+		"formula": "S_n = n/2 × [2a + (n - 1)d]",
+		"distractors": ["S_n = n × [2a + d]", "S_n = n/2 × (a + d)"],
+		"answer": 75,
+		"hint": "This is the sum of an arithmetic sequence for scores over games.",
+		"steps": [
+		  "Identify the first term (a = 5)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = n/2 × [2a + (n - 1)d]",
+		  "Substitute: S_6 = 6/2 × [2×5 + (6 - 1) × 3]",
+		  "Calculate: 3 × (10 + 15) = 3 × 25 = ?"
+		]
+	  },
+	  {
+		"text": "A gardener plants 2 trees the first day, 5 on the second, 8 on the third, continuing the pattern. How many trees after 6 days?",
+		"given": { "First term (a)": 2, "Common difference (d)": 3, "Number of terms (n)": 6 },
+		"formula": "S_n = n/2 × (2a + (n - 1)d)",
+		"distractors": ["S_n = a + n × d",  "S_n = n × (a + d)",  "S_n = a × n + d"],
+		"answer": 57,
+		"hint": "This is the sum of an arithmetic sequence for trees planted over days.",
+		"steps": [
+		  "Identify the first term (a = 2)",
+		  "Find the common difference (d = 3)",
+		  "Use the sum formula: S_n = n/2 × (2a + (n - 1)d)",
+		  "Substitute: S_6 = 6/2 × (2×2 + (6 - 1) × 3)",
+		  "Calculate: 3 × (4 + 15) = 3 × 19 = ?"
+		]
+	  }
+	]
+  }
+]

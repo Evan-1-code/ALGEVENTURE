@@ -1,0 +1,107 @@
+[
+  {
+    "level": 1,
+    "problems": [
+      {
+        "text": "A football stadium expands its seating yearly. In the first year, 5,000 seats are added, in the second year 5,500, the third year 6,000, and so on. How many seats are added in the 50th year?",
+        "given": { "a": 5000, "d": 500, "n": 50 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = n(a + d)", "a_n = (a + d)(n - 1)"],
+        "answer": 29500,
+        "hint": "This is an arithmetic sequence. Each year the number of seats added increases by 500.",
+        "steps": [
+          "Identify the first term (a = 5000)",
+          "Find the common difference (d = 500)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_50 = 5000 + (50 - 1) × 500",
+          "Calculate: 5000 + 49 × 500 = 5000 + 24500 = ?"
+        ]
+      },
+      {
+        "text": "A scientist releases gas in intervals that increase arithmetically. The first release is 20 ml, the second 28 ml, the third 36 ml, and so on. What is the total gas released in the first 25 releases?",
+        "given": { "a": 20, "d": 8, "n": 25 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = (n/2)(a + d)", "S_n = n(a + d)"],
+        "answer": 2700,
+        "hint": "This is the sum of an arithmetic sequence for gas released in 25 intervals.",
+        "steps": [
+          "Identify the first term (a = 20)",
+          "Find the common difference (d = 8)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_25 = 25/2 (2×20 + (25 - 1) × 8)",
+          "Calculate: 12.5 × (40 + 192) = 12.5 × 232 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 2,
+    "problems": [
+      {
+        "text": "An oil tank is drained daily in an arithmetic sequence. On the first day, 1,200 liters are removed, on the second 1,150 liters, the third 1,100 liters, and so on. How many liters are removed on the 40th day?",
+        "given": { "a": 1200, "d": -50, "n": 40 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × n + d", "a_n = a + (n + 1)d"],
+        "answer": 250,
+        "hint": "This is an arithmetic sequence. Each day, 50 liters less are removed than the previous day.",
+        "steps": [
+          "Identify the first term (a = 1200)",
+          "Find the common difference (d = -50)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_40 = 1200 + (40 - 1) × -50",
+          "Calculate: 1200 + 39 × -50 = 1200 - 1950 = ?"
+        ]
+      },
+      {
+        "text": "A farmer arranges crops in rows. The first row has 60 plants, the second has 64, the third has 68, and so on. How many plants are there in total in the first 50 rows?",
+        "given": { "a": 60, "d": 4, "n": 50 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + (n + 1)d)"],
+        "answer": 7900,
+        "hint": "This is the sum of an arithmetic sequence for plants in 50 rows.",
+        "steps": [
+          "Identify the first term (a = 60)",
+          "Find the common difference (d = 4)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_50 = 50/2 (2×60 + (50 - 1) × 4)",
+          "Calculate: 25 × (120 + 196) = 25 × 316 = ?"
+        ]
+      }
+    ]
+  },
+  {
+    "level": 3,
+    "problems": [
+      {
+        "text": "In a research project, a robot moves forward in an arithmetic sequence of steps. The first step is 2 meters, the second 4 meters, the third 6 meters, and so on. How long is the robot’s 120th step?",
+        "given": { "a": 2, "d": 2, "n": 120 },
+        "formula": "a_n = a + (n - 1)d",
+        "distractors": ["a_n = a × (n - 1) + d", "a_n = (a + d)(n + 1)"],
+        "answer": 240,
+        "hint": "This is an arithmetic sequence. Each step is 2 meters longer than the previous step.",
+        "steps": [
+          "Identify the first term (a = 2)",
+          "Find the common difference (d = 2)",
+          "Use the formula: a_n = a + (n - 1)d",
+          "Substitute: a_120 = 2 + (120 - 1) × 2",
+          "Calculate: 2 + 119 × 2 = 2 + 238 = ?"
+        ]
+      },
+      {
+        "text": "An event organizer sets up chairs in rows. The first row has 100 seats, the second row has 97, the third row has 94, and so on. How many seats are there in total in the first 30 rows?",
+        "given": { "a": 100, "d": -3, "n": 30 },
+        "formula": "S_n = (n/2)(2a + (n - 1)d)",
+        "distractors": ["S_n = n(a + d)", "S_n = (n/2)(a + d)"],
+        "answer": 1290,
+        "hint": "This is the sum of an arithmetic sequence for seats in 30 rows.",
+        "steps": [
+          "Identify the first term (a = 100)",
+          "Find the common difference (d = -3)",
+          "Use the sum formula: S_n = (n/2)(2a + (n - 1)d)",
+          "Substitute: S_30 = 30/2 (2×100 + (30 - 1) × -3)",
+          "Calculate: 15 × (200 - 87) = 15 × 113 = ?"
+        ]
+      }
+    ]
+  }
+]

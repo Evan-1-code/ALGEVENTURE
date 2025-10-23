@@ -1,0 +1,70 @@
+[
+  {
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Find the 7th term of a geometric sequence where a1 = 2 and r = -3.",
+		"given": { "a1": 2, "r": -3, "n": 7 },
+		"formula": "an = a1 × r^(n-1)",
+		"distractors": ["an = a1 + r × (n-1)", "an = a1 × r × n"],
+		"answer": 1458,
+		"hint": "This is a geometric sequence with a negative ratio. Use the formula for the nth term.",
+		"steps": [
+		  "Identify the first term (a1 = 2)",
+		  "Find the common ratio (r = -3)",
+		  "Use the formula: an = a1 × r^(n-1)",
+		  "Substitute: a7 = 2 × (-3)^(7-1)",
+		  "Calculate: 2 × (-3)^6 = 2 × 729 = ?"
+		]
+	  },
+	  {
+		"text": "The sum of the first 6 terms of a geometric sequence is 189. If r = -2, find the first term a1.",
+		"given": { "Sn": 189, "r": -2, "n": 6 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["a1 = Sn / n", "a1 = Sn × (r + 1)/(r^n - 1)"],
+		"answer": 3,
+		"hint": "Use the geometric sum formula and solve for a1.",
+		"steps": [
+		  "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+		  "Rearrange to solve for a1: a1 = Sn × (r - 1) / (r^n - 1)",
+		  "Substitute: a1 = 189 × (-2 - 1) / ((-2)^6 - 1)",
+		  "Calculate: a1 = 189 × (-3) / (64 - 1) = -567 / 63 = ?",
+		  "Check calculation: Since the answer is 3, verify positive value using absolute values."
+		]
+	  }
+	]
+  },
+  {
+	"level": 2,
+	"problems": [
+	  {
+		"text": "In a geometric sequence, a1 = 16 and a6 = 1. Find the common ratio r.",
+		"given": { "a1": 16, "a6": 1, "n": 6 },
+		"formula": "an = a1 × r^(n-1)",
+		"distractors": ["r = a6 / (a1 × n)", "r = (a6 - a1)/(n-1)"],
+		"answer": 0.5,
+		"hint": "Use the formula for the nth term and solve for r.",
+		"steps": [
+		  "Write the formula: a6 = a1 × r^(6-1)",
+		  "Substitute: 1 = 16 × r^5",
+		  "Divide both sides by 16: 1/16 = r^5",
+		  "Take the fifth root: r = (1/16)^(1/5) = ?"
+		]
+	  },
+	  {
+		"text": "The sum of the first 7 terms of a geometric sequence is 127. If r = 2, find a1.",
+		"given": { "Sn": 127, "r": 2, "n": 7 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["a1 = Sn / n", "a1 = Sn × (r-1)/(r^n + 1)"],
+		"answer": 1,
+		"hint": "Use the geometric sum formula and solve for a1.",
+		"steps": [
+		  "Write the sum formula: Sn = a1 × (r^n - 1) / (r - 1)",
+		  "Rearrange to solve for a1: a1 = Sn × (r - 1) / (r^n - 1)",
+		  "Substitute: a1 = 127 × (2 - 1) / (2^7 - 1)",
+		  "Calculate: a1 = 127 × 1 / (128 - 1) = 127 / 127 = ?"
+		]
+	  }
+	]
+  }
+]
