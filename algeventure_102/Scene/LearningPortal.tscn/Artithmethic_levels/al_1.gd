@@ -7,6 +7,8 @@ var levels = []
 var current_level_index := 0
 var current_problem_index := 0
 var current_step: Step = Step.SHOW_PROBLEM
+@export var level_type: String = "al"  
+@export var level_number: int = 1 
 
 @onready var ProblemLabel = $ProblemLabel
 @onready var NextButton = $NextButton
@@ -319,13 +321,13 @@ func _hide_calculator():
 func _show_end_buttons():
 	NextButton.text = "Next Level"
 	NextButton.show()
-	ProgressManager.mark_complete("al_" + str(current_level_index + 1))
+	ProgressManager.mark_complete("%s_%d" % [level_type, level_number])
 
 func _show_all_levels_complete():
 	ProblemLabel.text = "[b]All stages complete![/b]"
 	NextButton.text = "Back to Topics"
 	NextButton.show()
-	ProgressManager.mark_complete("al_all")
+	ProgressManager.mark_complete("%s_%d" % [level_type, current_level_index + 1])
 
 func _on_back_to_topics_pressed():
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/learning_portal.tscn")

@@ -32,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
 JSON_PATH = "res://Scene/LearningPortal.tscn/ARlevel_problems/ALevel_7_problem.json"
+level_number = 7
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

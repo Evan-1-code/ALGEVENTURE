@@ -33,6 +33,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lssfj")
 JSON_PATH = "res://Scene/LearningPortal.tscn/GElevel_problems/GLevel_6_problem.json"
+level_type = "gl"
+level_number = 6
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
