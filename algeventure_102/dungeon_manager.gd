@@ -21,16 +21,26 @@ func _ready() -> void:
 	player_state = PlayerState.new()
 
 func _initialize_configs() -> void:
-	# Create default configs for Arithmetic and Geometric dungeons
-	arithmetic_config = DungeonConfig.new()
-	arithmetic_config.dungeon_type = "arithmetic"
-	arithmetic_config.dungeon_name = "Arithmetic Depths"
-	arithmetic_config.max_floors = 4
+	# Load configs from resource files
+	var arithmetic_path = "res://data/dungeon/arithmetic_config.tres"
+	var geometric_path = "res://data/dungeon/geometric_config.tres"
 	
-	geometric_config = DungeonConfig.new()
-	geometric_config.dungeon_type = "geometric"
-	geometric_config.dungeon_name = "Geometric Labyrinth"
-	geometric_config.max_floors = 4
+	if ResourceLoader.exists(arithmetic_path):
+		arithmetic_config = load(arithmetic_path)
+	else:
+		# Fallback to creating default configs
+		arithmetic_config = DungeonConfig.new()
+		arithmetic_config.dungeon_type = "arithmetic"
+		arithmetic_config.dungeon_name = "Arithmetic Depths"
+		arithmetic_config.max_floors = 4
+	
+	if ResourceLoader.exists(geometric_path):
+		geometric_config = load(geometric_path)
+	else:
+		geometric_config = DungeonConfig.new()
+		geometric_config.dungeon_type = "geometric"
+		geometric_config.dungeon_name = "Geometric Labyrinth"
+		geometric_config.max_floors = 4
 
 func load_dungeon(dungeon_type: String) -> void:
 	current_dungeon_type = dungeon_type

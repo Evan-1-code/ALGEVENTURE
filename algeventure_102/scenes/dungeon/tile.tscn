@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=4 uid="uid://tile_scene_001"]
+
+[ext_resource type="Script" path="res://scripts/dungeon/tile.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 64)
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="FogOverlay" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DungeonConfig" load_steps=2 format=4]
+
+[ext_resource type="Script" path="res://scripts/dungeon/dungeon_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+rows = 5
+cols = 10
+tile_size = 64
+spawn_col = 9
+spawn_row = 2
+staircase_min_distance = 5
+enemy_count = 5
+chest_count_min = 1
+chest_count_max = 3
+obstacle_percentage_min = 0.1
+obstacle_percentage_max = 0.18
+starting_moves = 5
+reveal_radius = 1
+required_kill_percentage = 0.5
+boots_move_bonus = 2
+starting_hearts = 3.0
+damage_per_wrong_answer = 1.0
+damage_with_armor = 0.5
+dungeon_type = "geometric"
+dungeon_name = "Geometric Labyrinth"
+max_floors = 4
