@@ -1,40 +1,40 @@
 [
   {
-    "level": 1,
-    "problems": [
-      {
-        "text": "Find the 7th term of a geometric sequence where a1 = 2 and r = -3.",
-        "given": { "a1": 2, "r": -3, "n": 7 },
-        "formula": "an = a1 × r^(n-1)",
-        "distractors": ["an = a1 + r × (n-1)", "an = a1 × r × n"],
-        "answer": 1458
-      },
-      {
-        "text": "The sum of the first 6 terms of a geometric sequence is 189. If r = -2, find the first term a1.",
-        "given": { "Sn": 189, "r": -2, "n": 6 },
-        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
-        "distractors": ["a1 = Sn / n", "a1 = Sn × (r + 1)/(r^n - 1)"],
-        "answer": 3
-      }
-    ]
+	"level": 1,
+	"problems": [
+	  {
+		"text": "Find the 7th term of a geometric sequence where a1 = 2 and r = -3.",
+		"given": { "a1": 2, "r": -3, "n": 7 },
+		"formula": "an = a1 × r^(n-1)",
+		"distractors": ["an = a1 + r × (n-1)", "an = a1 × r × n"],
+		"answer": 1458
+	  },
+	  {
+		"text": "The sum of the first 6 terms of a geometric sequence is 189. If r = -2, find the first term a1.",
+		"given": { "Sn": 189, "r": -2, "n": 6 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["a1 = Sn / n", "a1 = Sn × (r + 1)/(r^n - 1)"],
+		"answer": 3
+	  }
+	]
   },
   {
-    "level": 2,
-    "problems": [
-      {
-        "text": "In a geometric sequence, a1 = 16 and a6 = 1. Find the common ratio r.",
-        "given": { "a1": 16, "a6": 1, "n": 6 },
-        "formula": "an = a1 × r^(n-1)",
-        "distractors": ["r = a6 / (a1 × n)", "r = (a6 - a1)/(n-1)"],
-        "answer": 0.5
-      },
-      {
-        "text": "The sum of the first 7 terms of a geometric sequence is 127. If r = 2, find a1.",
-        "given": { "Sn": 127, "r": 2, "n": 7 },
-        "formula": "Sn = a1 × (r^n - 1) / (r - 1)",
-        "distractors": ["a1 = Sn / n", "a1 = Sn × (r-1)/(r^n + 1)"],
-        "answer": 1
-      }
-    ]
+	"level": 2,
+	"problems": [
+	  {
+		"text": "In a geometric sequence, a1 = 16 and a6 = 1. Find the common ratio r.",
+		"given": { "a1": 16, "a6": 1, "n": 6 },
+		"formula": "an = a1 × r^(n-1)",
+		"distractors": ["r = a6 / (a1 × n)", "r = (a6 - a1)/(n-1)"],
+		"answer": 0.5
+	  },
+	  {
+		"text": "The sum of the first 7 terms of a geometric sequence is 127. If r = 2, find a1.",
+		"given": { "Sn": 127, "r": 2, "n": 7 },
+		"formula": "Sn = a1 × (r^n - 1) / (r - 1)",
+		"distractors": ["a1 = Sn / n", "a1 = Sn × (r-1)/(r^n + 1)"],
+		"answer": 1
+	  }
+	]
   }
 ]

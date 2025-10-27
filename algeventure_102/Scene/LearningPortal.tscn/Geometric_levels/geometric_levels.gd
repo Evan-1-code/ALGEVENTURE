@@ -1,5 +1,6 @@
 extends Control
 
+@onready var gl1_button: Button = $HBoxContainer/Button
 @onready var gl2_button: Button = $HBoxContainer/Button2
 @onready var gl3_button: Button = $HBoxContainer/Button3
 @onready var gl4_button: Button = $HBoxContainer/Button4
@@ -15,6 +16,7 @@ extends Control
 @onready var gl14_button: Button = $HBoxContainer/Button14
 
 func _ready():
+	gl1_button.disabled = false  
 	gl2_button.disabled = not ProgressManager.progress["gl_1"]
 	gl3_button.disabled = not ProgressManager.progress["gl_2"]
 	gl4_button.disabled = not ProgressManager.progress["gl_3"]
@@ -30,6 +32,11 @@ func _ready():
 	gl14_button.disabled = not ProgressManager.progress["gl_13"]
 
 	get_tree().set_meta("previous_scene_path", get_tree().current_scene.scene_file_path)
+	
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scene/LearningPortal.tscn/Geometric_levels/gl_1.tscn")

@@ -20,3 +20,8 @@ func _on_geometric_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	SceneManager.change_scene("res://Tests/Main_menu.tscn")
+
+@onready var settings_overlay := $option_menu # adjust the path to your overlay
+
+func _on_settings_button_pressed() -> void:
+	settings_overlay.open()

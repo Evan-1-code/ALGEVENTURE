@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6kae70op7f75"]
+
+[ext_resource type="Script" uid="uid://de3a7c7au1q" path="res://achievement_popup.gd" id="1_3161u"]
+
+[node name="AchievementPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3161u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 126.0
+grow_horizontal = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.858824)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 4.0
+offset_right = 752.0
+offset_bottom = 41.0
+text = "Title "
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 31.0
+offset_right = 761.0
+offset_bottom = 123.0
+text = "description"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_right = 263.0
+offset_bottom = 128.0
