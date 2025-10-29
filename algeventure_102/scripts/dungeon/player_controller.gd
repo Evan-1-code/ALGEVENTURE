@@ -17,12 +17,23 @@ var current_position: Vector2i
 var is_moving: bool = false
 var fog_of_war: Dictionary = {}  # pos -> bool (revealed or not)
 var generator: DungeonGenerator
+var player_visual: ColorRect
 
 func _ready() -> void:
 	if not player_state:
 		player_state = PlayerState.new()
 	if not config:
 		config = DungeonConfig.new()
+	
+	# Create visual representation
+	_create_player_visual()
+
+func _create_player_visual() -> void:
+	player_visual = ColorRect.new()
+	player_visual.size = Vector2(60, 60)
+	player_visual.position = Vector2(2, 2)  # Small offset for visibility
+	player_visual.color = Color(0.2, 0.5, 1.0, 1.0)  # Blue
+	add_child(player_visual)
 
 func initialize(gen: DungeonGenerator, state: PlayerState) -> void:
 	generator = gen
