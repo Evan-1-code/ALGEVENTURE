@@ -1,7 +1,6 @@
 extends Node2D
-class_name DungeonTile
 
-## Individual dungeon tile
+## Individual dungeon tile script for the procedural dungeon system
 
 signal clicked(tile_position: Vector2i)
 
