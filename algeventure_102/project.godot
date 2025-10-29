@@ -22,6 +22,7 @@ NavigationManager="*res://Globals/navigation_manager.gd"
 Achievement_Manager="*res://achievement_manager.gd"
 UserDataManager="*res://userdata_manager.gd"
 MusicPlayer="*res://Scene/MusicPlayer.tscn"
+DungeonManager="*res://dungeon_manager.gd"
 
 [display]
 

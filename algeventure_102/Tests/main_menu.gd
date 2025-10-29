@@ -20,3 +20,13 @@ func _on_manual_user_pressed() -> void:
 
 func _on_settings_button_pressed() -> void:
 	settings_overlay.open()
+
+
+func _on_dungeon_arithmetic_pressed() -> void:
+	if DungeonManager:
+		DungeonManager.load_dungeon("arithmetic")
+
+
+func _on_dungeon_geometric_pressed() -> void:
+	if DungeonManager:
+		DungeonManager.load_dungeon("geometric")
